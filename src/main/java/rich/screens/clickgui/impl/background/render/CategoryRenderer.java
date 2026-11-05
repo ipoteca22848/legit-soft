@@ -1,161 +1,35 @@
 package rich.screens.clickgui.impl.background.render;
-
 import rich.modules.module.category.ModuleCategory;
 import rich.util.render.Render2D;
 import rich.util.render.font.Fonts;
-
-import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
-
-public class CategoryRenderer {
-
-    private static final ModuleCategory[] MAIN_CATEGORIES = {
-            ModuleCategory.COMBAT, ModuleCategory.MOVEMENT, ModuleCategory.RENDER, ModuleCategory.PLAYER, ModuleCategory.MISC
-    };
-    private static final String[] MAIN_CATEGORY_NAMES = {"Combat", "Movement", "Render", "Player", "Util"};
-    private static final String[] MAIN_CATEGORY_ICONS = {"a", "b", "c", "d", "e"};
-
-    private static final ModuleCategory[] EXTRA_CATEGORIES = {
-            ModuleCategory.AUTOBUY
-    };
-    private static final String[] EXTRA_CATEGORY_NAMES = {"Settings"};
-    private static final String[] EXTRA_CATEGORY_ICONS = {"g"};
-
-    private final Map<ModuleCategory, Float> categoryAnimations = new HashMap<>();
-
-    private static final float ANIMATION_SPEED = 8f;
-    private static final float MAX_OFFSET = 5f;
-    private static final float BALL_SIZE = 3f;
-    private static final float TEXT_SIZE = 6f;
-    private static final float ICON_SIZE = 6f;
-    private static final float ICON_SPACING = 4f;
-    private static final float SECTION_TEXT_SIZE = 5f;
-    private static final float EXTRA_CATEGORY_OFFSET = 10f;
-
-    public CategoryRenderer() {
-        for (ModuleCategory cat : MAIN_CATEGORIES) {
-            categoryAnimations.put(cat, 0f);
-        }
-        for (ModuleCategory cat : EXTRA_CATEGORIES) {
-            categoryAnimations.put(cat, 0f);
-        }
-    }
-
-    public void updateAnimations(ModuleCategory selectedCategory, float deltaTime) {
-        for (ModuleCategory cat : MAIN_CATEGORIES) {
-            updateCategoryAnimation(cat, selectedCategory, deltaTime);
-        }
-        for (ModuleCategory cat : EXTRA_CATEGORIES) {
-            updateCategoryAnimation(cat, selectedCategory, deltaTime);
-        }
-    }
-
-    private void updateCategoryAnimation(ModuleCategory cat, ModuleCategory selected, float deltaTime) {
-        float target = cat == selected ? 1f : 0f;
-        float current = categoryAnimations.getOrDefault(cat, 0f);
-
-        float diff = target - current;
-        float change = diff * ANIMATION_SPEED * deltaTime;
-
-        if (Math.abs(diff) < 0.001f) {
-            categoryAnimations.put(cat, target);
-        } else {
-            categoryAnimations.put(cat, current + change);
-        }
-    }
-
-    public void render(float bgX, float bgY, ModuleCategory selectedCategory, float alphaMultiplier) {
-        renderSectionHeader(bgX, bgY + 52f, "Основные", alphaMultiplier);
-        renderMainCategories(bgX, bgY, alphaMultiplier);
-        renderSectionHeader(bgX, bgY + 62f + MAIN_CATEGORY_NAMES.length * 15f + 10f - EXTRA_CATEGORY_OFFSET, "Другие", alphaMultiplier);
-        renderExtraCategories(bgX, bgY, alphaMultiplier);
-    }
-
-    private void renderSectionHeader(float bgX, float sectionY, String title, float alphaMultiplier) {
-        float lineWidth = 18f;
-        float textWidth = Fonts.BOLD.getWidth(title, SECTION_TEXT_SIZE);
-        float totalWidth = 65f;
-        float textX = bgX + 15f + (totalWidth - textWidth) / 2f;
-        float lineY = sectionY + 3f;
-        int lineAlpha = (int) (40 * alphaMultiplier);
-        int textAlpha = (int) (100 * alphaMultiplier);
-        Render2D.rect(bgX + 15f, lineY, lineWidth, 0.5f, new Color(255, 255, 255, lineAlpha).getRGB(), 0);
-        Render2D.rect(bgX + 15f + totalWidth - lineWidth, lineY, lineWidth, 0.5f, new Color(255, 255, 255, lineAlpha).getRGB(), 0);
-        Fonts.BOLD.draw(title, textX, sectionY, SECTION_TEXT_SIZE, new Color(150, 150, 150, textAlpha).getRGB());
-    }
-
-    private void renderMainCategories(float bgX, float bgY, float alphaMultiplier) {
-        for (int i = 0; i < MAIN_CATEGORY_NAMES.length; i++) {
-            ModuleCategory cat = MAIN_CATEGORIES[i];
-            float animation = categoryAnimations.getOrDefault(cat, 0f);
-            float textY = bgY + 65f + i * 15f;
-            renderCategoryItem(bgX, textY, MAIN_CATEGORY_NAMES[i], MAIN_CATEGORY_ICONS[i], animation, alphaMultiplier);
-        }
-    }
-
-    private void renderExtraCategories(float bgX, float bgY, float alphaMultiplier) {
-        float separatorY = bgY + 65f + MAIN_CATEGORY_NAMES.length * 15f + 1f;
-        float extraStartY = separatorY + 18f - EXTRA_CATEGORY_OFFSET;
-
-        for (int i = 0; i < EXTRA_CATEGORY_NAMES.length; i++) {
-            ModuleCategory cat = EXTRA_CATEGORIES[i];
-            float animation = categoryAnimations.getOrDefault(cat, 0f);
-            float textY = extraStartY + i * 15f;
-            renderCategoryItem(bgX, textY, EXTRA_CATEGORY_NAMES[i], EXTRA_CATEGORY_ICONS[i], animation, alphaMultiplier);
-        }
-    }
-
-    private void renderCategoryItem(float bgX, float textY, String name, String icon, float animation, float alphaMultiplier) {
-        float offsetX = animation * MAX_OFFSET;
-
-        int baseGray = 128;
-        int targetWhite = 255;
-        int colorValue = (int) (baseGray + (targetWhite - baseGray) * animation);
-        int alpha = (int) ((128 + 127 * animation) * alphaMultiplier);
-        Color textColor = new Color(colorValue, colorValue, colorValue, alpha);
-
-        float iconX = bgX + 17f + offsetX;
-        float iconWidth = Fonts.CATEGORY_ICONS.getWidth(icon, ICON_SIZE);
-        float textX = iconX + iconWidth + ICON_SPACING;
-        float textWidth = Fonts.BOLD.getWidth(name, TEXT_SIZE);
-
-        Fonts.CATEGORY_ICONS.draw(icon, iconX, textY + 0.5f, ICON_SIZE, textColor.getRGB());
-
-        if (animation > 0.01f) {
-            float lineWidth = (iconWidth + ICON_SPACING + textWidth) * animation;
-            float lineAlpha = animation * 60 * alphaMultiplier;
-            Render2D.rect(iconX, textY + 9f, lineWidth, 0.5f, new Color(255, 255, 255, (int) lineAlpha).getRGB(), 0);
-
-            float ballAlpha = animation * 200 * alphaMultiplier;
-            float ballX = bgX + 12f;
-            float ballY = textY + 2.5f;
-            Render2D.rect(ballX, ballY, BALL_SIZE, BALL_SIZE, new Color(255, 255, 255, (int) ballAlpha).getRGB(), BALL_SIZE / 2f);
-        }
-
-        Fonts.BOLD.draw(name, textX, textY, TEXT_SIZE, textColor.getRGB());
-    }
-
-    public ModuleCategory getCategoryAtPosition(double mouseX, double mouseY, float bgX, float bgY) {
-        if (mouseX < bgX + 10f || mouseX > bgX + 95f) return null;
-
-        for (int i = 0; i < MAIN_CATEGORY_NAMES.length; i++) {
-            float catY = 65f + i * 15f;
-            if (mouseY >= bgY + catY && mouseY <= bgY + catY + 13f) {
-                return MAIN_CATEGORIES[i];
-            }
-        }
-
-        float separatorY = 65f + MAIN_CATEGORY_NAMES.length * 15f + 1f;
-        float extraStartY = separatorY + 18f - EXTRA_CATEGORY_OFFSET;
-
-        for (int i = 0; i < EXTRA_CATEGORIES.length; i++) {
-            float catY = extraStartY + i * 15f;
-            if (mouseY >= bgY + catY && mouseY <= bgY + catY + 13f) {
-                return EXTRA_CATEGORIES[i];
-            }
-        }
-
-        return null;
-    }
+import rich.util.render.shader.Scissor;
+import rich.screens.clickgui.impl.background.BackgroundComponent;
+import java.util.*;
+public final class CategoryRenderer {
+ private static final ModuleCategory[] CATEGORIES=ModuleCategory.values();
+ private final Map<ModuleCategory,Float> animations=new EnumMap<>(ModuleCategory.class);
+ private float scroll;
+ private ModuleCategory lastSelected;
+ public void updateAnimations(ModuleCategory selected,float delta){
+  if(selected!=lastSelected){lastSelected=selected;float row=6+selected.ordinal()*15-scroll;float viewport=BackgroundComponent.BG_HEIGHT-96;if(row<0)scroll+=row;else if(row+15>viewport)scroll+=row+15-viewport;}
+  for(var cat:CATEGORIES)animations.put(cat,animations.getOrDefault(cat,0f)+(cat==selected?1f-animations.getOrDefault(cat,0f):-animations.getOrDefault(cat,0f))*Math.min(1f,delta*8));}
+ public void render(float x,float y,ModuleCategory selected,float alpha){
+  Scissor.enable(x+10,y+54,80,BackgroundComponent.BG_HEIGHT-96,2);
+  for(int i=0;i<CATEGORIES.length;i++){
+   var cat=CATEGORIES[i];float row=y+60+i*15-scroll;if(row<y+40||row>y+BackgroundComponent.BG_HEIGHT-35)continue;
+   float anim=animations.getOrDefault(cat,0f);int a=(int)((128+127*anim)*alpha);int c=(a<<24)|0xd0d0d0;
+   if(cat==selected)Render2D.rect(x+12,row+3,3,3,(a<<24)|0xffffff,1.5f);
+   Fonts.CATEGORY_ICONS.draw(""+(char)('a'+i%7),x+18+anim*3,row+.5f,6,c);
+   String title=switch(cat){case MISC->"Утилиты";case RENDER->"Визуалы";case PLAYER->"Игрок";case COMBAT->"Combat";case MOVEMENT->"Movement";default->cat.getReadableName();};
+   Fonts.BOLD.draw(title,x+29+anim*3,row,6,c);
+  }
+  float viewport=BackgroundComponent.BG_HEIGHT-96,content=6+CATEGORIES.length*15;
+  if(content>viewport){float thumb=Math.max(20,viewport*viewport/content),max=content-viewport;Render2D.rect(x+88,y+54,1.5f,viewport,((int)(40*alpha)<<24)|0xffffff,1);Render2D.rect(x+88,y+54+(viewport-thumb)*scroll/max,1.5f,thumb,((int)(130*alpha)<<24)|0xffffff,1);}
+  Scissor.disable();
+ }
+ public ModuleCategory getCategoryAtPosition(double mx,double my,float x,float y){if(mx<x+10||mx>x+90||my<y+54||my>y+BackgroundComponent.BG_HEIGHT-42)return null;int i=(int)Math.floor((my-y-60+scroll)/15);return i>=0&&i<CATEGORIES.length?CATEGORIES[i]:null;}
+ public boolean scroll(double mx,double my,double delta,float x,float y){
+  if(mx<x+10||mx>x+90||my<y+54||my>y+BackgroundComponent.BG_HEIGHT-42)return false;
+  scroll=Math.max(0,Math.min(Math.max(0,6+CATEGORIES.length*15-(BackgroundComponent.BG_HEIGHT-96)),scroll-(float)delta*22));return true;
+ }
 }

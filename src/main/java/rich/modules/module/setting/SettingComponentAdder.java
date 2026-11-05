@@ -10,6 +10,7 @@ public class SettingComponentAdder {
 
     public void addSettingComponent(List<Setting> settings, List<AbstractSettingComponent> components) {
         settings.forEach(setting -> {
+            if(setting instanceof com.bamber.client.PreviewSetting preview)components.add(new com.bamber.client.PreviewComponent(preview));
             if (setting instanceof com.bamber.client.LabelSetting label) {
                 components.add(new com.bamber.client.LabelComponent(label));
             }

@@ -36,6 +36,7 @@ public class ClickGui extends Screen implements IMinecraft {
     private final BackgroundComponent background = new BackgroundComponent();
     private final ModuleComponent moduleComponent = new ModuleComponent();
     private final DragHandler dragHandler = new DragHandler();
+    private final com.bamber.client.CosmeticsGallery cosmeticsGallery = new com.bamber.client.CosmeticsGallery();
     private ModuleCategory selectedCategory = ModuleCategory.RENDER;
 
     private final GuiAnimation openAnimation = new GuiAnimation();
@@ -79,6 +80,8 @@ public class ClickGui extends Screen implements IMinecraft {
         updateModules();
     }
 
+    public void selectCategory(ModuleCategory category){background.setSearchActive(false);selectedCategory=category;updateModules();}
+
     private void updateModules() {
         List<ModuleStructure> modules = new ArrayList<>();
         try {
@@ -89,6 +92,7 @@ public class ClickGui extends Screen implements IMinecraft {
                 }
             }
         } catch (Exception ignored) {}
+        modules.addAll(com.bamber.client.NativeSections.cards(selectedCategory));
         moduleComponent.updateModules(modules, selectedCategory);
     }
 
@@ -153,6 +157,7 @@ public class ClickGui extends Screen implements IMinecraft {
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         com.bamber.client.FrontendBridge.refresh();
+        if(com.bamber.client.NativeSections.consumeRefresh()){updateModules();}
         lastMouseX = mouseX;
         lastMouseY = mouseY;
         lastDelta = delta;
@@ -240,7 +245,7 @@ public class ClickGui extends Screen implements IMinecraft {
             boolean shouldRenderModules = isModuleCategory(selectedCategory);
             boolean slidingToModuleCategory = isAutoBuySliding && isModuleCategory(selectedCategory);
 
-            if (shouldRenderModules || slidingToModuleCategory) {
+            if ((shouldRenderModules || slidingToModuleCategory) && selectedCategory != ModuleCategory.COSMETICS) {
                 moduleComponent.updateScroll(delta, scrollSpeed);
                 moduleComponent.updateScrollFades(delta, scrollSpeed, mlH, spH);
                 moduleComponent.renderModuleList(context, mlX, mlY, mlW, mlH, mx, my, FIXED_GUI_SCALE, alphaMultiplier * normalAlpha);
@@ -248,6 +253,8 @@ public class ClickGui extends Screen implements IMinecraft {
             }
 
         }
+
+        if (normalAlpha > .01f && selectedCategory == ModuleCategory.COSMETICS) cosmeticsGallery.render(context,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46,mx,my,FIXED_GUI_SCALE,alphaMultiplier*normalAlpha);
 
         if (searchAlpha > 0.01f) {
             background.renderSearchResults(context, bgX, bgY, mx, my, FIXED_GUI_SCALE, alphaMultiplier);
@@ -359,6 +366,7 @@ public class ClickGui extends Screen implements IMinecraft {
             return true;
         }
 
+        if(selectedCategory==ModuleCategory.COSMETICS && cosmeticsGallery.mouseClicked(mx,my,click.button(),bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
         if (isModuleCategory(selectedCategory)) {
             ModuleStructure starModule = moduleComponent.getModuleForStarClick(mx, my, mlX, mlY, mlW, mlH);
             if (starModule != null && click.button() == 0) {
@@ -425,6 +433,8 @@ public class ClickGui extends Screen implements IMinecraft {
 
         float[] bg = calculateBackground(scale);
         float bgX = bg[0], bgY = bg[1];
+        if(background.scrollCategories(mx,my,vertical,bgX,bgY))return true;
+        if(selectedCategory==ModuleCategory.COSMETICS && !background.isSearchActive() && cosmeticsGallery.mouseScrolled(mx,my,vertical,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
 
         if (background.isSearchActive()) {
             float panelX = bgX + 92f;

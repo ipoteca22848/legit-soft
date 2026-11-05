@@ -133,6 +133,8 @@ public class BackgroundComponent implements IMinecraft {
         return searchRenderer.getModuleAtPosition(mouseX, mouseY, bgX, bgY, BG_WIDTH, BG_HEIGHT, searchHandler);
     }
 
+    public boolean scrollCategories(double mouseX,double mouseY,double delta,float bgX,float bgY){return categoryRenderer.scroll(mouseX,mouseY,delta,bgX,bgY);}
+
     public ModuleCategory getCategoryAtPosition(double mouseX, double mouseY, float bgX, float bgY) {
         return categoryRenderer.getCategoryAtPosition(mouseX, mouseY, bgX, bgY);
     }

@@ -106,7 +106,7 @@ public final class FunTimeEventsClient {
     }
 
     public static String getApiToken() {
-        return System.getProperty("auravisuals.funtimeApiToken", "a71de3a.1d53638e29be5bd55b0852059514fbb3").trim();
+        return System.getProperty("auravisuals.funtimeApiToken", "").trim();
     }
 
     public static String getApiBaseUrl() {

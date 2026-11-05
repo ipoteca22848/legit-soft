@@ -30,6 +30,7 @@ public class Hud extends Module {
     public static final NumberSetting hudGlowStrength = new NumberSetting(
         "HUD Glow Strength", 1.0, 0.25, 2.0, 0.05, () -> isLiquidGlassStyle() && hudGlassGlow.getValue()
     );
+    public static final BooleanSetting stableEffects = new BooleanSetting("Спокойные эффекты HUD",true);
     public static final BooleanSetting customHotbar = new BooleanSetting("Хотбар", true);
     public static final BooleanSetting armorHud = new BooleanSetting("Броня", true);
     public static final BooleanSetting watermark = new BooleanSetting("Ватермарка", true);
@@ -51,6 +52,7 @@ public class Hud extends Module {
     public Hud() {
         super("Hud", "Настройки визуального интерфейса", Category.VISUALS);
         this.addSettings(
+            stableEffects, presetMode, presetName, createPreset, editPreset, hudGlassGlow, hudGlowStrength,
             hudStyle,
             hudGlassColor,
             watermark,

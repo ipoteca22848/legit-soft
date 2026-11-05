@@ -75,6 +75,7 @@ public final class Inventory implements HudElement {
 
     @Override
     public void render(DrawContext context, Hud hud) {
+        if(!com.example.auravisuals.module.render.Hud.inventory.getValue())return;
         hud.panel(context, 1444.0F, 540.0F, 307.0F, 89.0F, 8.0F);
         int separatorColor = Hud.animatedColor(452984831);
         Gui$Color separators = Gui.color(context);

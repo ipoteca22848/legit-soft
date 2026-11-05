@@ -136,7 +136,7 @@ public final class Hud {
 
     private void renderElement(DrawContext context, HudElement element, boolean editing) {
         boolean enabled = elementEnabled(element);
-        if (editing && !enabled) {
+        if (!enabled) {
             ELEMENT_ANIMS.put(element.id(), 0.0F);
             DRAG_ANIMS.put(element.id(), 0.0F);
         } else if (!this.hiddenBehindClickGui(element)) {

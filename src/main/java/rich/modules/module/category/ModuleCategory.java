@@ -11,7 +11,8 @@ public enum ModuleCategory {
     RENDER("Render"),
     PLAYER("Player"),
     MISC("Misc"),
-    AUTOBUY("AutoBuy");
+    HUD("HUD"), CONFIGS("Конфиги"), MARKS("Метки"), COSMETICS("Косметика"),
+    THEMES("Темы"), EVENTS("Ивенты"), MINES("Шахты"), MESSENGER("Мессенджер"), SETTINGS("Настройки");
 
     final String readableName;
 }

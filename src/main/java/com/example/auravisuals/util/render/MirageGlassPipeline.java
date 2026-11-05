@@ -84,13 +84,14 @@ public final class MirageGlassPipeline {
     }
 
     public static void beginRenderFrame() {
+        StableWorldFrameCapture.beginFrame();
         hudFrameCaptureLocked = false;
     }
 
     public static void captureHudFrame() {
-        hudFrameCaptureLocked = false;
-        captureFrame(true);
+        if(hudFrameCaptureLocked)return;
         hudFrameCaptureLocked = true;
+        captureFrame(true);
     }
 
     private static void captureFrame(boolean force) {
@@ -102,7 +103,8 @@ public final class MirageGlassPipeline {
                 int fbWidth = client.getFramebuffer().textureWidth;
                 int fbHeight = client.getFramebuffer().textureHeight;
                 ensureTexture(fbWidth, fbHeight, client.getFramebuffer().getColorAttachment().getFormat());
-                FramebufferBlitter.blit(client.getFramebuffer().getColorAttachmentView(), sourceTextureView);
+                GpuTextureView clean = hudFrameCaptureLocked ? StableWorldFrameCapture.colorView() : null;
+                FramebufferBlitter.blit(clean!=null?clean:client.getFramebuffer().getColorAttachmentView(),sourceTextureView);
                 lastCaptureNanos = now;
             }
         }
@@ -402,7 +404,8 @@ public final class MirageGlassPipeline {
         dataBuffer.putFloat(screenW).putFloat(screenH).putFloat(0.0F).putFloat(0.0F);
         dataBuffer.putFloat(radius).putFloat(blur).putFloat(distortion).putFloat(shine);
         dataBuffer.putFloat(red).putFloat(green).putFloat(blue).putFloat(tintAlpha);
-        dataBuffer.putFloat(alpha).putFloat(z).putFloat(time).putFloat(effectMode);
+        boolean calm=hudFrameCaptureLocked && com.example.auravisuals.module.render.Hud.stableEffects.getValue();
+        dataBuffer.putFloat(alpha).putFloat(z).putFloat(calm?0.0F:time).putFloat(effectMode);
         dataBuffer.flip();
         ensureBuffer();
     }

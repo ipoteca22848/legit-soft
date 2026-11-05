@@ -18,6 +18,8 @@ public final class StableWorldFrameCapture {
     private StableWorldFrameCapture() {
     }
 
+    public static void beginFrame(){populated=false;}
+
     public static void captureCleanWorld() {
         Framebuffer framebuffer = MinecraftClient.getInstance().getFramebuffer();
         if (usable(framebuffer) && RenderSystem.tryGetDevice() != null) {

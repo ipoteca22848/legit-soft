@@ -54,7 +54,7 @@ public class ModuleComponent implements IMinecraft {
     }
 
     public void updateModules(List<ModuleStructure> newModules, ModuleCategory category) {
-        if (category == currentCategory) return;
+        if (category == currentCategory && modules.equals(newModules)) return;
 
         animationHandler.prepareTransition(modules, displayModules);
         currentCategory = category;
@@ -186,6 +186,10 @@ public class ModuleComponent implements IMinecraft {
     }
 
     public void tick() {
+        if(selectedModule!=null){
+            java.util.List<rich.modules.module.setting.Setting> visible=settingComponents.stream().map(AbstractSettingComponent::getSetting).toList();
+            if(!visible.equals(selectedModule.settings())){var selected=selectedModule;selectedModule=null;selectModule(selected);}
+        }
         settingComponents.forEach(AbstractSettingComponent::tick);
     }
 
