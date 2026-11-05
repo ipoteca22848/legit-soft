@@ -1,4 +1,4 @@
-# bamber client 1.0.0
+# bamber client 1.0.1
 
 Готовый JAR: [Releases](https://github.com/ipoteca22848/legit-soft/releases). Автоматическая сборка: [Actions](https://github.com/ipoteca22848/legit-soft/actions).
 
@@ -7,7 +7,7 @@
 ## Установка
 
 1. Установите профиль Fabric для Minecraft 1.21.11.
-2. Скопируйте `bamber-client-1.0.0.jar` и Fabric API для 1.21.11 в папку `mods` этого профиля. В архиве `bamber-client-1.21.11-mods.zip` оба файла уже находятся в папке `mods`.
+2. Скопируйте `bamber-client-1.0.1.jar` и Fabric API для 1.21.11 в папку `mods` этого профиля. В архиве `bamber-client-1.21.11-mods.zip` оба файла уже находятся в папке `mods`.
 3. Уберите отдельно установленный присланный `item-model-fix`: его движок уже встроен в bamber client. Одновременная установка запустит отдельный экземпляр со старыми фиксированными клавишами.
 4. Запустите игру через профиль Fabric.
 
@@ -28,6 +28,10 @@
 
 Нужен JDK 21. Linux/macOS: `bash gradlew build`. Windows: `gradlew.bat build`.
 
-Готовый мод: `build/libs/bamber-client-1.0.0.jar`.
+Готовый мод: `build/libs/bamber-client-1.0.1.jar`.
 
 Локальная интеграционная проверка: `bash gradlew runClient -Psmoke`. Она открывает главное меню и Click GUI, проверяет покрытие модулей, загрузку движка триггербота, сохранение бинда и отключение через Unhook. Тестовый код не включается в обычную сборку. Запускайте этот режим без внешней сети, если не нужно подключение исходных сетевых сервисов.
+
+## Проверка устанавливаемого JAR
+
+`bash gradlew build remapProductionSmoke` собирает релиз и отдельный тестовый мод `build/libs/bamber-client-1.0.1-smoke.jar`. Для проверки обычной установки поместите оба JAR и Fabric API в тестовый профиль Minecraft 1.21.11 с Fabric. Тест проверяет также инициализацию стекла, эффектов рук и слоёв окраски при ударе. Тестовый JAR не нужен в обычной игре. Выполняйте проверку без внешней сети.

@@ -9,7 +9,6 @@ import com.mojang.blaze3d.buffers.GpuBufferSlice;
 import com.mojang.blaze3d.buffers.GpuBuffer.MappedView;
 import com.mojang.blaze3d.pipeline.BlendFunction;
 import com.mojang.blaze3d.pipeline.RenderPipeline;
-import com.mojang.blaze3d.pipeline.RenderPipeline.Snippet;
 import com.mojang.blaze3d.platform.DepthTestFunction;
 import com.mojang.blaze3d.systems.CommandEncoder;
 import com.mojang.blaze3d.systems.RenderPass;
@@ -20,7 +19,6 @@ import com.mojang.blaze3d.textures.GpuTextureView;
 import com.mojang.blaze3d.textures.TextureFormat;
 import com.mojang.blaze3d.vertex.VertexFormat.DrawMode;
 import java.awt.Color;
-import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
@@ -41,7 +39,7 @@ public final class HandFxPipeline {
     private static final int HIT_SAMPLE_SIDE = 7;
     private static final long HIT_SAMPLE_MAX_AGE_NANOS = 250000000L;
     private static final double HIT_SAMPLE_MOUSE_TOLERANCE = 9.0;
-    private static final RenderPipeline PIPELINE = RenderPipeline.builder(snippet("TRANSFORMS_AND_PROJECTION_SNIPPET"))
+    private static final RenderPipeline PIPELINE = RenderPipeline.builder(RenderPipelines.TRANSFORMS_AND_PROJECTION_SNIPPET)
         .withLocation(Identifier.of("auravisuals", "pipeline/hand_fx"))
         .withVertexShader(Identifier.of("auravisuals", "core/hand_fx"))
         .withFragmentShader(Identifier.of("auravisuals", "core/hand_fx"))
@@ -99,16 +97,6 @@ public final class HandFxPipeline {
     private static volatile boolean sampledHandPixel;
     private static volatile double sampledMainHandDistanceSq = Double.POSITIVE_INFINITY;
     private static volatile double sampledOffHandDistanceSq = Double.POSITIVE_INFINITY;
-
-    private static Snippet snippet(String name) {
-        try {
-            Field f = RenderPipelines.class.getDeclaredField(name);
-            f.setAccessible(true);
-            return (Snippet)f.get(null);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     private HandFxPipeline() {
     }

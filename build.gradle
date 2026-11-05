@@ -79,3 +79,24 @@ if (project.hasProperty('smoke')) {
         }
     }
 }
+
+// Exercise the distributable JAR in intermediary names, as an installed client does.
+tasks.register('compileProductionSmoke', JavaCompile) {
+    dependsOn tasks.named('classes')
+    source = fileTree('src/smoke/java') { include '**/*.java' }
+    classpath = sourceSets.main.compileClasspath + sourceSets.main.output
+    destinationDirectory = layout.buildDirectory.dir('productionSmoke/classes')
+    options.release = 21
+}
+tasks.register('packageProductionSmoke', Jar) {
+    dependsOn tasks.named('compileProductionSmoke')
+    from(layout.buildDirectory.dir('productionSmoke/classes'))
+    from('src/smoke/resources')
+    archiveClassifier = 'smoke-dev'
+}
+tasks.register('remapProductionSmoke', net.fabricmc.loom.task.RemapJarTask) {
+    dependsOn tasks.named('packageProductionSmoke')
+    inputFile = tasks.named('packageProductionSmoke', Jar).flatMap { it.archiveFile }
+    archiveClassifier = 'smoke'
+    addNestedDependencies = false
+}

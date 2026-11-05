@@ -10,7 +10,13 @@ public final class SmokeCheck implements ClientModInitializer {
    if(client.getOverlay()!=null||++ticks%100!=0)return;
    try{
     switch(stage++){
-     case 0 -> {client.setScreen(new rich.screens.menu.MainMenuScreen());System.out.println("BAMBER SMOKE: menu loaded");}
+     case 0 -> {
+      Class.forName("com.example.auravisuals.util.render.MirageGlassPipeline");
+      Class.forName("com.example.auravisuals.util.render.HandFxPipeline");
+      var texture=net.minecraft.util.Identifier.of("minecraft","textures/entity/player/wide/steve.png");
+      if(com.example.auravisuals.util.render.HitColorRenderLayers.tint(texture)==null || com.example.auravisuals.util.render.HitColorRenderLayers.full(texture)==null)throw new AssertionError("Hit color render layers");
+      System.out.println("BAMBER SMOKE: glass, hand effects and hit-color pipelines initialized");
+      client.setScreen(new rich.screens.menu.MainMenuScreen());System.out.println("BAMBER SMOKE: menu loaded");}
      case 1 -> {
       if(ModuleManager.INSTANCE.getModules().size()!=96)throw new AssertionError("Expected 96 modules");
       if(FrontendBridge.modules().size()!=97)throw new AssertionError("GUI module coverage");
