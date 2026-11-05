@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 import net.minecraft.client.MinecraftClient;
 
 public final class FunTimeEventsClient {
-    static final String DEFAULT_API_TOKEN = "a71de3a.1d53638e29be5bd55b0852059514fbb3";
+    static final String DEFAULT_API_TOKEN = "";
     static final String HARDCODED_API_ORIGIN = "https://api.funtime.su";
     static final String FIXED_API_BASE = normalizeApiBaseUrl("https://api.funtime.su");
     static final String EVENT_TYPE_FILTER = "all";
