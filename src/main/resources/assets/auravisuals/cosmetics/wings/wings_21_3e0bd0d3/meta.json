@@ -1,0 +1,76 @@
+{
+  "id": "3e0bd0d3-9dfb-4f33-88fa-677ff00f0f9a",
+  "contributor": "DMineShop",
+  "name": "Крылья хранителя",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": true,
+  "isLimited": false,
+  "price": 2999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.75,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "createdTime": 1682095648760,
+  "hash256": "20e166f7ac82a9c1a3373a28c41896a0ddd4226ffa0bad0cad9a874a8f914909",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/20e166f7ac82a9c1a3373a28c41896a0ddd4226ffa0bad0cad9a874a8f914909.model",
+  "slug": "wings_21_3e0bd0d3",
+  "category": "wings",
+  "displayName": "Крылья хранителя",
+  "bounds": {
+    "min_x": -20.3526,
+    "max_x": 20.352600000000002,
+    "min_y": 1,
+    "max_y": 14.79435,
+    "min_z": 1.2,
+    "max_z": 4.2,
+    "center_x": 1.7763568394002505e-15,
+    "center_y": 7.897175,
+    "center_z": 2.7,
+    "height": 13.79435
+  }
+}

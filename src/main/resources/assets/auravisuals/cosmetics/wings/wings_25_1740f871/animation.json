@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "bezier"
+						},
+						"2.0": {
+							"post": [1.3378, 14.94159, 5.17544],
+							"lerp_mode": "bezier"
+						},
+						"4.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "bezier"
+						}
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "bezier"
+						},
+						"2.0": {
+							"post": [1.3378, -14.94159, -5.17544],
+							"lerp_mode": "bezier"
+						},
+						"4.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "bezier"
+						}
+					}
+				}
+			}
+		}
+	}
+}

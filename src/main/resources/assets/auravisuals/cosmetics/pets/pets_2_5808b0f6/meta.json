@@ -1,0 +1,77 @@
+{
+  "id": "5808b0f6-8a7b-4070-89f9-d2eba3ca58e9",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "DMine",
+  "name": "Вырезка по тыкве",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 299,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "supportOptions": {
+    "SWAP_X": {
+      "location.x": true,
+      "scale.x": true,
+      "rotate.yaw": true
+    }
+  },
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.84,
+        0,
+        0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.03,
+        0.03,
+        0.03
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        9.6,
+        0
+      ],
+      "rotation": [
+        -160,
+        0,
+        0
+      ],
+      "scale": [
+        -1,
+        1,
+        1
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "hash256": "528e71ba34a329aa1c5c3cdc1cc927557f87dbf268741b2bd22baa7c82476e04",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/528e71ba34a329aa1c5c3cdc1cc927557f87dbf268741b2bd22baa7c82476e04.model",
+  "slug": "pets_2_5808b0f6",
+  "category": "pets",
+  "displayName": "Вырезка по тыкве",
+  "bounds": {
+    "min_x": -5,
+    "max_x": 12.50314,
+    "min_y": 2,
+    "max_y": 16.70711,
+    "min_z": -5,
+    "max_z": 5,
+    "center_x": 3.75157,
+    "center_y": 9.353555,
+    "center_z": 0.0,
+    "height": 14.70711
+  }
+}

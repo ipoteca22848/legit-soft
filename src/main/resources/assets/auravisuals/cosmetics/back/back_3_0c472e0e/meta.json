@@ -1,0 +1,71 @@
+{
+  "id": "0c472e0e-e367-4250-8234-ac47725e2ade",
+  "contributor": "DMine",
+  "name": "Рюкзак Китсуне",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "hash256": "d467532a61f1b5a87ae0c4beeabd2547d3a1264b9a09f313c87f30fa2f7cbcfd",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/d467532a61f1b5a87ae0c4beeabd2547d3a1264b9a09f313c87f30fa2f7cbcfd.model",
+  "slug": "back_3_0c472e0e",
+  "category": "back",
+  "displayName": "Рюкзак Китсуне",
+  "bounds": {
+    "min_x": -9.64637,
+    "max_x": 10.353629999999999,
+    "min_y": 12.18227,
+    "max_y": 29.35654,
+    "min_z": -4.35882,
+    "max_z": 13.76323,
+    "center_x": 0.3536299999999999,
+    "center_y": 20.769405,
+    "center_z": 4.702205,
+    "height": 17.17427
+  }
+}

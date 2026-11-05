@@ -1,0 +1,76 @@
+{
+  "id": "f684c6fe-a735-4a27-8714-42c63b12ceb2",
+  "contributor": "KindMiner",
+  "name": "Кристальные крылья",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 849,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.3,
+        0.03
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        23,
+        0
+      ],
+      "rotation": [
+        -140,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "hash256": "498a374cf3317c50047e9cc4a84553e3c0a923267f37b739312f2e1b25577a88",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/498a374cf3317c50047e9cc4a84553e3c0a923267f37b739312f2e1b25577a88.model",
+  "slug": "wings_12_f684c6fe",
+  "category": "wings",
+  "displayName": "Кристальные крылья",
+  "bounds": {
+    "min_x": -30.75,
+    "max_x": 30.75,
+    "min_y": 7,
+    "max_y": 24.04685,
+    "min_z": 2.15,
+    "max_z": 4.15,
+    "center_x": 0.0,
+    "center_y": 15.523425,
+    "center_z": 3.1500000000000004,
+    "height": 17.04685
+  }
+}

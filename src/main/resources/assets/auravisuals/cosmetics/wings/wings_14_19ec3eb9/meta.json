@@ -1,0 +1,76 @@
+{
+  "id": "19ec3eb9-62e2-4cd3-9cb1-6403fd5a8fc4",
+  "contributor": "K0ozochka",
+  "name": "Крылья свободы",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.065,
+        0.065,
+        0.065
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        -120,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "hash256": "2dd095f7ff9f51111765d499d15fc51416c7e97c9a85dcad95d6e8246c3baa28",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/2dd095f7ff9f51111765d499d15fc51416c7e97c9a85dcad95d6e8246c3baa28.model",
+  "slug": "wings_14_19ec3eb9",
+  "category": "wings",
+  "displayName": "Крылья свободы",
+  "bounds": {
+    "min_x": -17.27309,
+    "max_x": 17.27309,
+    "min_y": 6.34737,
+    "max_y": 32.54066,
+    "min_z": 1.49555,
+    "max_z": 4.50445,
+    "center_x": 0.0,
+    "center_y": 19.444015,
+    "center_z": 3.0,
+    "height": 26.193290000000005
+  }
+}

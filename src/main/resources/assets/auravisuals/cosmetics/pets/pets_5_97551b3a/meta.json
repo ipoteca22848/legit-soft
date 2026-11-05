@@ -1,0 +1,76 @@
+{
+  "id": "97551b3a-4f21-4fee-b9a0-2cbe1697ebfd",
+  "categoryId": "pets",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Эльф",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 99,
+  "availableInGui": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.55,
+        -0.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "PET",
+  "supportOptions": {
+    "SWAP_X": {
+      "location.x": true,
+      "scale.x": true,
+      "rotate.yaw": true
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "ac4cea2cdb4666102a1a215f8124a44e9948c79608223cad247d208004958b68",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/ac4cea2cdb4666102a1a215f8124a44e9948c79608223cad247d208004958b68.model",
+  "slug": "pets_5_97551b3a",
+  "category": "pets",
+  "displayName": "Эльф",
+  "bounds": {
+    "min_x": -16.5,
+    "max_x": 16,
+    "min_y": 0,
+    "max_y": 26,
+    "min_z": -6.26746,
+    "max_z": 10.821200000000001,
+    "center_x": -0.25,
+    "center_y": 13.0,
+    "center_z": 2.2768700000000006,
+    "height": 26
+  }
+}

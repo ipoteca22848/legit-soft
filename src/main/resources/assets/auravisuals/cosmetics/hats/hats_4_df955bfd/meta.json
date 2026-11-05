@@ -1,0 +1,81 @@
+{
+  "id": "df955bfd-e05b-4fd9-84bb-20605be58393",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Dionis",
+  "name": "Шлем скейтера",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.02,
+        0
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "scale": [
+        0.065,
+        0.065,
+        0.065
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.05,
+      "max": 0,
+      "step": 0.01
+    },
+    "COLOR_HSB": {
+      "default": "16777215"
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571530,
+  "hash256": "7c9dfaeb47d963df8b4f1f85ae42eb31433942dbc95adc45ab03a74108f35108",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/7c9dfaeb47d963df8b4f1f85ae42eb31433942dbc95adc45ab03a74108f35108.model",
+  "slug": "hats_4_df955bfd",
+  "category": "hats",
+  "displayName": "Шлем скейтера",
+  "bounds": {
+    "min_x": -5,
+    "max_x": 5,
+    "min_y": 1.7994,
+    "max_y": 10.1,
+    "min_z": -6.175,
+    "max_z": 5.02,
+    "center_x": 0.0,
+    "center_y": 5.9497,
+    "center_z": -0.5775000000000001,
+    "height": 8.3006
+  }
+}

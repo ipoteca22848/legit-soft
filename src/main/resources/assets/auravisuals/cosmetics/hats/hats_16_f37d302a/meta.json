@@ -1,0 +1,70 @@
+{
+  "id": "f37d302a-df34-4ed9-a84f-60ad5f8781fa",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Большой подарок",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.04,
+        0.04,
+        0.04
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "d78f99b48870f55a1814044c226d01e0f8cd695d39725c02446a5584cc8ba9c7",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/d78f99b48870f55a1814044c226d01e0f8cd695d39725c02446a5584cc8ba9c7.model",
+  "slug": "hats_16_f37d302a",
+  "category": "hats",
+  "displayName": "Большой подарок",
+  "bounds": {
+    "min_x": -6,
+    "max_x": 6,
+    "min_y": 0,
+    "max_y": 13.62362,
+    "min_z": -6,
+    "max_z": 6,
+    "center_x": 0.0,
+    "center_y": 6.81181,
+    "center_z": 0.0,
+    "height": 13.62362
+  }
+}

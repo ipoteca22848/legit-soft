@@ -1,0 +1,77 @@
+{
+  "id": "ee401e1a-2275-4398-ac42-15ebc7f1d732",
+  "contributor": "Wan_win",
+  "name": "Костические крылья",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.15,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.062,
+        0.062,
+        0.062
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "createdTime": 1730339571514,
+  "hash256": "50ec56ba134369eed970bbf812f6959e95329b6fb4a5ad5aaad6263b532b8ff3",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/50ec56ba134369eed970bbf812f6959e95329b6fb4a5ad5aaad6263b532b8ff3.model",
+  "slug": "wings_8_ee401e1a",
+  "category": "wings",
+  "displayName": "Костические крылья",
+  "bounds": {
+    "min_x": -38,
+    "max_x": 38,
+    "min_y": -13,
+    "max_y": 13.12701,
+    "min_z": -2,
+    "max_z": 6.4,
+    "center_x": 0.0,
+    "center_y": 0.06350500000000014,
+    "center_z": 2.2,
+    "height": 26.12701
+  }
+}

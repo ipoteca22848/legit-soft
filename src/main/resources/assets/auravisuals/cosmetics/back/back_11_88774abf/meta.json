@@ -1,0 +1,72 @@
+{
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "id": "88774abf-e5ad-4bea-a672-b2340774b5d0",
+  "contributor": "DMine",
+  "name": "Шипы",
+  "rarity": "AWARD",
+  "price": 149,
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "supportOptions": {},
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.65,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        -3.8,
+        11.3,
+        0
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "1164df7f3cc3fc181e1b2f0438fa3272cb7ebf737c4a98e4ec1e28a0788461be",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/1164df7f3cc3fc181e1b2f0438fa3272cb7ebf737c4a98e4ec1e28a0788461be.model",
+  "slug": "back_11_88774abf",
+  "category": "back",
+  "displayName": "Шипы",
+  "bounds": {
+    "min_x": -14,
+    "max_x": 6.14655,
+    "min_y": -0.4864,
+    "max_y": 18,
+    "min_z": -9.52229,
+    "max_z": 20.54823,
+    "center_x": -3.926725,
+    "center_y": 8.7568,
+    "center_z": 5.51297,
+    "height": 18.4864
+  }
+}

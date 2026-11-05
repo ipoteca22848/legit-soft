@@ -1,0 +1,69 @@
+{
+  "id": "a3051e7e-986e-4827-968f-b53df8dd26c2",
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Снеговик",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.3,
+        0.7,
+        0.3
+      ],
+      "rotation": [
+        180,
+        0,
+        45
+      ],
+      "scale": [
+        -0.062,
+        0.062,
+        0.062
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "051d8c51262ec8bbbdd21d0a3b7ec135543e4ac3d70aa0443d2e3fe3641cfeef",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/051d8c51262ec8bbbdd21d0a3b7ec135543e4ac3d70aa0443d2e3fe3641cfeef.model",
+  "slug": "back_5_a3051e7e",
+  "category": "back",
+  "displayName": "Снеговик",
+  "bounds": {
+    "min_x": -6.10236,
+    "max_x": 6.10236,
+    "min_y": 0,
+    "max_y": 21.01777,
+    "min_z": -5.75,
+    "max_z": 6.38026,
+    "center_x": 0.0,
+    "center_y": 10.508885,
+    "center_z": 0.3151299999999999,
+    "height": 21.01777
+  }
+}

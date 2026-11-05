@@ -1,0 +1,72 @@
+{
+  "id": "997ccf8a-e867-4f34-9604-5770b139b2be",
+  "contributor": "Dionis",
+  "name": "Топор сао топ 51-200",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 149,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        -0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "createdTime": 1730339571510,
+  "hash256": "04ef41d2e4eddf9fbfcb1944244adf9eb602790348c0e66fc23c00f975a91db4",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/04ef41d2e4eddf9fbfcb1944244adf9eb602790348c0e66fc23c00f975a91db4.model",
+  "slug": "back_16_997ccf8a",
+  "category": "back",
+  "displayName": "Топор сао топ 51-200",
+  "bounds": {
+    "min_x": -10.225,
+    "max_x": 14.325,
+    "min_y": -0.175,
+    "max_y": 29.325,
+    "min_z": -3,
+    "max_z": 3.5,
+    "center_x": 2.05,
+    "center_y": 14.575,
+    "center_z": 0.25,
+    "height": 29.5
+  }
+}

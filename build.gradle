@@ -1,0 +1,81 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+    id 'idea'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    modImplementation files('libs/bamber-trigger-engine.jar')
+    compileOnly 'org.projectlombok:lombok:1.18.42'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // The original nested JARs are also preserved under META-INF/jars in resources.
+    // They are dependencies here; do not include() them a second time.
+    implementation fileTree(dir: 'src/main/resources/META-INF/jars', include: ['*.jar'])
+}
+
+loom {
+    accessWidenerPath = file('src/main/resources/auravisuals.accesswidener')
+    mixin {
+        useLegacyMixinAp = false
+    }
+    runs {
+        client {
+            // Skip the promotional browser action during development runs.
+            vmArg '-Dauravisuals.tghook=true'
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-Xmaxerrs', '1000']
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = false
+    }
+}
+
+// Local integration smoke check; excluded from normal release artifacts.
+if (project.hasProperty('smoke')) {
+    sourceSets.main.java.srcDir('src/smoke/java')
+    processResources {
+        doLast {
+            def metadata = file("${destinationDir}/fabric.mod.json")
+            def parsed = new groovy.json.JsonSlurper().parse(metadata)
+            parsed.entrypoints.client.add('com.bamber.smoke.SmokeCheck')
+            parsed.jars = parsed.jars.findAll { !it.file.endsWith('bamber-trigger-engine.jar') }
+            metadata.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(parsed))
+        }
+    }
+}

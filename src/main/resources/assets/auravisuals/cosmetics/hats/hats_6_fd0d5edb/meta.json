@@ -1,0 +1,72 @@
+{
+  "id": "fd0d5edb-da0b-4a3c-b9ab-610c7d410c1b",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "FairyZelz",
+  "name": "Змеюка",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 349,
+  "rarity": "AWARD",
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        -25,
+        0,
+        0
+      ],
+      "scale": [
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "HAT",
+  "conflictGroups": [
+    "hat",
+    "head"
+  ],
+  "hash256": "73d30ac8e955cde42707c9537df0af2aa3ca658c46bc278b727a6c3eeb1eaa55",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/73d30ac8e955cde42707c9537df0af2aa3ca658c46bc278b727a6c3eeb1eaa55.model",
+  "slug": "hats_6_fd0d5edb",
+  "category": "hats",
+  "displayName": "Змеюка",
+  "bounds": {
+    "min_x": -5.5,
+    "max_x": 5.5,
+    "min_y": 20.96927,
+    "max_y": 33,
+    "min_z": -5.5,
+    "max_z": 5.5,
+    "center_x": 0.0,
+    "center_y": 26.984635,
+    "center_z": 0.0,
+    "height": 12.030729999999998
+  }
+}

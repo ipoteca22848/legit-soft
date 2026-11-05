@@ -1,0 +1,74 @@
+{
+  "gui_open": {
+    "category": "master",
+    "sounds": [
+      "auravisuals:gui_open"
+    ]
+  },
+  "gui_close": {
+    "category": "master",
+    "sounds": [
+      "auravisuals:gui_close"
+    ]
+  },
+  "sixseven": {
+    "category": "master",
+    "sounds": [
+      "auravisuals:sixseven"
+    ]
+  },
+  "ios_type": {
+    "category": "master",
+    "sounds": [
+      "auravisuals:ios_type"
+    ]
+  },
+  "disable": {
+    "category": "master",
+    "sounds": [ "auravisuals:disable" ]
+  },
+  "disable1": {
+    "category": "master",
+    "sounds": [ "auravisuals:disable1" ]
+  },
+  "disable2": {
+    "category": "master",
+    "sounds": [ "auravisuals:disable2" ]
+  },
+  "enable": {
+    "category": "master",
+    "sounds": [ "auravisuals:enable" ]
+  },
+  "enable1": {
+    "category": "master",
+    "sounds": [ "auravisuals:enable1" ]
+  },
+  "enable2": {
+    "category": "master",
+    "sounds": [ "auravisuals:enable2" ]
+  },
+  "kill2": {
+    "category": "master",
+    "sounds": [ "auravisuals:kill2" ]
+  },
+  "nya": {
+    "category": "master",
+    "sounds": [ "auravisuals:nya" ]
+  },
+  "skeet": {
+    "category": "master",
+    "sounds": [ "auravisuals:skeet" ]
+  },
+  "uwu": {
+    "category": "master",
+    "sounds": [ "auravisuals:uwu" ]
+  },
+  "welcome": {
+    "category": "master",
+    "sounds": [ "auravisuals:welcome" ]
+  },
+  "bell": {
+    "category": "master",
+    "sounds": [ "auravisuals:bell" ]
+  }
+}

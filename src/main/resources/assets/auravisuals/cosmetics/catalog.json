@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "cddf708b-a983-42c4-91e6-4157b39eb711",
+    "slug": "wings_1_cddf708b",
+    "name": "Buzz Neon Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_1_cddf708b/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_1_cddf708b/texture.png",
+    "metaPath": "cosmetics/wings/wings_1_cddf708b/meta.json",
+    "previewPath": "cosmetics/wings/wings_1_cddf708b/preview.png",
+    "animationPath": "cosmetics/wings/wings_1_cddf708b/animation.json",
+    "offset": [
+      -0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "81b06a4b-54ba-43b1-aed6-279a80f5b32b",
+    "slug": "wings_3_81b06a4b",
+    "name": "Seraph Angel Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_3_81b06a4b/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_3_81b06a4b/texture.png",
+    "metaPath": "cosmetics/wings/wings_3_81b06a4b/meta.json",
+    "previewPath": "cosmetics/wings/wings_3_81b06a4b/preview.png",
+    "animationPath": "cosmetics/wings/wings_3_81b06a4b/animation.json",
+    "offset": [
+      -0.0,
+      8.5,
+      6.25
+    ]
+  },
+  {
+    "id": "ac93f2ee-881d-4801-b4cd-af545b6ac498",
+    "slug": "wings_4_ac93f2ee",
+    "name": "Infernal Fire Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_4_ac93f2ee/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_4_ac93f2ee/texture.png",
+    "metaPath": "cosmetics/wings/wings_4_ac93f2ee/meta.json",
+    "previewPath": "cosmetics/wings/wings_4_ac93f2ee/preview.png",
+    "animationPath": "cosmetics/wings/wings_4_ac93f2ee/animation.json",
+    "offset": [
+      -3.552713678800501e-15,
+      8.40182,
+      6.5
+    ]
+  },
+  {
+    "id": "ee401e1a-2275-4398-ac42-15ebc7f1d731",
+    "slug": "wings_7_ee401e1a",
+    "name": "Bone Reaper Wings I",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_7_ee401e1a/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_7_ee401e1a/texture.png",
+    "metaPath": "cosmetics/wings/wings_7_ee401e1a/meta.json",
+    "previewPath": "cosmetics/wings/wings_7_ee401e1a/preview.png",
+    "animationPath": "cosmetics/wings/wings_7_ee401e1a/animation.json",
+    "offset": [
+      -0.0,
+      15.647855,
+      4.25
+    ]
+  },
+  {
+    "id": "ee401e1a-2275-4398-ac42-15ebc7f1d732",
+    "slug": "wings_8_ee401e1a",
+    "name": "Bone Reaper Wings II",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_8_ee401e1a/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_8_ee401e1a/texture.png",
+    "metaPath": "cosmetics/wings/wings_8_ee401e1a/meta.json",
+    "previewPath": "cosmetics/wings/wings_8_ee401e1a/preview.png",
+    "animationPath": "cosmetics/wings/wings_8_ee401e1a/animation.json",
+    "offset": [
+      -0.0,
+      17.936495,
+      4.5
+    ]
+  },
+  {
+    "id": "ee401e1a-2275-4398-ac42-15ebc7f1d733",
+    "slug": "wings_9_ee401e1a",
+    "name": "Bone Reaper Wings III",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_9_ee401e1a/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_9_ee401e1a/texture.png",
+    "metaPath": "cosmetics/wings/wings_9_ee401e1a/meta.json",
+    "previewPath": "cosmetics/wings/wings_9_ee401e1a/preview.png",
+    "animationPath": "cosmetics/wings/wings_9_ee401e1a/animation.json",
+    "offset": [
+      -0.0,
+      23.5,
+      4.0
+    ]
+  },
+  {
+    "id": "bc304070-b031-484e-b993-9dbc6a8a4e31",
+    "slug": "wings_10_bc304070",
+    "name": "Frost Symphony Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_10_bc304070/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_10_bc304070/texture.png",
+    "metaPath": "cosmetics/wings/wings_10_bc304070/meta.json",
+    "previewPath": "cosmetics/wings/wings_10_bc304070/preview.png",
+    "animationPath": "cosmetics/wings/wings_10_bc304070/animation.json",
+    "offset": [
+      -0.0,
+      11.19504,
+      0.1499999999999999
+    ]
+  },
+  {
+    "id": "f684c6fe-a735-4a27-8714-42c63b12ceb1",
+    "slug": "wings_11_f684c6fe",
+    "name": "Chaos Purple Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_11_f684c6fe/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_11_f684c6fe/texture.png",
+    "metaPath": "cosmetics/wings/wings_11_f684c6fe/meta.json",
+    "previewPath": "cosmetics/wings/wings_11_f684c6fe/preview.png",
+    "animationPath": "cosmetics/wings/wings_11_f684c6fe/animation.json",
+    "offset": [
+      -0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "f684c6fe-a735-4a27-8714-42c63b12ceb2",
+    "slug": "wings_12_f684c6fe",
+    "name": "Crystal Glider Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_12_f684c6fe/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_12_f684c6fe/texture.png",
+    "metaPath": "cosmetics/wings/wings_12_f684c6fe/meta.json",
+    "previewPath": "cosmetics/wings/wings_12_f684c6fe/preview.png",
+    "animationPath": "cosmetics/wings/wings_12_f684c6fe/animation.json",
+    "offset": [
+      -0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "04875af2-765a-4046-8941-71f8c919b652",
+    "slug": "wings_13_04875af2",
+    "name": "Holy Sacred Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_13_04875af2/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_13_04875af2/texture.png",
+    "metaPath": "cosmetics/wings/wings_13_04875af2/meta.json",
+    "previewPath": "cosmetics/wings/wings_13_04875af2/preview.png",
+    "animationPath": "cosmetics/wings/wings_13_04875af2/animation.json",
+    "offset": [
+      1.7763568394002505e-15,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "19ec3eb9-62e2-4cd3-9cb1-6403fd5a8fc4",
+    "slug": "wings_14_19ec3eb9",
+    "name": "Freedom Eagle Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_14_19ec3eb9/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_14_19ec3eb9/texture.png",
+    "metaPath": "cosmetics/wings/wings_14_19ec3eb9/meta.json",
+    "previewPath": "cosmetics/wings/wings_14_19ec3eb9/preview.png",
+    "animationPath": "cosmetics/wings/wings_14_19ec3eb9/animation.json",
+    "offset": [
+      -0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "f65e409f-ee63-4ea9-96f8-136d5377bd20",
+    "slug": "wings_15_f65e409f",
+    "name": "Solar Phoenix Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_15_f65e409f/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_15_f65e409f/texture.png",
+    "metaPath": "cosmetics/wings/wings_15_f65e409f/meta.json",
+    "previewPath": "cosmetics/wings/wings_15_f65e409f/preview.png",
+    "animationPath": "cosmetics/wings/wings_15_f65e409f/animation.json",
+    "offset": [
+      -0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "c0b373f2-b2dc-4515-a67c-25cdcdf3e15e",
+    "slug": "wings_20_c0b373f2",
+    "name": "Amethyst Glider",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_20_c0b373f2/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_20_c0b373f2/texture.png",
+    "metaPath": "cosmetics/wings/wings_20_c0b373f2/meta.json",
+    "previewPath": "cosmetics/wings/wings_20_c0b373f2/preview.png",
+    "animationPath": "cosmetics/wings/wings_20_c0b373f2/animation.json",
+    "offset": [
+      -0.0,
+      9.909385,
+      1.19321
+    ]
+  },
+  {
+    "id": "3e0bd0d3-9dfb-4f33-88fa-677ff00f0f9a",
+    "slug": "wings_21_3e0bd0d3",
+    "name": "Guardian Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_21_3e0bd0d3/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_21_3e0bd0d3/texture.png",
+    "metaPath": "cosmetics/wings/wings_21_3e0bd0d3/meta.json",
+    "previewPath": "cosmetics/wings/wings_21_3e0bd0d3/preview.png",
+    "animationPath": "cosmetics/wings/wings_21_3e0bd0d3/animation.json",
+    "offset": [
+      -1.7763568394002505e-15,
+      10.102825,
+      1.3
+    ]
+  },
+  {
+    "id": "3dfa663d-5837-4d15-8e17-16136c467a78",
+    "slug": "wings_22_3dfa663d",
+    "name": "Sparrow Feather Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_22_3dfa663d/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_22_3dfa663d/texture.png",
+    "metaPath": "cosmetics/wings/wings_22_3dfa663d/meta.json",
+    "previewPath": "cosmetics/wings/wings_22_3dfa663d/preview.png",
+    "animationPath": "cosmetics/wings/wings_22_3dfa663d/animation.json",
+    "offset": [
+      0.044670000000001764,
+      8.041595000000001,
+      2.57521
+    ]
+  },
+  {
+    "id": "28b34740-71e5-4467-8d3f-23e2cf14a464",
+    "slug": "wings_23_28b34740",
+    "name": "Vampire Bat Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_23_28b34740/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_23_28b34740/texture.png",
+    "metaPath": "cosmetics/wings/wings_23_28b34740/meta.json",
+    "previewPath": "cosmetics/wings/wings_23_28b34740/preview.png",
+    "animationPath": "cosmetics/wings/wings_23_28b34740/animation.json",
+    "offset": [
+      -0.0,
+      8.616724999999999,
+      2.0433
+    ]
+  },
+  {
+    "id": "7fc46dd7-111b-460c-9b44-f821f4f07bee",
+    "slug": "wings_24_7fc46dd7",
+    "name": "Golden Aurum Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_24_7fc46dd7/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_24_7fc46dd7/texture.png",
+    "metaPath": "cosmetics/wings/wings_24_7fc46dd7/meta.json",
+    "previewPath": "cosmetics/wings/wings_24_7fc46dd7/preview.png",
+    "animationPath": "cosmetics/wings/wings_24_7fc46dd7/animation.json",
+    "offset": [
+      -0.0,
+      11.965135,
+      1.79683
+    ]
+  },
+  {
+    "id": "1740f871-1d98-4088-b152-70ae523b8238",
+    "slug": "wings_25_1740f871",
+    "name": "Hydra Venom Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/wings/wings_25_1740f871/model.geo.json",
+    "texturePath": "cosmetics/wings/wings_25_1740f871/texture.png",
+    "metaPath": "cosmetics/wings/wings_25_1740f871/meta.json",
+    "previewPath": "cosmetics/wings/wings_25_1740f871/preview.png",
+    "animationPath": "cosmetics/wings/wings_25_1740f871/animation.json",
+    "offset": [
+      1.7763568394002505e-15,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "f83bf9c2-b7bd-438b-b5ec-d7ae650f9513",
+    "slug": "hats_1_f83bf9c2",
+    "name": "Cyber 2026 Crown",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_1_f83bf9c2/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_1_f83bf9c2/texture.png",
+    "metaPath": "cosmetics/hats/hats_1_f83bf9c2/meta.json",
+    "previewPath": "cosmetics/hats/hats_1_f83bf9c2/preview.png",
+    "offset": [
+      -4.440892098500626e-16,
+      -24.0,
+      -0.0
+    ]
+  },
+  {
+    "id": "cf6887c0-cb34-44bb-8593-c966e6641a16",
+    "slug": "hats_2_cf6887c0",
+    "name": "Anonymous Mask",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_2_cf6887c0/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_2_cf6887c0/texture.png",
+    "metaPath": "cosmetics/hats/hats_2_cf6887c0/meta.json",
+    "previewPath": "cosmetics/hats/hats_2_cf6887c0/preview.png",
+    "offset": [
+      -0.30000000000000027,
+      0,
+      -0.0
+    ]
+  },
+  {
+    "id": "9fd1b6c2-1de8-4f86-8713-fc059496b3c6",
+    "slug": "hats_3_9fd1b6c2",
+    "name": "Dragon Knight Helm",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_3_9fd1b6c2/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_3_9fd1b6c2/texture.png",
+    "metaPath": "cosmetics/hats/hats_3_9fd1b6c2/meta.json",
+    "previewPath": "cosmetics/hats/hats_3_9fd1b6c2/preview.png",
+    "offset": [
+      -0.0,
+      -1.10379,
+      -2.0972350000000004
+    ]
+  },
+  {
+    "id": "469c9b9e-bae5-4246-8b4d-d12f6e022434",
+    "slug": "hats_5_469c9b9e",
+    "name": "Gentleman Tophat",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_5_469c9b9e/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_5_469c9b9e/texture.png",
+    "metaPath": "cosmetics/hats/hats_5_469c9b9e/meta.json",
+    "previewPath": "cosmetics/hats/hats_5_469c9b9e/preview.png",
+    "offset": [
+      -0.0,
+      -10.2725,
+      -0.0
+    ]
+  },
+  {
+    "id": "fd0d5edb-da0b-4a3c-b9ab-610c7d410c1b",
+    "slug": "hats_6_fd0d5edb",
+    "name": "Serpent Headband",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_6_fd0d5edb/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_6_fd0d5edb/texture.png",
+    "metaPath": "cosmetics/hats/hats_6_fd0d5edb/meta.json",
+    "previewPath": "cosmetics/hats/hats_6_fd0d5edb/preview.png",
+    "offset": [
+      -0.0,
+      -24.0,
+      -0.0
+    ]
+  },
+  {
+    "id": "e2b017aa-6946-4258-96a6-d4eb87f134b6",
+    "slug": "hats_13_e2b017aa",
+    "name": "Nutcracker Tophat",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_13_e2b017aa/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_13_e2b017aa/texture.png",
+    "metaPath": "cosmetics/hats/hats_13_e2b017aa/meta.json",
+    "previewPath": "cosmetics/hats/hats_13_e2b017aa/preview.png",
+    "offset": [
+      -0.0,
+      1.0,
+      -1.0
+    ]
+  },
+  {
+    "id": "5a319037-365f-4219-9d25-8f6e091c2f5f",
+    "slug": "hats_15_5a319037",
+    "name": "Gift Box Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_15_5a319037/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_15_5a319037/texture.png",
+    "metaPath": "cosmetics/hats/hats_15_5a319037/meta.json",
+    "previewPath": "cosmetics/hats/hats_15_5a319037/preview.png",
+    "offset": [
+      -0.0,
+      -0.25,
+      -0.0
+    ]
+  },
+  {
+    "id": "f37d302a-df34-4ed9-a84f-60ad5f8781fa",
+    "slug": "hats_16_f37d302a",
+    "name": "Royal Present Box",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_16_f37d302a/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_16_f37d302a/texture.png",
+    "metaPath": "cosmetics/hats/hats_16_f37d302a/meta.json",
+    "previewPath": "cosmetics/hats/hats_16_f37d302a/preview.png",
+    "offset": [
+      -0.0,
+      0,
+      -0.0
+    ]
+  },
+  {
+    "id": "8f15edc6-6b0e-4b59-a9e8-a31d9ce50c2b",
+    "slug": "hats_17_8f15edc6",
+    "name": "Nordic Reindeer Horns",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_17_8f15edc6/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_17_8f15edc6/texture.png",
+    "metaPath": "cosmetics/hats/hats_17_8f15edc6/meta.json",
+    "previewPath": "cosmetics/hats/hats_17_8f15edc6/preview.png",
+    "offset": [
+      -0.0,
+      -1,
+      1.0
+    ]
+  },
+  {
+    "id": "f2a80fc7-833b-4aaf-9d71-ad6d99ce871f",
+    "slug": "hats_20_f2a80fc7",
+    "name": "Classic Bowler Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_20_f2a80fc7/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_20_f2a80fc7/texture.png",
+    "metaPath": "cosmetics/hats/hats_20_f2a80fc7/meta.json",
+    "previewPath": "cosmetics/hats/hats_20_f2a80fc7/preview.png",
+    "offset": [
+      -0.0,
+      -5,
+      -0.0
+    ]
+  },
+  {
+    "id": "b1c0cee2-29ae-4c9e-b765-4259b7f68e87",
+    "slug": "hats_21_b1c0cee2",
+    "name": "Pipe Head Armor",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_21_b1c0cee2/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_21_b1c0cee2/texture.png",
+    "metaPath": "cosmetics/hats/hats_21_b1c0cee2/meta.json",
+    "previewPath": "cosmetics/hats/hats_21_b1c0cee2/preview.png",
+    "offset": [
+      -0.0,
+      -5.5,
+      -0.0
+    ]
+  },
+  {
+    "id": "09bcffae-40a4-4265-951c-e03130ea1f02",
+    "slug": "hats_22_09bcffae",
+    "name": "AirPods Max Headset",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_22_09bcffae/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_22_09bcffae/texture.png",
+    "metaPath": "cosmetics/hats/hats_22_09bcffae/meta.json",
+    "previewPath": "cosmetics/hats/hats_22_09bcffae/preview.png",
+    "offset": [
+      -0.0,
+      -4.1,
+      -0.0
+    ]
+  },
+  {
+    "id": "f7125cb5-b640-4ddb-bfd1-b1f9bb6be58d",
+    "slug": "hats_23_f7125cb5",
+    "name": "Apple Vision Pro",
+    "category": "hats",
+    "modelPath": "cosmetics/hats/hats_23_f7125cb5/model.geo.json",
+    "texturePath": "cosmetics/hats/hats_23_f7125cb5/texture.png",
+    "metaPath": "cosmetics/hats/hats_23_f7125cb5/meta.json",
+    "previewPath": "cosmetics/hats/hats_23_f7125cb5/preview.png",
+    "offset": [
+      -0.0,
+      -4.4,
+      0.2749999999999999
+    ]
+  },
+  {
+    "id": "42b31d7f-cdb0-4896-b741-cc9b014d9b62",
+    "slug": "back_2_42b31d7f",
+    "name": "Рюкзак-пришелец ",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_2_42b31d7f/model.geo.json",
+    "texturePath": "cosmetics/back/back_2_42b31d7f/texture.png",
+    "metaPath": "cosmetics/back/back_2_42b31d7f/meta.json",
+    "previewPath": "cosmetics/back/back_2_42b31d7f/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "0c472e0e-e367-4250-8234-ac47725e2ade",
+    "slug": "back_3_0c472e0e",
+    "name": "Рюкзак Китсуне",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_3_0c472e0e/model.geo.json",
+    "texturePath": "cosmetics/back/back_3_0c472e0e/texture.png",
+    "metaPath": "cosmetics/back/back_3_0c472e0e/meta.json",
+    "previewPath": "cosmetics/back/back_3_0c472e0e/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "73991370-0641-4e56-b92c-1266c29b41ab",
+    "slug": "back_4_73991370",
+    "name": "Мешок с подарками",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_4_73991370/model.geo.json",
+    "texturePath": "cosmetics/back/back_4_73991370/texture.png",
+    "metaPath": "cosmetics/back/back_4_73991370/meta.json",
+    "previewPath": "cosmetics/back/back_4_73991370/preview.png",
+    "offset": [
+      -2.1249999999999996,
+      8.367715,
+      8.5
+    ]
+  },
+  {
+    "id": "a3051e7e-986e-4827-968f-b53df8dd26c2",
+    "slug": "back_5_a3051e7e",
+    "name": "Снеговик",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_5_a3051e7e/model.geo.json",
+    "texturePath": "cosmetics/back/back_5_a3051e7e/texture.png",
+    "metaPath": "cosmetics/back/back_5_a3051e7e/meta.json",
+    "previewPath": "cosmetics/back/back_5_a3051e7e/preview.png",
+    "offset": [
+      -0.0,
+      7.491115000000001,
+      8.25
+    ]
+  },
+  {
+    "id": "ba4234eb-c846-4012-bd90-fdd71c25dc65",
+    "slug": "back_6_ba4234eb",
+    "name": "Игровой автомат",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_6_ba4234eb/model.geo.json",
+    "texturePath": "cosmetics/back/back_6_ba4234eb/texture.png",
+    "metaPath": "cosmetics/back/back_6_ba4234eb/meta.json",
+    "previewPath": "cosmetics/back/back_6_ba4234eb/preview.png",
+    "offset": [
+      -0.0,
+      5.594999999999999,
+      5.92
+    ]
+  },
+  {
+    "id": "ba4234eb-c846-4012-bd90-fdd71c25dc66",
+    "slug": "back_7_ba4234eb",
+    "name": "Игровой автомат",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_7_ba4234eb/model.geo.json",
+    "texturePath": "cosmetics/back/back_7_ba4234eb/texture.png",
+    "metaPath": "cosmetics/back/back_7_ba4234eb/meta.json",
+    "previewPath": "cosmetics/back/back_7_ba4234eb/preview.png",
+    "offset": [
+      -0.0,
+      5.594999999999999,
+      5.92
+    ]
+  },
+  {
+    "id": "ba4234eb-c846-4012-bd90-fdd71c25dc67",
+    "slug": "back_8_ba4234eb",
+    "name": "Игровой автомат",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_8_ba4234eb/model.geo.json",
+    "texturePath": "cosmetics/back/back_8_ba4234eb/texture.png",
+    "metaPath": "cosmetics/back/back_8_ba4234eb/meta.json",
+    "previewPath": "cosmetics/back/back_8_ba4234eb/preview.png",
+    "offset": [
+      -0.0,
+      5.594999999999999,
+      5.92
+    ]
+  },
+  {
+    "id": "ba4234eb-c846-4012-bd90-fdd71c25dc68",
+    "slug": "back_9_ba4234eb",
+    "name": "Игровой автомат",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_9_ba4234eb/model.geo.json",
+    "texturePath": "cosmetics/back/back_9_ba4234eb/texture.png",
+    "metaPath": "cosmetics/back/back_9_ba4234eb/meta.json",
+    "previewPath": "cosmetics/back/back_9_ba4234eb/preview.png",
+    "offset": [
+      -0.0,
+      5.594999999999999,
+      5.92
+    ]
+  },
+  {
+    "id": "94b04f2e-1d48-4d24-89e9-a16540ca04ae",
+    "slug": "back_10_94b04f2e",
+    "name": "Valkyrie Broadsword",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_10_94b04f2e/model.geo.json",
+    "texturePath": "cosmetics/back/back_10_94b04f2e/texture.png",
+    "metaPath": "cosmetics/back/back_10_94b04f2e/meta.json",
+    "previewPath": "cosmetics/back/back_10_94b04f2e/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "88774abf-e5ad-4bea-a672-b2340774b5d0",
+    "slug": "back_11_88774abf",
+    "name": "Guitar Rockstar Pack",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_11_88774abf/model.geo.json",
+    "texturePath": "cosmetics/back/back_11_88774abf/texture.png",
+    "metaPath": "cosmetics/back/back_11_88774abf/meta.json",
+    "previewPath": "cosmetics/back/back_11_88774abf/preview.png",
+    "offset": [
+      3.926725,
+      9.2432,
+      12.02229
+    ]
+  },
+  {
+    "id": "6d765ef2-0e0f-4126-8ff0-bd6d5675f658",
+    "slug": "back_12_6d765ef2",
+    "name": "Steampunk Gearpack",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_12_6d765ef2/model.geo.json",
+    "texturePath": "cosmetics/back/back_12_6d765ef2/texture.png",
+    "metaPath": "cosmetics/back/back_12_6d765ef2/meta.json",
+    "previewPath": "cosmetics/back/back_12_6d765ef2/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "ae87b373-b92d-4f51-a00a-80ba47851f3b",
+    "slug": "back_13_ae87b373",
+    "name": "Dark Magic Grimoire",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_13_ae87b373/model.geo.json",
+    "texturePath": "cosmetics/back/back_13_ae87b373/texture.png",
+    "metaPath": "cosmetics/back/back_13_ae87b373/meta.json",
+    "previewPath": "cosmetics/back/back_13_ae87b373/preview.png",
+    "offset": [
+      2.5,
+      -0.7219149999999992,
+      -2.25
+    ]
+  },
+  {
+    "id": "82cf5272-a02a-400c-908a-f87068c81b72",
+    "slug": "back_14_82cf5272",
+    "name": "Ghostly Skull Cape",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_14_82cf5272/model.geo.json",
+    "texturePath": "cosmetics/back/back_14_82cf5272/texture.png",
+    "metaPath": "cosmetics/back/back_14_82cf5272/meta.json",
+    "previewPath": "cosmetics/back/back_14_82cf5272/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "3d08f827-67d9-46c3-b690-34ceb305aa5a",
+    "slug": "back_15_3d08f827",
+    "name": "Рюкзак с минералами",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_15_3d08f827/model.geo.json",
+    "texturePath": "cosmetics/back/back_15_3d08f827/texture.png",
+    "metaPath": "cosmetics/back/back_15_3d08f827/meta.json",
+    "previewPath": "cosmetics/back/back_15_3d08f827/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "997ccf8a-e867-4f34-9604-5770b139b2be",
+    "slug": "back_16_997ccf8a",
+    "name": "Топор сао топ 51-200",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_16_997ccf8a/model.geo.json",
+    "texturePath": "cosmetics/back/back_16_997ccf8a/texture.png",
+    "metaPath": "cosmetics/back/back_16_997ccf8a/meta.json",
+    "previewPath": "cosmetics/back/back_16_997ccf8a/preview.png",
+    "offset": [
+      -2.05,
+      3.4250000000000007,
+      5.5
+    ]
+  },
+  {
+    "id": "d31ee85e-382b-4cf5-8dc8-d42e4ad87894",
+    "slug": "back_17_d31ee85e",
+    "name": "Рюкзак Марио ",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_17_d31ee85e/model.geo.json",
+    "texturePath": "cosmetics/back/back_17_d31ee85e/texture.png",
+    "metaPath": "cosmetics/back/back_17_d31ee85e/meta.json",
+    "previewPath": "cosmetics/back/back_17_d31ee85e/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "b9cf72a5-3a70-46bc-a33e-024e0175c337",
+    "slug": "back_18_b9cf72a5",
+    "name": "Флаг надежд?",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_18_b9cf72a5/model.geo.json",
+    "texturePath": "cosmetics/back/back_18_b9cf72a5/texture.png",
+    "metaPath": "cosmetics/back/back_18_b9cf72a5/meta.json",
+    "previewPath": "cosmetics/back/back_18_b9cf72a5/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "5b7aef16-a942-450c-9cca-ed22dce2e76b",
+    "slug": "back_19_5b7aef16",
+    "name": "Портальная пушка",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_19_5b7aef16/model.geo.json",
+    "texturePath": "cosmetics/back/back_19_5b7aef16/texture.png",
+    "metaPath": "cosmetics/back/back_19_5b7aef16/meta.json",
+    "previewPath": "cosmetics/back/back_19_5b7aef16/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "e91ba7a0-80b1-4d37-b0d4-7a152aa02b67",
+    "slug": "back_20_e91ba7a0",
+    "name": "Аркадный геймпад",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_20_e91ba7a0/model.geo.json",
+    "texturePath": "cosmetics/back/back_20_e91ba7a0/texture.png",
+    "metaPath": "cosmetics/back/back_20_e91ba7a0/meta.json",
+    "previewPath": "cosmetics/back/back_20_e91ba7a0/texture.png",
+    "offset": [
+      -0.0,
+      13.526354999999999,
+      5.3
+    ]
+  },
+  {
+    "id": "61fb616b-fb5e-4ce9-9655-74caea1dbefe",
+    "slug": "back_21_61fb616b",
+    "name": "Медовый пчелиный рюкзак",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_21_61fb616b/model.geo.json",
+    "texturePath": "cosmetics/back/back_21_61fb616b/texture.png",
+    "metaPath": "cosmetics/back/back_21_61fb616b/meta.json",
+    "previewPath": "cosmetics/back/back_21_61fb616b/preview.png",
+    "offset": [
+      -0.0,
+      10.281745,
+      12.5
+    ]
+  },
+  {
+    "id": "fd63e8e7-7e15-4f6a-90ef-1fd951d881d3",
+    "slug": "back_22_fd63e8e7",
+    "name": "Бочка с пивом",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_22_fd63e8e7/model.geo.json",
+    "texturePath": "cosmetics/back/back_22_fd63e8e7/texture.png",
+    "metaPath": "cosmetics/back/back_22_fd63e8e7/meta.json",
+    "previewPath": "cosmetics/back/back_22_fd63e8e7/preview.png",
+    "offset": [
+      -2.125,
+      10.25,
+      9.125
+    ]
+  },
+  {
+    "id": "7fef0612-b249-4eaf-bdc5-fdefa611fddd",
+    "slug": "back_23_7fef0612",
+    "name": "Скелет прародителя",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_23_7fef0612/model.geo.json",
+    "texturePath": "cosmetics/back/back_23_7fef0612/texture.png",
+    "metaPath": "cosmetics/back/back_23_7fef0612/meta.json",
+    "previewPath": "cosmetics/back/back_23_7fef0612/preview.png",
+    "offset": [
+      -0.0,
+      11.45,
+      5.5
+    ]
+  },
+  {
+    "id": "0212a027-4a9d-49cf-a79a-4ce2c59f98fa",
+    "slug": "back_24_0212a027",
+    "name": "Рюкзак-дракон",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_24_0212a027/model.geo.json",
+    "texturePath": "cosmetics/back/back_24_0212a027/texture.png",
+    "metaPath": "cosmetics/back/back_24_0212a027/meta.json",
+    "previewPath": "cosmetics/back/back_24_0212a027/preview.png",
+    "offset": [
+      -0.0,
+      9.0,
+      12.76808
+    ]
+  },
+  {
+    "id": "0c8e21ea-54ed-44aa-bdff-14abace4dd9e",
+    "slug": "back_25_0c8e21ea",
+    "name": "Золотой меч рыцаря",
+    "category": "back",
+    "modelPath": "cosmetics/back/back_25_0c8e21ea/model.geo.json",
+    "texturePath": "cosmetics/back/back_25_0c8e21ea/texture.png",
+    "metaPath": "cosmetics/back/back_25_0c8e21ea/meta.json",
+    "previewPath": "cosmetics/back/back_25_0c8e21ea/preview.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "686b0742-e9fe-4f9f-9fe3-9b2821157672",
+    "slug": "pets_1_686b0742",
+    "name": "Морковная погоня",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_1_686b0742/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_1_686b0742/texture.png",
+    "metaPath": "cosmetics/pets/pets_1_686b0742/meta.json",
+    "previewPath": "cosmetics/pets/pets_1_686b0742/preview.png",
+    "offset": [
+      -1.4139599999999999,
+      9,
+      -2.5999999999999996
+    ]
+  },
+  {
+    "id": "5808b0f6-8a7b-4070-89f9-d2eba3ca58e9",
+    "slug": "pets_2_5808b0f6",
+    "name": "Вырезка по тыкве",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_2_5808b0f6/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_2_5808b0f6/texture.png",
+    "metaPath": "cosmetics/pets/pets_2_5808b0f6/meta.json",
+    "previewPath": "cosmetics/pets/pets_2_5808b0f6/preview.png",
+    "offset": [
+      -3.75157,
+      -2,
+      -0.0
+    ]
+  },
+  {
+    "id": "4d300ebb-953f-4046-8a62-6a09f6be517e",
+    "slug": "pets_3_4d300ebb",
+    "name": "Взлом",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_3_4d300ebb/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_3_4d300ebb/texture.png",
+    "metaPath": "cosmetics/pets/pets_3_4d300ebb/meta.json",
+    "previewPath": "cosmetics/pets/pets_3_4d300ebb/preview.png",
+    "offset": [
+      0.5,
+      0,
+      -0.5
+    ]
+  },
+  {
+    "id": "97551b3a-4f21-4fee-b9a0-2cbe1697ebfd",
+    "slug": "pets_5_97551b3a",
+    "name": "Эльф",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_5_97551b3a/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_5_97551b3a/texture.png",
+    "metaPath": "cosmetics/pets/pets_5_97551b3a/meta.json",
+    "previewPath": "cosmetics/pets/pets_5_97551b3a/preview.png",
+    "offset": [
+      0.25,
+      0,
+      -2.2768700000000006
+    ]
+  },
+  {
+    "id": "d97f2e47-02b7-49ac-8418-baab9c094ba0",
+    "slug": "pets_6_d97f2e47",
+    "name": "Носок с подарками",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_6_d97f2e47/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_6_d97f2e47/texture.png",
+    "metaPath": "cosmetics/pets/pets_6_d97f2e47/meta.json",
+    "previewPath": "cosmetics/pets/pets_6_d97f2e47/preview.png",
+    "offset": [
+      0.75,
+      0,
+      0.25
+    ]
+  },
+  {
+    "id": "0b032799-2ac6-43a1-b1b7-726ef04de158",
+    "slug": "pets_7_0b032799",
+    "name": "Злая печенька",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_7_0b032799/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_7_0b032799/texture.png",
+    "metaPath": "cosmetics/pets/pets_7_0b032799/meta.json",
+    "previewPath": "cosmetics/pets/pets_7_0b032799/preview.png",
+    "offset": [
+      1.5876199999999994,
+      0,
+      0.995
+    ]
+  },
+  {
+    "id": "57911b2e-f6f8-4bf4-a1a9-27859bfd2ebb",
+    "slug": "pets_8_57911b2e",
+    "name": "Зелёный подарок",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_8_57911b2e/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_8_57911b2e/texture.png",
+    "metaPath": "cosmetics/pets/pets_8_57911b2e/meta.json",
+    "previewPath": "cosmetics/pets/pets_8_57911b2e/preview.png",
+    "offset": [
+      8.881784197001252e-16,
+      0,
+      8.881784197001252e-16
+    ]
+  },
+  {
+    "id": "e529445b-e29e-4f60-a026-80e43ee6e7d5",
+    "slug": "pets_9_e529445b",
+    "name": "Утопленние",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_9_e529445b/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_9_e529445b/texture.png",
+    "metaPath": "cosmetics/pets/pets_9_e529445b/meta.json",
+    "previewPath": "cosmetics/pets/pets_9_e529445b/preview.png",
+    "offset": [
+      1.4052399999999996,
+      6.41659,
+      -0.0
+    ]
+  },
+  {
+    "id": "a8cb44ad-f381-4092-8c7e-fe1d84419eff",
+    "slug": "pets_10_a8cb44ad",
+    "name": "Chibi Alex Idol",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_10_a8cb44ad/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_10_a8cb44ad/texture.png",
+    "metaPath": "cosmetics/pets/pets_10_a8cb44ad/meta.json",
+    "previewPath": "cosmetics/pets/pets_10_a8cb44ad/preview.png",
+    "offset": [
+      -0.0,
+      0,
+      -0.0
+    ]
+  },
+  {
+    "id": "bafb845e-744f-44bd-952f-3abaa6c9e5ac",
+    "slug": "pets_11_bafb845e",
+    "name": "Baby Piggy Buddy",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_11_bafb845e/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_11_bafb845e/texture.png",
+    "metaPath": "cosmetics/pets/pets_11_bafb845e/meta.json",
+    "previewPath": "cosmetics/pets/pets_11_bafb845e/preview.png",
+    "offset": [
+      0.7177899999999999,
+      1.31242,
+      0.2501700000000002
+    ]
+  },
+  {
+    "id": "d7f59cd5-f637-451b-905a-081e9eb8b1d1",
+    "slug": "pets_12_d7f59cd5",
+    "name": "Pocket Enderman",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_12_d7f59cd5/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_12_d7f59cd5/texture.png",
+    "metaPath": "cosmetics/pets/pets_12_d7f59cd5/meta.json",
+    "previewPath": "cosmetics/pets/pets_12_d7f59cd5/preview.png",
+    "offset": [
+      0.34999999999999964,
+      0.1,
+      9.1
+    ]
+  },
+  {
+    "id": "d7f59cd5-f637-451b-905a-081e9eb8b1d4",
+    "slug": "pets_13_d7f59cd5",
+    "name": "Tiny Slime Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_13_d7f59cd5/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_13_d7f59cd5/texture.png",
+    "metaPath": "cosmetics/pets/pets_13_d7f59cd5/meta.json",
+    "previewPath": "cosmetics/pets/pets_13_d7f59cd5/preview.png",
+    "offset": [
+      -0.0,
+      0,
+      3.5
+    ]
+  },
+  {
+    "id": "d7f59cd5-f637-451b-905a-081e9eb8b1d2",
+    "slug": "pets_14_d7f59cd5",
+    "name": "Floating Heart Spirit",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_14_d7f59cd5/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_14_d7f59cd5/texture.png",
+    "metaPath": "cosmetics/pets/pets_14_d7f59cd5/meta.json",
+    "previewPath": "cosmetics/pets/pets_14_d7f59cd5/preview.png",
+    "offset": [
+      0.34999999999999964,
+      0.1,
+      9.1
+    ]
+  },
+  {
+    "id": "d7f59cd5-f637-451b-905a-081e9eb8b1d3",
+    "slug": "pets_15_d7f59cd5",
+    "name": "Mini Creeper Drone",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_15_d7f59cd5/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_15_d7f59cd5/texture.png",
+    "metaPath": "cosmetics/pets/pets_15_d7f59cd5/meta.json",
+    "previewPath": "cosmetics/pets/pets_15_d7f59cd5/preview.png",
+    "offset": [
+      0.34999999999999964,
+      0.1,
+      9.1
+    ]
+  },
+  {
+    "id": "fc40c143-55b8-4ab3-ab97-e8344efb4c75",
+    "slug": "pets_16_fc40c143",
+    "name": "Визер-скелет",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_16_fc40c143/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_16_fc40c143/texture.png",
+    "metaPath": "cosmetics/pets/pets_16_fc40c143/meta.json",
+    "previewPath": "cosmetics/pets/pets_16_fc40c143/preview.png",
+    "offset": [
+      -0.0,
+      0,
+      4.375
+    ]
+  },
+  {
+    "id": "363c9627-c8e7-4a6e-b7c6-64381543e95d",
+    "slug": "pets_17_363c9627",
+    "name": "Зомби",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_17_363c9627/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_17_363c9627/texture.png",
+    "metaPath": "cosmetics/pets/pets_17_363c9627/meta.json",
+    "previewPath": "cosmetics/pets/pets_17_363c9627/preview.png",
+    "offset": [
+      -0.0,
+      0.25,
+      -0.0
+    ]
+  },
+  {
+    "id": "95f0ae96-cfe0-4059-be87-cc555c4c84d1",
+    "slug": "pets_18_95f0ae96",
+    "name": "Топ1 аркады машина",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_18_95f0ae96/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_18_95f0ae96/texture.png",
+    "metaPath": "cosmetics/pets/pets_18_95f0ae96/meta.json",
+    "previewPath": "cosmetics/pets/pets_18_95f0ae96/preview.png",
+    "offset": [
+      -0.0,
+      -1.10078,
+      -4.75
+    ]
+  },
+  {
+    "id": "95f0ae96-cfe0-4059-be87-cc555c4c84d2",
+    "slug": "pets_19_95f0ae96",
+    "name": "Топ2 аркады машина",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_19_95f0ae96/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_19_95f0ae96/texture.png",
+    "metaPath": "cosmetics/pets/pets_19_95f0ae96/meta.json",
+    "previewPath": "cosmetics/pets/pets_19_95f0ae96/preview.png",
+    "offset": [
+      -0.0,
+      -1.10078,
+      -4.75
+    ]
+  },
+  {
+    "id": "95f0ae96-cfe0-4059-be87-cc555c4c84d3",
+    "slug": "pets_20_95f0ae96",
+    "name": "Топ3 аркады машина",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_20_95f0ae96/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_20_95f0ae96/texture.png",
+    "metaPath": "cosmetics/pets/pets_20_95f0ae96/meta.json",
+    "previewPath": "cosmetics/pets/pets_20_95f0ae96/preview.png",
+    "offset": [
+      -0.0,
+      -1.10078,
+      -4.75
+    ]
+  },
+  {
+    "id": "95f0ae96-cfe0-4059-be87-cc555c4c84d4",
+    "slug": "pets_21_95f0ae96",
+    "name": "Топ4 аркады машина",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_21_95f0ae96/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_21_95f0ae96/texture.png",
+    "metaPath": "cosmetics/pets/pets_21_95f0ae96/meta.json",
+    "previewPath": "cosmetics/pets/pets_21_95f0ae96/preview.png",
+    "offset": [
+      -0.0,
+      -1.10078,
+      -4.75
+    ]
+  },
+  {
+    "id": "8c31ea2d-75d9-43bf-856c-2893b85edacc",
+    "slug": "pets_23_8c31ea2d",
+    "name": "Марио",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_23_8c31ea2d/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_23_8c31ea2d/texture.png",
+    "metaPath": "cosmetics/pets/pets_23_8c31ea2d/meta.json",
+    "previewPath": "cosmetics/pets/pets_23_8c31ea2d/preview.png",
+    "offset": [
+      0.03143999999999991,
+      0,
+      1.023705
+    ]
+  },
+  {
+    "id": "dcc79c46-4f6a-4bc5-a601-a9b233326583",
+    "slug": "pets_24_dcc79c46",
+    "name": "Принесса Пич",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_24_dcc79c46/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_24_dcc79c46/texture.png",
+    "metaPath": "cosmetics/pets/pets_24_dcc79c46/meta.json",
+    "previewPath": "cosmetics/pets/pets_24_dcc79c46/preview.png",
+    "offset": [
+      -0.0,
+      0.20857,
+      -5.746650000000001
+    ]
+  },
+  {
+    "id": "188671f0-0c4f-4624-8559-7713d963320c",
+    "slug": "pets_25_188671f0",
+    "name": "Том",
+    "category": "pets",
+    "modelPath": "cosmetics/pets/pets_25_188671f0/model.geo.json",
+    "texturePath": "cosmetics/pets/pets_25_188671f0/texture.png",
+    "metaPath": "cosmetics/pets/pets_25_188671f0/meta.json",
+    "previewPath": "cosmetics/pets/pets_25_188671f0/preview.png",
+    "offset": [
+      -0.0,
+      0,
+      1.0
+    ]
+  }
+]

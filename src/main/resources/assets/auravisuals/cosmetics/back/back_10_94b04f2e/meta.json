@@ -1,0 +1,71 @@
+{
+  "id": "94b04f2e-1d48-4d24-89e9-a16540ca04ae",
+  "contributor": "Dionis",
+  "name": "Молоток",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 149,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        -0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730632129051,
+  "hash256": "09d9b68bdeeec46a444faa4b19676a486e5214b3bacd50a83251dec7c335554f",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/09d9b68bdeeec46a444faa4b19676a486e5214b3bacd50a83251dec7c335554f.model",
+  "slug": "back_10_94b04f2e",
+  "category": "back",
+  "displayName": "Молоток",
+  "bounds": {
+    "min_x": -4.5,
+    "max_x": 4.5,
+    "min_y": 10.5,
+    "max_y": 24.25,
+    "min_z": -3,
+    "max_z": 4.75,
+    "center_x": 0.0,
+    "center_y": 17.375,
+    "center_z": 0.875,
+    "height": 13.75
+  }
+}

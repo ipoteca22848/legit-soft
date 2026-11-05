@@ -1,0 +1,70 @@
+{
+  "id": "61fb616b-fb5e-4ce9-9655-74caea1dbefe",
+  "contributor": "Dionis",
+  "name": "Медовый пчелиный рюкзак",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.81,
+        0.3
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "hash256": "76e4fa52793ddbd6cce2e2f28b32ecf0af7ec0c2c5d3085739fb73c27c5a4a8c",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/76e4fa52793ddbd6cce2e2f28b32ecf0af7ec0c2c5d3085739fb73c27c5a4a8c.model",
+  "slug": "back_21_61fb616b",
+  "category": "back",
+  "displayName": "Медовый пчелиный рюкзак",
+  "bounds": {
+    "min_x": -8.5,
+    "max_x": 8.5,
+    "min_y": 1.43651,
+    "max_y": 14,
+    "min_z": -10,
+    "max_z": 8.375,
+    "center_x": 0.0,
+    "center_y": 7.718255,
+    "center_z": -0.8125,
+    "height": 12.56349
+  }
+}

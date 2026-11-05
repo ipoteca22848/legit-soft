@@ -1,0 +1,76 @@
+{
+  "id": "57911b2e-f6f8-4bf4-a1a9-27859bfd2ebb",
+  "categoryId": "pets",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Зелёный подарок",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 99,
+  "availableInGui": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.55,
+        -0.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.02,
+        0.02,
+        0.02
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "PET",
+  "supportOptions": {
+    "SWAP_X": {
+      "location.x": true,
+      "scale.x": true,
+      "rotate.yaw": true
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "f4ad0945c7eb3e5a285bacd935d824d985a1d577fb6ab6b960d44d888e58ad39",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/f4ad0945c7eb3e5a285bacd935d824d985a1d577fb6ab6b960d44d888e58ad39.model",
+  "slug": "pets_8_57911b2e",
+  "category": "pets",
+  "displayName": "Зелёный подарок",
+  "bounds": {
+    "min_x": -8.91351,
+    "max_x": 8.913509999999999,
+    "min_y": 0,
+    "max_y": 11,
+    "min_z": -8.91351,
+    "max_z": 8.913509999999999,
+    "center_x": -8.881784197001252e-16,
+    "center_y": 5.5,
+    "center_z": -8.881784197001252e-16,
+    "height": 11
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "5b7aef16-a942-450c-9cca-ed22dce2e76b",
+  "contributor": "Dionis",
+  "name": "Портальная пушка",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "hash256": "7167041bd2ddb0daba80bb0f969b95dcbe1c38945037d1e8cd1ee81799c2c0bd",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/7167041bd2ddb0daba80bb0f969b95dcbe1c38945037d1e8cd1ee81799c2c0bd.model",
+  "slug": "back_19_5b7aef16",
+  "category": "back",
+  "displayName": "Портальная пушка",
+  "bounds": {
+    "min_x": -6.25115,
+    "max_x": 0.9738499999999999,
+    "min_y": 19.6786,
+    "max_y": 26.2661,
+    "min_z": -9.47543,
+    "max_z": 5.8245700000000005,
+    "center_x": -2.63865,
+    "center_y": 22.97235,
+    "center_z": -1.8254299999999994,
+    "height": 6.587500000000002
+  }
+}

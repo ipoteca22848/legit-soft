@@ -1,0 +1,71 @@
+{
+  "id": "397ccd91-7dbc-45fa-b028-e7c2db8c6df0",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "DMine",
+  "name": "Шляпа Китсуне",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "rarity": "AWARD",
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "HEAD",
+  "conflictGroups": [
+    "hat"
+  ],
+  "hash256": "6f9e21df31c6923b3afcff0a93b96f9d7bec8b7b8930378365a7c9fea8571513",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/6f9e21df31c6923b3afcff0a93b96f9d7bec8b7b8930378365a7c9fea8571513.model",
+  "slug": "hats_7_397ccd91",
+  "category": "hats",
+  "displayName": "Шляпа Китсуне",
+  "bounds": {
+    "min_x": -10.25,
+    "max_x": 10,
+    "min_y": 21,
+    "max_y": 41.24774,
+    "min_z": -14,
+    "max_z": 8.5,
+    "center_x": -0.125,
+    "center_y": 31.12387,
+    "center_z": -2.75,
+    "height": 20.24774
+  }
+}

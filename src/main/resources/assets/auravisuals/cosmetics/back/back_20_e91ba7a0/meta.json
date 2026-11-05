@@ -1,0 +1,71 @@
+{
+  "id": "e91ba7a0-80b1-4d37-b0d4-7a152aa02b67",
+  "contributor": "K0ozochka",
+  "name": "Аркадный геймпад",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.66,
+        0.33
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "hash256": "70a73c4ca62317c8a97a09013b5f83f965ecad699ddf54deb19544ca1104914e",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/70a73c4ca62317c8a97a09013b5f83f965ecad699ddf54deb19544ca1104914e.model",
+  "slug": "back_20_e91ba7a0",
+  "category": "back",
+  "displayName": "Аркадный геймпад",
+  "bounds": {
+    "min_x": -7.11221,
+    "max_x": 7.11221,
+    "min_y": -1.05271,
+    "max_y": 10,
+    "min_z": -2.8,
+    "max_z": 3.25,
+    "center_x": 0.0,
+    "center_y": 4.473645,
+    "center_z": 0.2250000000000001,
+    "height": 11.05271
+  }
+}

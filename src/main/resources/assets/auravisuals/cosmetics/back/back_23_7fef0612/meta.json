@@ -1,0 +1,71 @@
+{
+  "id": "7fef0612-b249-4eaf-bdc5-fdefa611fddd",
+  "contributor": "K0ozochka",
+  "name": "Скелет прародителя",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.25,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.12,
+        0.12,
+        0.12
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack",
+    "body"
+  ],
+  "hash256": "30800f55f7e24764e2d5478d546d791bf6786bf196efed32aa06b57a4ec1ed12",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/30800f55f7e24764e2d5478d546d791bf6786bf196efed32aa06b57a4ec1ed12.model",
+  "slug": "back_23_7fef0612",
+  "category": "back",
+  "displayName": "Скелет прародителя",
+  "bounds": {
+    "min_x": -5.5,
+    "max_x": 5.5,
+    "min_y": 1.8,
+    "max_y": 11.3,
+    "min_z": -3,
+    "max_z": 4,
+    "center_x": 0.0,
+    "center_y": 6.550000000000001,
+    "center_z": 0.5,
+    "height": 9.5
+  }
+}

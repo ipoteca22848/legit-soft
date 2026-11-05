@@ -1,0 +1,77 @@
+{
+  "id": "d1dcdfa1-b22b-4368-9885-7b1ac7231905",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Bako",
+  "name": "Тыквенный кот",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {},
+  "hidePartBody": [
+    "HEAD",
+    "HEAD_WEAR"
+  ],
+  "type": "HEAD",
+  "conflictGroups": [
+    "hat",
+    "head"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "bb8f485233af8764d85e0beee0ffbdb540ecad0e38e1ed1660f2694798b28ea1",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/bb8f485233af8764d85e0beee0ffbdb540ecad0e38e1ed1660f2694798b28ea1.model",
+  "slug": "hats_24_d1dcdfa1",
+  "category": "hats",
+  "displayName": "Тыквенный кот",
+  "bounds": {
+    "min_x": -5.01972,
+    "max_x": 5.16617,
+    "min_y": 23,
+    "max_y": 42.75264,
+    "min_z": -9.46424,
+    "max_z": 6.67223,
+    "center_x": 0.07322499999999987,
+    "center_y": 32.87632,
+    "center_z": -1.3960050000000002,
+    "height": 19.75264
+  }
+}

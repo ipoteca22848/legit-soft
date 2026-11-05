@@ -1,0 +1,70 @@
+{
+  "id": "e2b017aa-6946-4258-96a6-d4eb87f134b6",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Цилиндр Щелкунчика",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.45,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        -0.068,
+        0.068,
+        0.068
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "23158a4d0000f57534cbe3839b7e021ab5c72ab6149ba4797257f2f5b67765ba",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/23158a4d0000f57534cbe3839b7e021ab5c72ab6149ba4797257f2f5b67765ba.model",
+  "slug": "hats_13_e2b017aa",
+  "category": "hats",
+  "displayName": "Цилиндр Щелкунчика",
+  "bounds": {
+    "min_x": -5.5,
+    "max_x": 5.5,
+    "min_y": -7,
+    "max_y": 13,
+    "min_z": -5.5,
+    "max_z": 7.5,
+    "center_x": 0.0,
+    "center_y": 3.0,
+    "center_z": 1.0,
+    "height": 20
+  }
+}

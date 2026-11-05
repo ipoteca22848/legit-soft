@@ -1,0 +1,71 @@
+{
+  "id": "fc40c143-55b8-4ab3-ab97-e8344efb4c75",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "FairyZelz",
+  "name": "Визер-скелет",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 10,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.75,
+        0,
+        0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.0225,
+        0.0225,
+        0.0225
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        -1,
+        1,
+        1
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "createdTime": 1732290327204,
+  "hash256": "a577de92b6dc78971abea1f78c38cc3ac68641071826537ef1d5897f7bcce052",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/a577de92b6dc78971abea1f78c38cc3ac68641071826537ef1d5897f7bcce052.model",
+  "slug": "pets_16_fc40c143",
+  "category": "pets",
+  "displayName": "Визер-скелет",
+  "bounds": {
+    "min_x": -5.04297,
+    "max_x": 5.04297,
+    "min_y": 0,
+    "max_y": 23,
+    "min_z": -12.75,
+    "max_z": 4,
+    "center_x": 0.0,
+    "center_y": 11.5,
+    "center_z": -4.375,
+    "height": 23
+  }
+}

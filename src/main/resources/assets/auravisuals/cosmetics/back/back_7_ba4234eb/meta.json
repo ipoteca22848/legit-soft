@@ -1,0 +1,72 @@
+{
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "id": "ba4234eb-c846-4012-bd90-fdd71c25dc66",
+  "contributor": "AnolXD",
+  "name": "Игровой автомат",
+  "rarity": "AWARD",
+  "price": 149,
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "supportOptions": {},
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.1,
+        0.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.062,
+        0.062,
+        0.062
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "f3c5690fce6332c78daa3846661861c67388071f7a8baf7422fbe3009b4417a3",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/f3c5690fce6332c78daa3846661861c67388071f7a8baf7422fbe3009b4417a3.model",
+  "slug": "back_7_ba4234eb",
+  "category": "back",
+  "displayName": "Игровой автомат",
+  "bounds": {
+    "min_x": -3.6,
+    "max_x": 3.6,
+    "min_y": 7.455,
+    "max_y": 17.355,
+    "min_z": -3.42,
+    "max_z": 3.7800000000000002,
+    "center_x": 0.0,
+    "center_y": 12.405000000000001,
+    "center_z": 0.18000000000000016,
+    "height": 9.9
+  }
+}

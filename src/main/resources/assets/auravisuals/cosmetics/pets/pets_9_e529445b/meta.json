@@ -1,0 +1,71 @@
+{
+  "id": "e529445b-e29e-4f60-a026-80e43ee6e7d5",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "FairyZelz",
+  "name": "Утопленние",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 10,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.75,
+        0,
+        0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.0225,
+        0.0225,
+        0.0225
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        -1,
+        1,
+        1
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "e4661ab4683957747fd583a324f8d0dd97a088d0b584fc3eda46a692258fc703",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/e4661ab4683957747fd583a324f8d0dd97a088d0b584fc3eda46a692258fc703.model",
+  "slug": "pets_9_e529445b",
+  "category": "pets",
+  "displayName": "Утопленние",
+  "bounds": {
+    "min_x": -10.02948,
+    "max_x": 7.219,
+    "min_y": -6.41659,
+    "max_y": 24.99242,
+    "min_z": -4,
+    "max_z": 4,
+    "center_x": -1.4052399999999996,
+    "center_y": 9.287915,
+    "center_z": 0.0,
+    "height": 31.40901
+  }
+}

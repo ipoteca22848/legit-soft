@@ -1,0 +1,70 @@
+{
+  "id": "b1c0cee2-29ae-4c9e-b765-4259b7f68e87",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Голова-труба",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.049,
+        0.049,
+        0.049
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "9cc0872e0c5efb40705f73ac2305aba3e9dcbb8442087829015d6058e37ad156",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/9cc0872e0c5efb40705f73ac2305aba3e9dcbb8442087829015d6058e37ad156.model",
+  "slug": "hats_21_b1c0cee2",
+  "category": "hats",
+  "displayName": "Голова-труба",
+  "bounds": {
+    "min_x": -9.5,
+    "max_x": 9.5,
+    "min_y": 0,
+    "max_y": 19,
+    "min_z": -7,
+    "max_z": 7,
+    "center_x": 0.0,
+    "center_y": 9.5,
+    "center_z": 0.0,
+    "height": 19
+  }
+}

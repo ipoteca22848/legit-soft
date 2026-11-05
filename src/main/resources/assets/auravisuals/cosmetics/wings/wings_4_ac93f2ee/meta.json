@@ -1,0 +1,77 @@
+{
+  "id": "ac93f2ee-881d-4801-b4cd-af545b6ac498",
+  "contributor": "Wan_win",
+  "name": "Крылья Адского Пера",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": false,
+  "price": 999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.5,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.052,
+        0.052,
+        0.052
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "createdTime": 1730339571510,
+  "hash256": "b14a38824cedecbda248c89ee2e5b5a13d3b6da35fcdac41ce9d9e5be8d036f0",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/b14a38824cedecbda248c89ee2e5b5a13d3b6da35fcdac41ce9d9e5be8d036f0.model",
+  "slug": "wings_4_ac93f2ee",
+  "category": "wings",
+  "displayName": "Крылья Адского Пера",
+  "bounds": {
+    "min_x": -33.87721,
+    "max_x": 33.877210000000005,
+    "min_y": 0.19636,
+    "max_y": 19,
+    "min_z": -4,
+    "max_z": 1.5,
+    "center_x": 3.552713678800501e-15,
+    "center_y": 9.59818,
+    "center_z": -1.25,
+    "height": 18.80364
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "42b31d7f-cdb0-4896-b741-cc9b014d9b62",
+  "contributor": "FairyZelz",
+  "name": "Рюкзак-пришелец ",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 349,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.43,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        25,
+        0
+      ],
+      "rotation": [
+        30,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "hash256": "78636451856f8804f52917ed10673cd531875c80359ba808aea47fb9dcfe30b1",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/78636451856f8804f52917ed10673cd531875c80359ba808aea47fb9dcfe30b1.model",
+  "slug": "back_2_42b31d7f",
+  "category": "back",
+  "displayName": "Рюкзак-пришелец ",
+  "bounds": {
+    "min_x": -5,
+    "max_x": 4.5,
+    "min_y": 11.375,
+    "max_y": 24.25,
+    "min_z": -2.58268,
+    "max_z": 8.875,
+    "center_x": -0.25,
+    "center_y": 17.8125,
+    "center_z": 3.14616,
+    "height": 12.875
+  }
+}

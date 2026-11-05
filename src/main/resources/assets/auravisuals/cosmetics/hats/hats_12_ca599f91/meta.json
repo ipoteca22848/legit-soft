@@ -1,0 +1,80 @@
+{
+  "id": "ca599f91-9703-4946-b2f2-0e8b6e8163d3",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Волосяной покров Деда Мороза",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.15,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.05,
+        0.05,
+        0.05
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.1,
+      "max": 0,
+      "step": 0.02
+    },
+    "COLOR_HSB": {
+      "default": "16777215"
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "e60ff8f55cbc7f6d615a29663088ad5281ae435de62a9ee26f4f5ea36e897395",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/e60ff8f55cbc7f6d615a29663088ad5281ae435de62a9ee26f4f5ea36e897395.model",
+  "slug": "hats_12_ca599f91",
+  "category": "hats",
+  "displayName": "Волосяной покров Деда Мороза",
+  "bounds": {
+    "min_x": -10.88384,
+    "max_x": 12.56371,
+    "min_y": -8.37714,
+    "max_y": 3.75,
+    "min_z": -5.5,
+    "max_z": 9.19189,
+    "center_x": 0.8399350000000005,
+    "center_y": -2.3135700000000003,
+    "center_z": 1.8459450000000004,
+    "height": 12.12714
+  }
+}

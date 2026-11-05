@@ -1,0 +1,77 @@
+{
+  "categoryId": "pets",
+  "apiGiveable": true,
+  "id": "dcc79c46-4f6a-4bc5-a601-a9b233326583",
+  "contributor": "FairyZelz",
+  "name": "Принесса Пич",
+  "rarity": "AWARD",
+  "price": 149,
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "supportOptions": {
+    "TEXTURE": {
+      "0": "4293950597;peach;Персиковый;base64:",
+      "1": "4293190884;peach_white;Белый;base64:"
+    }
+  },
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.8,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.025,
+        0.025,
+        0.025
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.8,
+        -0.8,
+        0.8
+      ]
+    }
+  },
+  "type": "PET",
+  "conflictGroups": [
+    "pet_left"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "01ea8a7d4a6bea7320322baeb29c5a30ef53a948d5abd3a57f2f5846199b11ac",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/01ea8a7d4a6bea7320322baeb29c5a30ef53a948d5abd3a57f2f5846199b11ac.model",
+  "slug": "pets_24_dcc79c46",
+  "category": "pets",
+  "displayName": "Принесса Пич",
+  "bounds": {
+    "min_x": -8,
+    "max_x": 8,
+    "min_y": -0.20857,
+    "max_y": 31.15589,
+    "min_z": -5.05493,
+    "max_z": 16.54823,
+    "center_x": 0.0,
+    "center_y": 15.473659999999999,
+    "center_z": 5.746650000000001,
+    "height": 31.36446
+  }
+}

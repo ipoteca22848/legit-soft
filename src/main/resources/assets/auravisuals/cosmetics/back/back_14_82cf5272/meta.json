@@ -1,0 +1,71 @@
+{
+  "id": "82cf5272-a02a-400c-908a-f87068c81b72",
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "contributor": "AnolXD",
+  "name": "Рюкзак мастера пикселей",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.52,
+        0.4
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        -0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730339571510,
+  "hash256": "1df9bd02388751430baf8b7d32e46db8ea4f577558a2d5b0377ef42f706162a7",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/1df9bd02388751430baf8b7d32e46db8ea4f577558a2d5b0377ef42f706162a7.model",
+  "slug": "back_14_82cf5272",
+  "category": "back",
+  "displayName": "Рюкзак мастера пикселей",
+  "bounds": {
+    "min_x": -3.5,
+    "max_x": 3.5,
+    "min_y": 13.75,
+    "max_y": 27.3,
+    "min_z": -4.28686,
+    "max_z": 3.27575,
+    "center_x": 0.0,
+    "center_y": 20.525,
+    "center_z": -0.505555,
+    "height": 13.55
+  }
+}

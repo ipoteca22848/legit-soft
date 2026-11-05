@@ -1,0 +1,71 @@
+{
+  "id": "a8cb44ad-f381-4092-8c7e-fe1d84419eff",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "Wan_Win",
+  "name": "Подарочек",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 10,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.75,
+        -0.2,
+        0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.0225,
+        0.0225,
+        0.0225
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        -22,
+        22,
+        22
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "5f45f4e866049d280627f35660fe85ca37ecee488c66936c10eb23d414d5c482",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/5f45f4e866049d280627f35660fe85ca37ecee488c66936c10eb23d414d5c482.model",
+  "slug": "pets_10_a8cb44ad",
+  "category": "pets",
+  "displayName": "Подарочек",
+  "bounds": {
+    "min_x": -3.5,
+    "max_x": 3.5,
+    "min_y": 0,
+    "max_y": 15,
+    "min_z": -3,
+    "max_z": 3,
+    "center_x": 0.0,
+    "center_y": 7.5,
+    "center_z": 0.0,
+    "height": 15
+  }
+}

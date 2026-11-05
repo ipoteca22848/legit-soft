@@ -1,0 +1,76 @@
+{
+  "id": "f65e409f-ee63-4ea9-96f8-136d5377bd20",
+  "contributor": "Artifex",
+  "name": "Крылья феникса",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.58,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.065,
+        0.065,
+        0.065
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        30,
+        0
+      ],
+      "rotation": [
+        -135,
+        30,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "hash256": "dfa15a989f2137764efaf4232fc600a90823c95219eabff4866c2cf52c896826",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/dfa15a989f2137764efaf4232fc600a90823c95219eabff4866c2cf52c896826.model",
+  "slug": "wings_15_f65e409f",
+  "category": "wings",
+  "displayName": "Крылья феникса",
+  "bounds": {
+    "min_x": -17.09055,
+    "max_x": 17.09055,
+    "min_y": 13.08836,
+    "max_y": 33.19169,
+    "min_z": 2,
+    "max_z": 13.84055,
+    "center_x": 0.0,
+    "center_y": 23.140025,
+    "center_z": 7.920275,
+    "height": 20.10333
+  }
+}

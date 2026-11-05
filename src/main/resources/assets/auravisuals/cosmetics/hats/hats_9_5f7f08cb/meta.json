@@ -1,0 +1,78 @@
+{
+  "id": "5f7f08cb-c595-4f33-86d7-b865770ba368",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "lilcrystal",
+  "name": "Золотая морковка",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.15,
+        -0.38
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        -0.068,
+        0.068,
+        0.068
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.1,
+      "max": 0,
+      "step": 0.02
+    }
+  },
+  "type": "HEAD",
+  "conflictGroups": [
+    "head"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "66c0db66ea04c935866d458a63f55a430eff63806c211193e5d1cd402f3ff04b",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/66c0db66ea04c935866d458a63f55a430eff63806c211193e5d1cd402f3ff04b.model",
+  "slug": "hats_9_5f7f08cb",
+  "category": "hats",
+  "displayName": "Золотая морковка",
+  "bounds": {
+    "min_x": -0.88,
+    "max_x": 0.88,
+    "min_y": 0.264,
+    "max_y": 2.024,
+    "min_z": -2.0856,
+    "max_z": 3.2088,
+    "center_x": 0.0,
+    "center_y": 1.1440000000000001,
+    "center_z": 0.5616000000000001,
+    "height": 1.76
+  }
+}

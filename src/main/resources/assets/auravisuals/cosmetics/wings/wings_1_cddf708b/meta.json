@@ -1,0 +1,77 @@
+{
+  "id": "cddf708b-a983-42c4-91e6-4157b39eb711",
+  "contributor": "Artifex",
+  "name": "Крылья Базза",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 500,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.055,
+        0.055,
+        0.055
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "createdTime": 1683480411969,
+  "hash256": "4ba948504fc66c4abfcdbe0a02a9363fb6f268d4a6141cf36b42ef21049d83a3",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/4ba948504fc66c4abfcdbe0a02a9363fb6f268d4a6141cf36b42ef21049d83a3.model",
+  "slug": "wings_1_cddf708b",
+  "category": "wings",
+  "displayName": "Крылья Базза",
+  "bounds": {
+    "min_x": -15,
+    "max_x": 15,
+    "min_y": 7,
+    "max_y": 24.60333,
+    "min_z": 2.5,
+    "max_z": 5.5,
+    "center_x": 0.0,
+    "center_y": 15.801665,
+    "center_z": 4.0,
+    "height": 17.60333
+  }
+}

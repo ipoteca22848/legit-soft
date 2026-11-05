@@ -1,0 +1,70 @@
+{
+  "id": "54a9005e-738c-43d2-b955-3dad8c032a3a",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Рождественская шапка с бомбоном",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.057,
+        0.057,
+        0.057
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "91c67187833770bdd951c5d1e5d70315c8d5a9178762ad6c9d5f7cf620c39b2e",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/91c67187833770bdd951c5d1e5d70315c8d5a9178762ad6c9d5f7cf620c39b2e.model",
+  "slug": "hats_19_54a9005e",
+  "category": "hats",
+  "displayName": "Рождественская шапка с бомбоном",
+  "bounds": {
+    "min_x": -6,
+    "max_x": 6,
+    "min_y": -9.75,
+    "max_y": 12,
+    "min_z": -11.25,
+    "max_z": 19,
+    "center_x": 0.0,
+    "center_y": 1.125,
+    "center_z": 3.875,
+    "height": 21.75
+  }
+}

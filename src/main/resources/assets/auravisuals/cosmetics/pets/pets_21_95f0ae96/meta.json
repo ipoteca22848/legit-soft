@@ -1,0 +1,71 @@
+{
+  "id": "95f0ae96-cfe0-4059-be87-cc555c4c84d4",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "FairyZelz",
+  "name": "Топ4 аркады машина",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 299,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.7,
+        -0.1,
+        -0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.016,
+        0.016,
+        0.016
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet_left"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "9ce9fbc82c05da3ce53c67f6db5641ba08ce1e19bafcb4dcd3ff67624156fe8b",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/9ce9fbc82c05da3ce53c67f6db5641ba08ce1e19bafcb4dcd3ff67624156fe8b.model",
+  "slug": "pets_21_95f0ae96",
+  "category": "pets",
+  "displayName": "Топ4 аркады машина",
+  "bounds": {
+    "min_x": -5.375,
+    "max_x": 5.375,
+    "min_y": 1.10078,
+    "max_y": 23.775779999999997,
+    "min_z": 0.15,
+    "max_z": 9.35,
+    "center_x": 0.0,
+    "center_y": 12.438279999999999,
+    "center_z": 4.75,
+    "height": 22.674999999999997
+  }
+}

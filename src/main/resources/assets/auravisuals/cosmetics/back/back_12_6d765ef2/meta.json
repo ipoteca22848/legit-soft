@@ -1,0 +1,72 @@
+{
+  "id": "6d765ef2-0e0f-4126-8ff0-bd6d5675f658",
+  "contributor": "DMine",
+  "name": "Стимпанк джетпак",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 349,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        17,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "e5f66ea1c0d835dbf06d8d0550d62b7285f44a93b690c0f69d54fad07a1e0f07",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/e5f66ea1c0d835dbf06d8d0550d62b7285f44a93b690c0f69d54fad07a1e0f07.model",
+  "slug": "back_12_6d765ef2",
+  "category": "back",
+  "displayName": "Стимпанк джетпак",
+  "bounds": {
+    "min_x": -7,
+    "max_x": 7,
+    "min_y": 11,
+    "max_y": 25,
+    "min_z": -3,
+    "max_z": 8,
+    "center_x": 0.0,
+    "center_y": 18.0,
+    "center_z": 2.5,
+    "height": 14
+  }
+}

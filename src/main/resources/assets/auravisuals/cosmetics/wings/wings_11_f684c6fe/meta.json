@@ -1,0 +1,76 @@
+{
+  "id": "f684c6fe-a735-4a27-8714-42c63b12ceb1",
+  "contributor": "KindMiner",
+  "name": "Крылья пурпурного хаоса",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 849,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.3,
+        0.03
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        23,
+        0
+      ],
+      "rotation": [
+        -140,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "hash256": "8465b3a101e98657cde4fc85659d903621b6330d83036c1c79115724219c8d77",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/8465b3a101e98657cde4fc85659d903621b6330d83036c1c79115724219c8d77.model",
+  "slug": "wings_11_f684c6fe",
+  "category": "wings",
+  "displayName": "Крылья пурпурного хаоса",
+  "bounds": {
+    "min_x": -30.75,
+    "max_x": 30.75,
+    "min_y": 7,
+    "max_y": 24.04685,
+    "min_z": 1.59261,
+    "max_z": 4.5926100000000005,
+    "center_x": 0.0,
+    "center_y": 15.523425,
+    "center_z": 3.0926100000000005,
+    "height": 17.04685
+  }
+}

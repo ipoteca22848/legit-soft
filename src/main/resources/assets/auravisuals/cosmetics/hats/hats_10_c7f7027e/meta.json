@@ -1,0 +1,76 @@
+{
+  "id": "c7f7027e-5483-459f-a9cd-ccad011dc766",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Wan_win",
+  "name": "Новогодняя шапка со снежинками",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.325,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.069,
+        0.069,
+        0.069
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.1,
+      "max": 0,
+      "step": 0.02
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "8eeb38b4fe39d27d22eb04fd3fe1d193b9e4d3b442c3dabb12b13d508dfb89a5",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/8eeb38b4fe39d27d22eb04fd3fe1d193b9e4d3b442c3dabb12b13d508dfb89a5.model",
+  "slug": "hats_10_c7f7027e",
+  "category": "hats",
+  "displayName": "Новогодняя шапка со снежинками",
+  "bounds": {
+    "min_x": -5,
+    "max_x": 5,
+    "min_y": 0,
+    "max_y": 10.952729999999999,
+    "min_z": -5.99336,
+    "max_z": 7.0241299999999995,
+    "center_x": 0.0,
+    "center_y": 5.4763649999999995,
+    "center_z": 0.5153849999999998,
+    "height": 10.952729999999999
+  }
+}

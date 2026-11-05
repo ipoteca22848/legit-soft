@@ -1,0 +1,48 @@
+{
+  "accessWidener": "auravisuals.accesswidener",
+  "authors": [
+    "bamber"
+  ],
+  "contact": {},
+  "depends": {
+    "fabric-api": "*",
+    "fabricloader": ">=0.19.3",
+    "java": ">=21",
+    "minecraft": "~1.21.11"
+  },
+  "description": "bamber client for Minecraft 1.21.11",
+  "entrypoints": {
+    "client": [
+      "com.example.auravisuals.client.AuraVisualsClient"
+    ],
+    "main": [
+      "com.example.auravisuals.AuraVisuals"
+    ]
+  },
+  "environment": "client",
+  "icon": "assets/auravisuals/icon.png",
+  "id": "bamber",
+  "jars": [
+    {
+      "file": "META-INF/jars/discord-rpc-release-v3.3.0.jar"
+    },
+    {
+      "file": "META-INF/jars/java-discord-rpc-v2.0.2.jar"
+    },
+    {
+      "file": "META-INF/jars/media-player-info-0.1.0.jar"
+    },
+    {
+      "file": "META-INF/jars/bamber-trigger-engine.jar"
+    }
+  ],
+  "license": "All Rights Reserved",
+  "mixins": [
+    "auravisuals.mixins.json",
+    "bamber.mixins.json"
+  ],
+  "name": "bamber client",
+  "schemaVersion": 1,
+  "suggests": {},
+  "version": "1.0.0"
+}

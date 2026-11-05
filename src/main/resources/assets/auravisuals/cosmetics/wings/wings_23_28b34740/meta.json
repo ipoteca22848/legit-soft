@@ -1,0 +1,75 @@
+{
+  "id": "28b34740-71e5-4467-8d3f-23e2cf14a464",
+  "contributor": "DMineShop",
+  "name": "Крылья летучей мыши",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": false,
+  "price": 999,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.75,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": 0,
+      "max": 0.3,
+      "step": 0.025
+    }
+  },
+  "type": "WINGS",
+  "categoryId": "wings",
+  "conflictGroups": [
+    "wings"
+  ],
+  "hash256": "acd0ad57aa7c613b08f58e0f7c379656a111e38a39c4486086aff670d52b538f",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/acd0ad57aa7c613b08f58e0f7c379656a111e38a39c4486086aff670d52b538f.model",
+  "slug": "wings_23_28b34740",
+  "category": "wings",
+  "displayName": "Крылья летучей мыши",
+  "bounds": {
+    "min_x": -20.11646,
+    "max_x": 20.11646,
+    "min_y": 3.9574,
+    "max_y": 14.80915,
+    "min_z": 0.4567,
+    "max_z": 2.4567,
+    "center_x": 0.0,
+    "center_y": 9.383275000000001,
+    "center_z": 1.4567,
+    "height": 10.851750000000001
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "686b0742-e9fe-4f9f-9fe3-9b2821157672",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "Dionis",
+  "name": "Морковная погоня",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 100,
+  "rarity": "AWARD",
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "supportOptions": {},
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.7,
+        0,
+        0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.03,
+        0.03,
+        0.03
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        145,
+        0,
+        0
+      ],
+      "scale": [
+        -0.3,
+        0.3,
+        0.3
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "hash256": "c3b6640e25c79be6fb1098fbf44ff60a2fed48745e3049e54136d24ed064222a",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/c3b6640e25c79be6fb1098fbf44ff60a2fed48745e3049e54136d24ed064222a.model",
+  "slug": "pets_1_686b0742",
+  "category": "pets",
+  "displayName": "Морковная погоня",
+  "bounds": {
+    "min_x": -4.92208,
+    "max_x": 7.75,
+    "min_y": -9,
+    "max_y": 23.175,
+    "min_z": -1.9,
+    "max_z": 7.1,
+    "center_x": 1.4139599999999999,
+    "center_y": 7.0875,
+    "center_z": 2.5999999999999996,
+    "height": 32.175
+  }
+}

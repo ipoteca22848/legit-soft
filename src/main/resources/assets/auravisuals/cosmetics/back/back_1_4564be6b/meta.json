@@ -1,0 +1,76 @@
+{
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "id": "4564be6b-92de-4877-a247-2c83447933de",
+  "contributor": "Dionis",
+  "name": "Скейт",
+  "rarity": "AWARD",
+  "price": 49,
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": false,
+  "supportOptions": {
+    "COLOR_HSB": {
+      "default": "-6204996"
+    }
+  },
+  "locationRotation": {
+    "normal": {
+      "location": [
+        -0.2,
+        1.45,
+        0.25
+      ],
+      "rotation": [
+        90,
+        -10,
+        0
+      ],
+      "scale": [
+        -0.068,
+        0.068,
+        0.068
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "BODY",
+  "conflictGroups": [
+    "backpack_flag"
+  ],
+  "createdTime": 1730339571530,
+  "hash256": "94a1f78be88356556c0964c7ae248076d9862b0b8ba1883d1d75ed14ea230c58",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/94a1f78be88356556c0964c7ae248076d9862b0b8ba1883d1d75ed14ea230c58.model",
+  "slug": "back_1_4564be6b",
+  "category": "back",
+  "displayName": "Скейт",
+  "bounds": {
+    "min_x": -2,
+    "max_x": 3,
+    "min_y": 14.57487,
+    "max_y": 17.5,
+    "min_z": -7.54854,
+    "max_z": 7.52544,
+    "center_x": 0.5,
+    "center_y": 16.037435000000002,
+    "center_z": -0.011550000000000171,
+    "height": 2.9251299999999993
+  }
+}

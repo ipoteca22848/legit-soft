@@ -1,0 +1,78 @@
+{
+  "id": "f7125cb5-b640-4ddb-bfd1-b1f9bb6be58d",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "lilcrystal",
+  "name": "Apple Vision Pro",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 499,
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.14,
+        0.02
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.065,
+        0.065,
+        0.063
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        200,
+        0,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.1,
+      "max": 0.08,
+      "step": 0.02
+    }
+  },
+  "type": "HEAD",
+  "conflictGroups": [
+    "head"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "c4ee9b9d0b072bfa763442ea2b79ec46f05c36250f5dd086bcae6112d21d03e9",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/c4ee9b9d0b072bfa763442ea2b79ec46f05c36250f5dd086bcae6112d21d03e9.model",
+  "slug": "hats_23_f7125cb5",
+  "category": "hats",
+  "displayName": "Apple Vision Pro",
+  "bounds": {
+    "min_x": -5.4,
+    "max_x": 5.4,
+    "min_y": 4.4,
+    "max_y": 9.9,
+    "min_z": -6.425,
+    "max_z": 5.875,
+    "center_x": 0.0,
+    "center_y": 7.15,
+    "center_z": -0.2749999999999999,
+    "height": 5.5
+  }
+}

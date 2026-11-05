@@ -1,0 +1,78 @@
+{
+  "id": "f83bf9c2-b7bd-438b-b5ec-d7ae650f9513",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "DMine",
+  "name": "Ободок 2026",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "createdTime": 1766869200000,
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "OFFSET_Y": {
+      "min": -0.1,
+      "max": 0.08,
+      "step": 0.02
+    }
+  },
+  "type": "HEAD",
+  "conflictGroups": [
+    "hat"
+  ],
+  "hash256": "7d7fe1c91ef699587f8384102dd96ec2d96d314dabe5c61ad79c79a53831c166",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/7d7fe1c91ef699587f8384102dd96ec2d96d314dabe5c61ad79c79a53831c166.model",
+  "slug": "hats_1_f83bf9c2",
+  "category": "hats",
+  "displayName": "Ободок 2026",
+  "bounds": {
+    "min_x": -5.48375,
+    "max_x": 5.483750000000001,
+    "min_y": 27.4875,
+    "max_y": 38.4175,
+    "min_z": -1.025,
+    "max_z": 1.025,
+    "center_x": 4.440892098500626e-16,
+    "center_y": 32.9525,
+    "center_z": 0.0,
+    "height": 10.929999999999996
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fd63e8e7-7e15-4f6a-90ef-1fd951d881d3",
+  "contributor": "K0ozochka",
+  "name": "Бочка с пивом",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.79,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.045,
+        0.045,
+        0.045
+      ]
+    },
+    "gui": {
+      "location": [
+        1,
+        8,
+        0
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "scale": [
+        1.1,
+        1.1,
+        1.1
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "hash256": "1e2ede14eb099a6938007212bf5f860760be8422edfadee82099926a38d454bc",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/1e2ede14eb099a6938007212bf5f860760be8422edfadee82099926a38d454bc.model",
+  "slug": "back_22_fd63e8e7",
+  "category": "back",
+  "displayName": "Бочка с пивом",
+  "bounds": {
+    "min_x": -6.375,
+    "max_x": 10.625,
+    "min_y": -1.75,
+    "max_y": 17.25,
+    "min_z": -6.625,
+    "max_z": 5.975,
+    "center_x": 2.125,
+    "center_y": 7.75,
+    "center_z": -0.3250000000000002,
+    "height": 19.0
+  }
+}

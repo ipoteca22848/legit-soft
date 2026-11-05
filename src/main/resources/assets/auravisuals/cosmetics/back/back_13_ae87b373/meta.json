@@ -1,0 +1,72 @@
+{
+  "id": "ae87b373-b92d-4f51-a00a-80ba47851f3b",
+  "contributor": "DMine",
+  "name": "Катана",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 200,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.62,
+        -0.28
+      ],
+      "rotation": [
+        0,
+        -10,
+        0
+      ],
+      "scale": [
+        0.071,
+        0.071,
+        0.071
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        25,
+        0
+      ],
+      "rotation": [
+        45,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "BODY",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack",
+    "wings"
+  ],
+  "createdTime": 1730339571510,
+  "hash256": "312a5fa95e47c1422d04f8b41b009e3737350e15ecf925f11e6707526a905565",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/312a5fa95e47c1422d04f8b41b009e3737350e15ecf925f11e6707526a905565.model",
+  "slug": "back_13_ae87b373",
+  "category": "back",
+  "displayName": "Катана",
+  "bounds": {
+    "min_x": -6.5,
+    "max_x": 1.5,
+    "min_y": 5.35264,
+    "max_y": 32.09119,
+    "min_z": 4.75,
+    "max_z": 7.75,
+    "center_x": -2.5,
+    "center_y": 18.721915,
+    "center_z": 6.25,
+    "height": 26.738549999999996
+  }
+}

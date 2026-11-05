@@ -1,0 +1,72 @@
+{
+  "id": "3d08f827-67d9-46c3-b690-34ceb305aa5a",
+  "contributor": "FairyZelz",
+  "name": "Рюкзак с минералами",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 249,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        5,
+        23,
+        0
+      ],
+      "rotation": [
+        -130,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "wings",
+    "backpack"
+  ],
+  "createdTime": 1730339571510,
+  "hash256": "4fc41fd654227bd226c601dc2d32237b4f6d41f53f655b7c869bbfd60f9c3580",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/4fc41fd654227bd226c601dc2d32237b4f6d41f53f655b7c869bbfd60f9c3580.model",
+  "slug": "back_15_3d08f827",
+  "category": "back",
+  "displayName": "Рюкзак с минералами",
+  "bounds": {
+    "min_x": -5.55,
+    "max_x": 5.55,
+    "min_y": 12.14709,
+    "max_y": 25.56129,
+    "min_z": -2.95212,
+    "max_z": 9.86494,
+    "center_x": 0.0,
+    "center_y": 18.85419,
+    "center_z": 3.4564100000000004,
+    "height": 13.4142
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2b9734ca-4e14-42de-907b-013f38365991",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Dionis",
+  "name": "Бомж топ1 награда",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "isLimited": true,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "8703c4892b68627ec20bd2ded00f1c57d1f0a5a3f9884d79eb22c39150ba84fe",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/8703c4892b68627ec20bd2ded00f1c57d1f0a5a3f9884d79eb22c39150ba84fe.model",
+  "slug": "hats_25_2b9734ca",
+  "category": "hats",
+  "displayName": "Бомж топ1 награда",
+  "bounds": {
+    "min_x": -3.5663,
+    "max_x": 3.925,
+    "min_y": 31.1576,
+    "max_y": 37.96567,
+    "min_z": -3.58909,
+    "max_z": 3.08844,
+    "center_x": 0.1793499999999999,
+    "center_y": 34.561635,
+    "center_z": -0.25032500000000013,
+    "height": 6.808070000000004
+  }
+}

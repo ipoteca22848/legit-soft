@@ -1,0 +1,70 @@
+{
+  "id": "8f15edc6-6b0e-4b59-a9e8-a31d9ce50c2b",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Рога северного оленя",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 249,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        -0.05,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "HAT",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "5153664dd78204c95c886e214448aada068a008f3602c4bc1f088bd92437ef07",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/5153664dd78204c95c886e214448aada068a008f3602c4bc1f088bd92437ef07.model",
+  "slug": "hats_17_8f15edc6",
+  "category": "hats",
+  "displayName": "Рога северного оленя",
+  "bounds": {
+    "min_x": -19,
+    "max_x": 19,
+    "min_y": 1,
+    "max_y": 16,
+    "min_z": -2,
+    "max_z": 0,
+    "center_x": 0.0,
+    "center_y": 8.5,
+    "center_z": -1.0,
+    "height": 15
+  }
+}

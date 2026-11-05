@@ -1,0 +1,71 @@
+{
+  "id": "7ed635c1-7250-452f-adb8-996e1d17e597",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "FairyZelz",
+  "name": "Джерри",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 299,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.8,
+        -0.1,
+        -0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.04,
+        0.04,
+        0.04
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.3,
+        -1.3,
+        1.3
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet_left"
+  ],
+  "createdTime": 1732972537528,
+  "hash256": "5f16f70b267b165e6385fbe27a2cf6a25d82398e65c6073a880ed4553baf0a74",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/5f16f70b267b165e6385fbe27a2cf6a25d82398e65c6073a880ed4553baf0a74.model",
+  "slug": "pets_22_7ed635c1",
+  "category": "pets",
+  "displayName": "Джерри",
+  "bounds": {
+    "min_x": -8.60355,
+    "max_x": 8.60355,
+    "min_y": -2.25,
+    "max_y": 13.08747,
+    "min_z": -5.25,
+    "max_z": 4.5,
+    "center_x": 0.0,
+    "center_y": 5.418735,
+    "center_z": -0.375,
+    "height": 15.33747
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "0c8e21ea-54ed-44aa-bdff-14abace4dd9e",
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "contributor": "K0ozochka",
+  "name": "Золотой меч рыцаря",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 500,
+  "availableInGui": false,
+  "isLimited": true,
+  "supportOptions": {},
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.52,
+        -0.14
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.065,
+        0.065,
+        0.065
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        35,
+        35,
+        35
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "hash256": "98eb552ad2e4acd7c105b86d1d732cbcbeb08b9228b156fefe81b3d5e9aafeaa",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/98eb552ad2e4acd7c105b86d1d732cbcbeb08b9228b156fefe81b3d5e9aafeaa.model",
+  "slug": "back_25_0c8e21ea",
+  "category": "back",
+  "displayName": "Золотой меч рыцаря",
+  "bounds": {
+    "min_x": -11,
+    "max_x": 1.5,
+    "min_y": 22,
+    "max_y": 47.8,
+    "min_z": 1.6,
+    "max_z": 7.6,
+    "center_x": -4.75,
+    "center_y": 34.9,
+    "center_z": 4.6,
+    "height": 25.799999999999997
+  }
+}

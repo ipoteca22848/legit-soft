@@ -1,0 +1,72 @@
+{
+  "categoryId": "pets",
+  "apiGiveable": true,
+  "id": "8c31ea2d-75d9-43bf-856c-2893b85edacc",
+  "contributor": "FairyZelz",
+  "name": "Марио",
+  "rarity": "AWARD",
+  "price": 149,
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "supportOptions": {},
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.8,
+        0.22,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.025,
+        0.025,
+        0.025
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.8,
+        -0.8,
+        0.8
+      ]
+    }
+  },
+  "type": "PET",
+  "conflictGroups": [
+    "pet_left"
+  ],
+  "createdTime": 1730339571506,
+  "hash256": "a903e46abc7809b4656e6c426d02ec7b35591d449660ebd7d30a7384d4ae70ca",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/a903e46abc7809b4656e6c426d02ec7b35591d449660ebd7d30a7384d4ae70ca.model",
+  "slug": "pets_23_8c31ea2d",
+  "category": "pets",
+  "displayName": "Марио",
+  "bounds": {
+    "min_x": -6.32825,
+    "max_x": 6.26537,
+    "min_y": 0,
+    "max_y": 29.26777,
+    "min_z": -7.04741,
+    "max_z": 5,
+    "center_x": -0.03143999999999991,
+    "center_y": 14.633885,
+    "center_z": -1.023705,
+    "height": 29.26777
+  }
+}

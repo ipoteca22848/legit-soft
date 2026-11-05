@@ -1,0 +1,70 @@
+{
+  "id": "4d300ebb-953f-4046-8a62-6a09f6be517e",
+  "apiGiveable": false,
+  "categoryId": "pets",
+  "contributor": "Artifex",
+  "name": "Взлом",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 100,
+  "availableInGui": false,
+  "isLimited": true,
+  "type": "PET",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.7,
+        -0.1,
+        0.05
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "scale": [
+        -0.025,
+        0.025,
+        0.025
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "scale": [
+        -0.3,
+        0.3,
+        0.3
+      ]
+    }
+  },
+  "conflictGroups": [
+    "pet"
+  ],
+  "hash256": "4475302e567c0eb88d057a197b9917d7ee8f281ba6c87fd7d8e14ee46ee5a276",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/4475302e567c0eb88d057a197b9917d7ee8f281ba6c87fd7d8e14ee46ee5a276.model",
+  "slug": "pets_3_4d300ebb",
+  "category": "pets",
+  "displayName": "Взлом",
+  "bounds": {
+    "min_x": -7,
+    "max_x": 6,
+    "min_y": 0,
+    "max_y": 12.5,
+    "min_z": -6,
+    "max_z": 7,
+    "center_x": -0.5,
+    "center_y": 6.25,
+    "center_z": 0.5,
+    "height": 12.5
+  }
+}

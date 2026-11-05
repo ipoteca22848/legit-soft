@@ -1,0 +1,69 @@
+{
+  "id": "73991370-0641-4e56-b92c-1266c29b41ab",
+  "categoryId": "backpack",
+  "apiGiveable": true,
+  "contributor": "Cristalix",
+  "name": "Мешок с подарками",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.8,
+        0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        -0.062,
+        0.062,
+        0.062
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "type": "WINGS",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "createdTime": 1730339571502,
+  "hash256": "13b8f8639d2181456f6fed7eb9d1ad5f3e199cc7953feeb76fc0929d00114fcc",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/13b8f8639d2181456f6fed7eb9d1ad5f3e199cc7953feeb76fc0929d00114fcc.model",
+  "slug": "back_4_73991370",
+  "category": "back",
+  "displayName": "Мешок с подарками",
+  "bounds": {
+    "min_x": -6.94409,
+    "max_x": 11.19409,
+    "min_y": 0,
+    "max_y": 19.26457,
+    "min_z": -6,
+    "max_z": 6,
+    "center_x": 2.1249999999999996,
+    "center_y": 9.632285,
+    "center_z": 0.0,
+    "height": 19.26457
+  }
+}

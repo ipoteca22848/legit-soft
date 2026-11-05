@@ -1,0 +1,80 @@
+{
+  "id": "469c9b9e-bae5-4246-8b4d-d12f6e022434",
+  "categoryId": "hats",
+  "apiGiveable": true,
+  "contributor": "Luttuce_m",
+  "name": "Цилиндр джентльмена",
+  "rarity": "AWARD",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "price": 149,
+  "availableInGui": false,
+  "isLimited": false,
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.0625,
+        0.0625,
+        0.0625
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "supportOptions": {
+    "TEXTURE": {
+      "0": "4288282606;Top_hat_big;Большолй;base64:iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUdwTC8wNkJCTTk5PikpLuj089bg36u9xclqyo4AAAABdFJOUwBA5thmAAAAKUlEQVQI12NgVlIyYGARFHRgYDRSFoCwWIQNHRjYU8MKGByNlEUYQAAATfMEDkeLtJcAAAAASUVORK5CYII=",
+      "1": "4289920639;Top_hat_small;Маленький;base64:iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUdwTC8wNkJCTTk5PikpLuj089bg36u9xclqyo4AAAABdFJOUwBA5thmAAAAJUlEQVQI12NggANmJSUDBhZBQQcGRiNlAQb21LACBkcjZRGwJAAv1QMgEexo1wAAAABJRU5ErkJggg=="
+    },
+    "COLOR_HSB": {
+      "default": "4280951587"
+    }
+  },
+  "type": "HEAD",
+  "conflictGroups": [
+    "hat"
+  ],
+  "createdTime": 1730510513957,
+  "hash256": "07d7a345eaacadc626783587ed483256c2d143fadd0d8aae3a8da8b24192c423",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/07d7a345eaacadc626783587ed483256c2d143fadd0d8aae3a8da8b24192c423.model",
+  "slug": "hats_5_469c9b9e",
+  "category": "hats",
+  "displayName": "Цилиндр джентльмена",
+  "bounds": {
+    "min_x": -4.52,
+    "max_x": 4.52,
+    "min_y": 10.2725,
+    "max_y": 11.4025,
+    "min_z": -4.52,
+    "max_z": 4.52,
+    "center_x": 0.0,
+    "center_y": 10.8375,
+    "center_z": 0.0,
+    "height": 1.129999999999999
+  }
+}

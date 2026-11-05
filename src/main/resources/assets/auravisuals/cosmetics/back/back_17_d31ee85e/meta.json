@@ -1,0 +1,70 @@
+{
+  "id": "d31ee85e-382b-4cf5-8dc8-d42e4ad87894",
+  "contributor": "DMine",
+  "name": "Рюкзак Марио ",
+  "source": "url",
+  "sourceFormat": "bedrock",
+  "availableInGui": false,
+  "isLimited": true,
+  "price": 349,
+  "rarity": "AWARD",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0,
+        1.45,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "gui": {
+      "location": [
+        0,
+        25,
+        0
+      ],
+      "rotation": [
+        30,
+        0,
+        0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ]
+    }
+  },
+  "supportOptions": {},
+  "type": "WINGS",
+  "categoryId": "backpack",
+  "conflictGroups": [
+    "backpack"
+  ],
+  "hash256": "d076d7d7a8d3bdb23b3e98c8a8cdeece7a4b65a3ceba8a19d8a4b729cf1261ac",
+  "sourcePath": "https://webdata.c7x.dev/client/p13n/d076d7d7a8d3bdb23b3e98c8a8cdeece7a4b65a3ceba8a19d8a4b729cf1261ac.model",
+  "slug": "back_17_d31ee85e",
+  "category": "back",
+  "displayName": "Рюкзак Марио ",
+  "bounds": {
+    "min_x": -4.55,
+    "max_x": 4.55,
+    "min_y": 13,
+    "max_y": 24.5,
+    "min_z": -2.95212,
+    "max_z": 7.5,
+    "center_x": 0.0,
+    "center_y": 18.75,
+    "center_z": 2.27394,
+    "height": 11.5
+  }
+}
