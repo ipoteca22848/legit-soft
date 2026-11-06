@@ -38,11 +38,12 @@ public class BackgroundRenderer {
         Render2D.blur(bgX + 12.5f, bgY + 220.5f, 70, 17, 4, 5, new Color(25, 25, 25, blurAlpha).getRGB());
 
         float textSize = 6f;
-        String soonText = "Разделы: колесо";
+        String soonText = "anvil " + com.anvil.client.ClientBranding.VERSION;
         float textWidth = Fonts.BOLD.getWidth(soonText, textSize);
         float textHeight = Fonts.BOLD.getHeight(textSize);
         float centerX = bgX + 12.5f + (70 - textWidth) / 2f;
-        float centerY = bgY + 220.5f + (17 - textHeight) / 2f;
-        Fonts.BOLD.draw(soonText, centerX, centerY, textSize, new Color(150, 150, 150, (int) (200 * alphaMultiplier)).getRGB());
+        float centerY = bgY + 222;
+        Fonts.BOLD.draw(soonText, centerX, centerY, textSize, new Color(190, 190, 190, (int) (200 * alphaMultiplier)).getRGB());
+        Fonts.BOLD.drawCentered("Разделы: колесо",bgX+47.5f,bgY+230,4f,new Color(150,150,150,(int)(200*alphaMultiplier)).getRGB());
     }
 }

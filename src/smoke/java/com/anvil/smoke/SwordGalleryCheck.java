@@ -4,6 +4,9 @@ import com.example.auravisuals.module.misc.CustomSword;
 import net.minecraft.component.DataComponentTypes;
 public final class SwordGalleryCheck {
  public static void verify(){
+  var categories=new rich.screens.clickgui.impl.background.render.CategoryRenderer();
+  if(categories.getCategoryAtPosition(40,108,0,0)!=rich.modules.module.category.ModuleCategory.SWORDS)throw new AssertionError("Swords not visible/clickable without sidebar scrolling");
+
   var module=CustomSword.INSTANCE;var gallery=new SwordGallery();
   if(gallery.items().size()!=119)throw new AssertionError("Incomplete sword catalogue");
   boolean enabled=module.isEnabled();String[] old=new String[6];boolean[] applied=new boolean[6];

@@ -356,7 +356,7 @@ public class MainMenuScreen extends Screen {
 
         Render2D.blur(scaledMouseX, scaledMouseY, 1, 1, BLUR_RADIUS, 1, new Color(128, 128, 128, 0).getRGB());
 
-        Fonts.TEST.drawCentered("anvil visual © All Rights Reserved", fixedWidth / 2f, fixedHeight - 6, 5f, new Color(128, 128, 128, 128).getRGB());
+        Fonts.TEST.drawCentered("anvil visual " + com.anvil.client.ClientBranding.VERSION + " © All Rights Reserved", fixedWidth / 2f, fixedHeight - 6, 5f, new Color(128, 128, 128, 128).getRGB());
 
         Render2D.blur(scaledMouseX, scaledMouseY, 1, 1, BLUR_RADIUS, 1, new Color(128, 128, 128, 0).getRGB());
 
