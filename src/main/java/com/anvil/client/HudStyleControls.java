@@ -1,4 +1,4 @@
-package com.bamber.client;
+package com.anvil.client;
 import java.util.*;
 import com.google.gson.*;
 import com.example.auravisuals.client.gui.hud.HudElementStyleManager;

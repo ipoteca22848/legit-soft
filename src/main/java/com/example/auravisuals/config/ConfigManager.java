@@ -70,7 +70,7 @@ public class ConfigManager {
     private String activeConfigName = "default";
 
     private ConfigManager() {
-        this.configDir = new File(MinecraftClient.getInstance().runDirectory, "bamber/configs");
+        this.configDir = new File(MinecraftClient.getInstance().runDirectory, "anvil/configs");
         if (!this.configDir.exists()) {
             this.configDir.mkdirs();
         }

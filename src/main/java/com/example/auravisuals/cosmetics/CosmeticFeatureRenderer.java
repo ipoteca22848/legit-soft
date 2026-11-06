@@ -19,7 +19,7 @@ public final class CosmeticFeatureRenderer extends FeatureRenderer<PlayerEntityR
     public void render(
         MatrixStack matrices, OrderedRenderCommandQueue queue, int light, PlayerEntityRenderState state, float relativeHeadYaw, float headPitch
     ) {
-        if (!com.bamber.client.BamberRuntime.isActive()) return;
+        if (!com.anvil.client.AnvilRuntime.isActive()) return;
         if (state != null && !state.invisible) {
             MinecraftClient client = MinecraftClient.getInstance();
             if (client.world != null) {

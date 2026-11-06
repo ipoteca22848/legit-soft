@@ -169,8 +169,8 @@ public class SettingsPanelRenderer {
     }
 
     private float getComponentBaseHeight(AbstractSettingComponent c) {
-        if (c instanceof com.bamber.client.PreviewComponent) return 80;
-        if (c instanceof com.bamber.client.LabelComponent label) return label.getTotalHeight();
+        if (c instanceof com.anvil.client.PreviewComponent) return 80;
+        if (c instanceof com.anvil.client.LabelComponent label) return label.getTotalHeight();
         if (c instanceof SelectComponent) return ((SelectComponent) c).getTotalHeight();
         if (c instanceof MultiSelectComponent) return ((MultiSelectComponent) c).getTotalHeight();
         if (c instanceof ColorComponent) return ((ColorComponent) c).getTotalHeight();

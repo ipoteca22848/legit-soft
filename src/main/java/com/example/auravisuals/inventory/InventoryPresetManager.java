@@ -22,7 +22,7 @@ public final class InventoryPresetManager {
     static final int MAIN_SIZE = 36;
     static final int ARMOR_SIZE = 4;
     final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    final File presetDir = new File(MinecraftClient.getInstance().runDirectory, "bamber/inventories");
+    final File presetDir = new File(MinecraftClient.getInstance().runDirectory, "anvil/inventories");
 
     InventoryPresetManager() {
         if (!this.presetDir.exists()) {

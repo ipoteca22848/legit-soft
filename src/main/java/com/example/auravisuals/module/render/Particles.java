@@ -140,7 +140,7 @@ public class Particles extends Module {
     static File getCustomParticlesFolder() {
         MinecraftClient client = MinecraftClient.getInstance();
         File runDirectory = client != null && client.runDirectory != null ? client.runDirectory : new File(".");
-        File folder = new File(runDirectory, "bamber/custom_particles");
+        File folder = new File(runDirectory, "anvil/custom_particles");
         if (!folder.exists()) {
             folder.mkdirs();
         }
@@ -249,7 +249,7 @@ public class Particles extends Module {
                                 mode.set(cleanName, true);
                                 if (client.player != null) {
                                     client.player
-                                        .sendMessage(Text.literal("§a[bamber client] §fКастомный партикл §e" + cleanName + " §fуспешно добавлен!"), false);
+                                        .sendMessage(Text.literal("§a[anvil visual] §fКастомный партикл §e" + cleanName + " §fуспешно добавлен!"), false);
                                 }
                             });
                         }
@@ -257,7 +257,7 @@ public class Particles extends Module {
                         throwable.printStackTrace();
                     }
                 },
-                "bamber client-Particle-Picker"
+                "anvil visual-Particle-Picker"
             )
             .start();
     }

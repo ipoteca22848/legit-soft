@@ -660,7 +660,7 @@ public final class LanguageManager {
         RU_TO_EN.put("РџРѕРґСЃРІРµС‚РєР° Рё СѓРІРµР»РёС‡РµРЅРёРµ РїСЂРµРґРјРµС‚РѕРІ", "Item highlight and scale");
         RU_TO_EN.put("РљР°СЃС‚РѕРјРЅС‹Р№ С†РІРµС‚ С…РёС‚Р±РѕРєСЃРѕРІ", "Custom hitbox colors");
         RU_TO_EN.put("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЏСЂРєРѕСЃС‚СЊ", "Maximum brightness");
-        RU_TO_EN.put("РџР»Р°С‰ СЃ Р»РѕРіРѕС‚РёРїРѕРј Aura", "Cape with bamber client logo");
+        RU_TO_EN.put("РџР»Р°С‰ СЃ Р»РѕРіРѕС‚РёРїРѕРј Aura", "Cape with anvil visual logo");
         RU_TO_EN.put("Р\u0098Р·РјРµРЅСЏРµС‚ РІСЂРµРјСЏ СЃСѓС‚РѕРє", "Changes time of day");
         RU_TO_EN.put("РљР°СЃС‚РѕРјРЅС‹Р№ С‚СѓРјР°РЅ", "Custom fog");
         RU_TO_EN.put("РђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ РїРµСЂРµРїСЂРѕРґР°Р¶Р° РЅР° Р°СѓРєС†РёРѕРЅРµ", "Auction house auto relist");
@@ -916,7 +916,7 @@ public final class LanguageManager {
         putHudItemEn("phantom_membrane", "Phantom Membrane");
         RU_TO_EN.put("Приблизить", "Zoom in");
         RU_TO_EN.put("Показывает статус игры в Discord", "Shows game status in Discord");
-        RU_TO_EN.put("Иконка у игроков с bamber client", "bamber client icon on players");
+        RU_TO_EN.put("Иконка у игроков с anvil visual", "anvil visual icon on players");
         RU_TO_EN.put("Размер GUI", "GUI size");
         RU_TO_EN.put("Бинд ClickGUI", "ClickGUI bind");
         RU_TO_EN.put("Акцентный цвет", "Accent color");
@@ -1055,8 +1055,8 @@ public final class LanguageManager {
         RU_TO_EN.put("свап", "Swap");
         RU_TO_EN.put("время до ивента", "Time until event");
         RU_TO_EN.put("Автоматический shift при ударе", "Automatic Shift on hit");
-        RU_TO_EN.put("Плащ с логотипом bamber client", "Cape with bamber client logo");
-        RU_TO_EN.put("плащ с логотипом bamber client", "Cape with bamber client logo");
+        RU_TO_EN.put("Плащ с логотипом anvil visual", "Cape with anvil visual logo");
+        RU_TO_EN.put("плащ с логотипом anvil visual", "Cape with anvil visual logo");
         RU_TO_EN.put("Тип свапа", "Swap type");
         RU_TO_EN.put("тип свапа", "Swap type");
         RU_TO_EN.put("Ищет анархию с наименьшем онлайном", "Finds anarchy with the lowest online");

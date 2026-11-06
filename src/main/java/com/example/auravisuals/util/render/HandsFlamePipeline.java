@@ -223,10 +223,10 @@ public final class HandsFlamePipeline {
     private static void init() {
         if (!initialized) {
             dataBuffer = MemoryUtil.memAlloc(64);
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hands_flame_uniform", 136, 64L);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hands_flame_uniform", 136, 64L);
             ByteBuffer dummy = MemoryUtil.memAlloc(4);
             dummy.putInt(0).flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hands_flame_dummy", 40, dummy);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hands_flame_dummy", 40, dummy);
             MemoryUtil.memFree(dummy);
             initialized = true;
         }
@@ -236,13 +236,13 @@ public final class HandsFlamePipeline {
         if (beforeTexture == null || width != lastWidth || height != lastHeight || sourceFormat != format) {
             closeTextures();
             int snapshotUsage = 12;
-            beforeTexture = createTexture("bamber client:hands_flame_before", width, height, snapshotUsage, format);
-            afterTexture = createTexture("bamber client:hands_flame_after", width, height, snapshotUsage, format);
+            beforeTexture = createTexture("anvil visual:hands_flame_before", width, height, snapshotUsage, format);
+            afterTexture = createTexture("anvil visual:hands_flame_after", width, height, snapshotUsage, format);
             int trailUsage = 12;
             int trailWidth = Math.max(1, (width + 2 - 1) / 2);
             int trailHeight = Math.max(1, (height + 2 - 1) / 2);
-            trailTextureA = createTexture("bamber client:hands_flame_trail_a", trailWidth, trailHeight, trailUsage, TextureFormat.RGBA8);
-            trailTextureB = createTexture("bamber client:hands_flame_trail_b", trailWidth, trailHeight, trailUsage, TextureFormat.RGBA8);
+            trailTextureA = createTexture("anvil visual:hands_flame_trail_a", trailWidth, trailHeight, trailUsage, TextureFormat.RGBA8);
+            trailTextureB = createTexture("anvil visual:hands_flame_trail_b", trailWidth, trailHeight, trailUsage, TextureFormat.RGBA8);
             beforeView = RenderSystem.getDevice().createTextureView(beforeTexture);
             afterView = RenderSystem.getDevice().createTextureView(afterTexture);
             trailViewA = RenderSystem.getDevice().createTextureView(trailTextureA);
@@ -283,7 +283,7 @@ public final class HandsFlamePipeline {
         GpuSampler depthSampler = RenderSystem.getSamplerCache().get(FilterMode.NEAREST);
 
         try (RenderPass pass = encoder.createRenderPass(
-                () -> "bamber client:hands_flame_trail", nextTrailView(), OptionalInt.empty(), null, OptionalDouble.empty()
+                () -> "anvil visual:hands_flame_trail", nextTrailView(), OptionalInt.empty(), null, OptionalDouble.empty()
             )) {
             pass.setPipeline(TRAIL_PIPELINE);
             pass.setVertexBuffer(0, dummyVertexBuffer);
@@ -301,7 +301,7 @@ public final class HandsFlamePipeline {
         GpuSampler depthSampler = RenderSystem.getSamplerCache().get(FilterMode.NEAREST);
 
         try (RenderPass pass = encoder.createRenderPass(
-                () -> "bamber client:hands_flame_composite", framebuffer.getColorAttachmentView(), OptionalInt.empty(), null, OptionalDouble.empty()
+                () -> "anvil visual:hands_flame_composite", framebuffer.getColorAttachmentView(), OptionalInt.empty(), null, OptionalDouble.empty()
             )) {
             pass.setPipeline(COMPOSITE_PIPELINE);
             pass.setVertexBuffer(0, dummyVertexBuffer);

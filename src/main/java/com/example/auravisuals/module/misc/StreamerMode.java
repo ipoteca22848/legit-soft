@@ -19,7 +19,7 @@ import net.minecraft.util.Formatting;
 
 public class StreamerMode extends Module {
     public static final int MAX_NAME_LENGTH = 12;
-    public static final StringSetting customName = new StringSetting("Новое имя", "bamber");
+    public static final StringSetting customName = new StringSetting("Новое имя", "anvil");
     public static final StringSetting anarchyName = new StringSetting("Анархия", "777");
     private Text originalHeader = null;
     private final Map<String, Text> originalTeamPrefixes = new HashMap<>();

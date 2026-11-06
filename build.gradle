@@ -16,7 +16,6 @@ repositories {
 }
 
 dependencies {
-    modImplementation files('libs/bamber-trigger-engine.jar')
     compileOnly 'org.projectlombok:lombok:1.18.42'
     annotationProcessor 'org.projectlombok:lombok:1.18.42'
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -73,8 +72,7 @@ if (project.hasProperty('smoke')) {
         doLast {
             def metadata = file("${destinationDir}/fabric.mod.json")
             def parsed = new groovy.json.JsonSlurper().parse(metadata)
-            parsed.entrypoints.client.add('com.bamber.smoke.SmokeCheck')
-            parsed.jars = parsed.jars.findAll { !it.file.endsWith('bamber-trigger-engine.jar') }
+            parsed.entrypoints.client.add('com.anvil.smoke.SmokeCheck')
             metadata.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(parsed))
         }
     }

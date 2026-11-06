@@ -29,7 +29,7 @@ public final class HolyWorldEventsClient {
     static final String API = "https://api.holyworld.me/v1/";
     static final HttpClient HTTP = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(15L)).followRedirects(Redirect.NORMAL).build();
     static final ExecutorService ASYNC = Executors.newSingleThreadExecutor(r -> {
-        Thread thread = new Thread(r, "bamber client-HolyWorldAPI");
+        Thread thread = new Thread(r, "anvil visual-HolyWorldAPI");
         thread.setDaemon(true);
         return thread;
     });

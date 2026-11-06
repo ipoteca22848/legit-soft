@@ -71,7 +71,7 @@ public final class MirageGlassPipeline {
             ByteBuffer dummyData = MemoryUtil.memAlloc(4);
             dummyData.putInt(0);
             dummyData.flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:mirage_glass_dummy_vertex", 32, dummyData);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:mirage_glass_dummy_vertex", 32, dummyData);
             MemoryUtil.memFree(dummyData);
             initialized = true;
         }
@@ -323,7 +323,7 @@ public final class MirageGlassPipeline {
                         .write(RenderSystem.getModelViewMatrix(), COLOR_MODULATOR, MODEL_OFFSET, TEXTURE_MATRIX);
 
                     try (RenderPass pass = encoder.createRenderPass(
-                            () -> "bamber client:mirage_glass",
+                            () -> "anvil visual:mirage_glass",
                             client.getFramebuffer().getColorAttachmentView(),
                             OptionalInt.empty(),
                             null,
@@ -364,7 +364,7 @@ public final class MirageGlassPipeline {
                 sourceTexture = null;
             }
 
-            sourceTexture = RenderSystem.getDevice().createTexture(() -> "bamber client:mirage_glass_source", 12, format, fbWidth, fbHeight, 1, 1);
+            sourceTexture = RenderSystem.getDevice().createTexture(() -> "anvil visual:mirage_glass_source", 12, format, fbWidth, fbHeight, 1, 1);
             sourceTextureView = RenderSystem.getDevice().createTextureView(sourceTexture);
             lastWidth = fbWidth;
             lastHeight = fbHeight;
@@ -417,7 +417,7 @@ public final class MirageGlassPipeline {
                 uniformBuffer.close();
             }
 
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:mirage_glass_uniform", 136, size);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:mirage_glass_uniform", 136, size);
         }
     }
 

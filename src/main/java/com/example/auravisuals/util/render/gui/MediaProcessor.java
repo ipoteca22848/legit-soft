@@ -152,7 +152,7 @@ public final class MediaProcessor {
         props.setProperty("delays", sb.toString());
 
         try (OutputStream os = Files.newOutputStream(dir.resolve("meta.properties"))) {
-            props.store(os, "bamber client media slot " + slot);
+            props.store(os, "anvil visual media slot " + slot);
         }
     }
 
@@ -278,7 +278,7 @@ public final class MediaProcessor {
             }
         }
 
-        NativeImageBackedTexture tex = new NativeImageBackedTexture(() -> "bamber client-s" + slot + "-" + idx, ni);
+        NativeImageBackedTexture tex = new NativeImageBackedTexture(() -> "anvil visual-s" + slot + "-" + idx, ni);
         tex.upload();
         tm.registerTexture(id, tex);
     }

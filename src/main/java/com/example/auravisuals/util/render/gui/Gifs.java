@@ -11,7 +11,7 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public final class Gifs {
     public static final String NONE = "none";
-    private static final Path CONFIG = FabricLoader.getInstance().getConfigDir().resolve("bamber client_livinggui.properties");
+    private static final Path CONFIG = FabricLoader.getInstance().getConfigDir().resolve("anvil visual_livinggui.properties");
     private static final GifOption[] slots = new GifOption[10];
     private static String selectedId = "none";
 
@@ -133,7 +133,7 @@ public final class Gifs {
             p.setProperty("selected", selectedId);
 
             try (OutputStream out = Files.newOutputStream(CONFIG)) {
-                p.store(out, "bamber client Living GUI selection");
+                p.store(out, "anvil visual Living GUI selection");
             }
         } catch (Exception var6) {
         }

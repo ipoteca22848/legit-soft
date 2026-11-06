@@ -16,7 +16,7 @@ public class TitleScreenMixin {
         MinecraftClient client = MinecraftClient.getInstance();
         TitleScreenMixin self = this;
         client.execute(() -> {
-            if (client.currentScreen == (Object)self && com.bamber.client.BamberRuntime.isActive() && MainMenu.shouldUseAuraMenu()) {
+            if (client.currentScreen == (Object)self && com.anvil.client.AnvilRuntime.isActive() && MainMenu.shouldUseAuraMenu()) {
                 client.setScreen(new rich.screens.menu.MainMenuScreen());
             }
         });

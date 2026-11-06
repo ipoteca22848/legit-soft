@@ -1,6 +1,6 @@
 {
-  "key.category.auravisuals.clickgui": "bamber client",
+  "key.category.auravisuals.clickgui": "anvil visual",
   "key.auravisuals.clickgui": "Open ClickGUI",
-  "key.bamber.opengui": "Open bamber client",
-  "key.category.auravisuals.main": "bamber client"
+  "key.anvil.opengui": "Open anvil visual",
+  "key.category.auravisuals.main": "anvil visual"
 }

@@ -44,7 +44,7 @@ public final class FramebufferBlitter {
             init();
             GpuSampler sampler = RenderSystem.getSamplerCache().get(FilterMode.LINEAR);
 
-            try (RenderPass pass = encoder.createRenderPass(() -> "bamber client:framebuffer_blit", target, OptionalInt.empty(), null, OptionalDouble.empty())) {
+            try (RenderPass pass = encoder.createRenderPass(() -> "anvil visual:framebuffer_blit", target, OptionalInt.empty(), null, OptionalDouble.empty())) {
                 pass.setPipeline(PIPELINE);
                 pass.setVertexBuffer(0, dummyVertexBuffer);
                 pass.bindTexture("Sampler0", source, sampler);
@@ -57,7 +57,7 @@ public final class FramebufferBlitter {
         if (dummyVertexBuffer == null) {
             ByteBuffer dummy = MemoryUtil.memAlloc(4);
             dummy.putInt(0).flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:framebuffer_blit_dummy", 40, dummy);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:framebuffer_blit_dummy", 40, dummy);
             MemoryUtil.memFree(dummy);
         }
     }

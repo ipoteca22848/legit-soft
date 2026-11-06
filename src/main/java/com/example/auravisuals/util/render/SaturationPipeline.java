@@ -61,7 +61,7 @@ public final class SaturationPipeline {
             ByteBuffer dummyData = MemoryUtil.memAlloc(4);
             dummyData.putInt(0);
             dummyData.flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:saturation_dummy_vertex", 32, dummyData);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:saturation_dummy_vertex", 32, dummyData);
             MemoryUtil.memFree(dummyData);
             initialized = true;
         }
@@ -95,7 +95,7 @@ public final class SaturationPipeline {
                             .write(RenderSystem.getModelViewMatrix(), COLOR_MODULATOR, MODEL_OFFSET, TEXTURE_MATRIX);
 
                         try (RenderPass pass = encoder.createRenderPass(
-                                () -> "bamber client:saturation",
+                                () -> "anvil visual:saturation",
                                 client.getFramebuffer().getColorAttachmentView(),
                                 OptionalInt.empty(),
                                 null,
@@ -140,7 +140,7 @@ public final class SaturationPipeline {
                 sourceTexture = null;
             }
 
-            sourceTexture = RenderSystem.getDevice().createTexture(() -> "bamber client:saturation_source", 12, format, fbWidth, fbHeight, 1, 1);
+            sourceTexture = RenderSystem.getDevice().createTexture(() -> "anvil visual:saturation_source", 12, format, fbWidth, fbHeight, 1, 1);
             sourceTextureView = RenderSystem.getDevice().createTextureView(sourceTexture);
             lastWidth = fbWidth;
             lastHeight = fbHeight;
@@ -155,7 +155,7 @@ public final class SaturationPipeline {
                 uniformBuffer.close();
             }
 
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:saturation_uniform", 136, size);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:saturation_uniform", 136, size);
         }
     }
 

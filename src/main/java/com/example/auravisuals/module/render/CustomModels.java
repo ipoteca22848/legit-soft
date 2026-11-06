@@ -1280,7 +1280,7 @@ public class CustomModels extends Module {
         try {
             String text = String.join(
                 "\r\n",
-                "=== Как добавить свою модель в bamber client ===",
+                "=== Как добавить свою модель в anvil visual ===",
                 "",
                 "1) Скачай модель-персонажа (аниме-аватары, бесплатные есть):",
                 "   https://hub.vroid.com/en/",

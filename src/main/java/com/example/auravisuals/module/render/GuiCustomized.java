@@ -100,7 +100,7 @@ public class GuiCustomized extends Module {
         if (slot < 0) {
             MinecraftClient mc = MinecraftClient.getInstance();
             if (mc != null && mc.player != null) {
-                mc.player.sendMessage(Text.literal("§c[bamber client] §fДостигнут лимит (максимум 10 фонов)!"), false);
+                mc.player.sendMessage(Text.literal("§c[anvil visual] §fДостигнут лимит (максимум 10 фонов)!"), false);
             }
         } else {
             new Thread(
@@ -156,7 +156,7 @@ public class GuiCustomized extends Module {
                                             mcx.player
                                                 .sendMessage(
                                                     Text.literal(
-                                                        "§a[bamber client] §fФон §e"
+                                                        "§a[anvil visual] §fФон §e"
                                                             + prepared.name
                                                             + " §fуспешно добавлен! ("
                                                             + prepared.frames.size()
@@ -172,7 +172,7 @@ public class GuiCustomized extends Module {
                             t.printStackTrace();
                         }
                     },
-                    "bamber client-Import"
+                    "anvil visual-Import"
                 )
                 .start();
         }

@@ -124,8 +124,8 @@ public class ModuleManager {
     private long lastFarWorldTeleportMs = 0L;
 
     private ModuleManager() {
-        this.addModule(new com.bamber.client.TriggerBot());
-        this.addModule(new com.bamber.client.Unhook());
+        this.addModule(new com.example.auravisuals.module.misc.DiscordRCP());
+        this.addModule(new com.anvil.client.Unhook());
         this.addModule(new QuickRespawn());
         this.addModule(new TapeMouse());
         this.addModule(new LockSlot());

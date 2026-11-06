@@ -33,7 +33,7 @@ public abstract class InGameHudMixin {
     @Inject(method = "render", at = @At("HEAD"), require = 0)
     private void auravisuals$captureStableGlassFrame(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         var module=ModuleManager.INSTANCE.getModule(Hud.class);
-        if(com.bamber.client.BamberRuntime.isActive()&&module!=null&&module.isEnabled())MirageGlassPipeline.captureHudFrame();
+        if(com.anvil.client.AnvilRuntime.isActive()&&module!=null&&module.isEnabled())MirageGlassPipeline.captureHudFrame();
     }
 
     @Inject(method = "renderHotbar", at = @At("HEAD"), cancellable = true, require = 0)

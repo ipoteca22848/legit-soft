@@ -1,7 +1,7 @@
 {
   "accessWidener": "auravisuals.accesswidener",
   "authors": [
-    "bamber"
+    "anvil"
   ],
   "contact": {},
   "depends": {
@@ -10,7 +10,7 @@
     "java": ">=21",
     "minecraft": "~1.21.11"
   },
-  "description": "bamber client for Minecraft 1.21.11",
+  "description": "anvil visual for Minecraft 1.21.11",
   "entrypoints": {
     "client": [
       "com.example.auravisuals.client.AuraVisualsClient"
@@ -21,7 +21,7 @@
   },
   "environment": "client",
   "icon": "assets/auravisuals/icon.png",
-  "id": "bamber",
+  "id": "anvil",
   "jars": [
     {
       "file": "META-INF/jars/discord-rpc-release-v3.3.0.jar"
@@ -31,18 +31,15 @@
     },
     {
       "file": "META-INF/jars/media-player-info-0.1.0.jar"
-    },
-    {
-      "file": "META-INF/jars/bamber-trigger-engine.jar"
     }
   ],
   "license": "All Rights Reserved",
   "mixins": [
     "auravisuals.mixins.json",
-    "bamber.mixins.json"
+    "anvil.mixins.json"
   ],
-  "name": "bamber client",
+  "name": "anvil visual",
   "schemaVersion": 1,
   "suggests": {},
-  "version": "1.0.3"
+  "version": "1.1.1"
 }

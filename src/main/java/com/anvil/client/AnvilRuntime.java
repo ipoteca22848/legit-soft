@@ -1,7 +1,7 @@
-package com.bamber.client;
+package com.anvil.client;
 import net.minecraft.client.MinecraftClient;
 import com.example.auravisuals.module.ModuleManager;
-public final class BamberRuntime {
+public final class AnvilRuntime {
  private static boolean active=true;
  public static boolean isActive(){return active;}
  public static void init(){
@@ -18,7 +18,6 @@ public final class BamberRuntime {
     module.setEnabledSilently(false);
    }
   }
-  TriggerBot.stopEngine();
   com.example.auravisuals.live.LiveScriptManager.INSTANCE.clearVisuals();
   com.example.auravisuals.util.integration.DiscordRPC.shutdown();
   active=false;

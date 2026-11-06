@@ -57,7 +57,7 @@ public final class ShadowRender {
             ByteBuffer empty = MemoryUtil.memAlloc(4);
             empty.putInt(0);
             empty.flip();
-            vertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:shadow_vertex", 32, empty);
+            vertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:shadow_vertex", 32, empty);
             MemoryUtil.memFree(empty);
         }
     }
@@ -95,7 +95,7 @@ public final class ShadowRender {
                 .write(RenderSystem.getModelViewMatrix(), COLOR_MODULATOR, MODEL_OFFSET, TEXTURE_MATRIX);
 
             try (RenderPass pass = encoder.createRenderPass(
-                    () -> "bamber client:shadow",
+                    () -> "anvil visual:shadow",
                     client.getFramebuffer().getColorAttachmentView(),
                     OptionalInt.empty(),
                     client.getFramebuffer().getDepthAttachmentView(),
@@ -125,7 +125,7 @@ public final class ShadowRender {
                 uniformBuffer.close();
             }
 
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:shadow_uniform", 136, size);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:shadow_uniform", 136, size);
         }
     }
 

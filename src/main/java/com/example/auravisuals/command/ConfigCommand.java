@@ -25,7 +25,7 @@ public class ConfigCommand extends Command {
 
                     String name = args[1];
                     ConfigManager.INSTANCE.saveConfig(name);
-                    CommandManager.addChatMessage(CommandManager.tr("§a[bamber client] §fКонфиг сохранен: §e", "§a[bamber client] §fConfig saved: §e") + name);
+                    CommandManager.addChatMessage(CommandManager.tr("§a[anvil visual] §fКонфиг сохранен: §e", "§a[anvil visual] §fConfig saved: §e") + name);
                     break;
                 case "load":
                     if (args.length < 2) {
@@ -35,7 +35,7 @@ public class ConfigCommand extends Command {
 
                     String loadName = args[1];
                     ConfigManager.INSTANCE.loadConfig(loadName);
-                    CommandManager.addChatMessage(CommandManager.tr("§a[bamber client] §fКонфиг загружен: §e", "§a[bamber client] §fConfig loaded: §e") + loadName);
+                    CommandManager.addChatMessage(CommandManager.tr("§a[anvil visual] §fКонфиг загружен: §e", "§a[anvil visual] §fConfig loaded: §e") + loadName);
                     break;
                 case "getcode":
                 case "share":
@@ -48,7 +48,7 @@ public class ConfigCommand extends Command {
 
                     CommandManager.addChatMessage(
                         CommandManager.tr(
-                            "§a[bamber client] §fКод конфига скопирован в буфер обмена!", "§a[bamber client] §fConfig share code copied to clipboard!"
+                            "§a[anvil visual] §fКод конфига скопирован в буфер обмена!", "§a[anvil visual] §fConfig share code copied to clipboard!"
                         )
                     );
                     break;
@@ -65,8 +65,8 @@ public class ConfigCommand extends Command {
                     if (codeToLoad == null || codeToLoad.isBlank()) {
                         CommandManager.addChatMessage(
                             CommandManager.tr(
-                                "§c[bamber client] Код конфига не указан и буфер обмена пуст!",
-                                "§c[bamber client] No config code specified and clipboard is empty!"
+                                "§c[anvil visual] Код конфига не указан и буфер обмена пуст!",
+                                "§c[anvil visual] No config code specified and clipboard is empty!"
                             )
                         );
                         return;
@@ -75,13 +75,13 @@ public class ConfigCommand extends Command {
                     if (ConfigManager.INSTANCE.importFromCode(codeToLoad)) {
                         CommandManager.addChatMessage(
                             CommandManager.tr(
-                                "§a[bamber client] §fКонфиг успешно загружен и применён по коду!",
-                                "§a[bamber client] §fConfig successfully loaded and applied from code!"
+                                "§a[anvil visual] §fКонфиг успешно загружен и применён по коду!",
+                                "§a[anvil visual] §fConfig successfully loaded and applied from code!"
                             )
                         );
                     } else {
                         CommandManager.addChatMessage(
-                            CommandManager.tr("§c[bamber client] Ошибка: Неверный формат кода конфига!", "§c[bamber client] Error: Invalid config code format!")
+                            CommandManager.tr("§c[anvil visual] Ошибка: Неверный формат кода конфига!", "§c[anvil visual] Error: Invalid config code format!")
                         );
                     }
                     break;
@@ -90,7 +90,7 @@ public class ConfigCommand extends Command {
                     if (configs.isEmpty()) {
                         CommandManager.addChatMessage(CommandManager.tr("Конфиги не найдены.", "No configs found."));
                     } else {
-                        CommandManager.addChatMessage(CommandManager.tr("§a[bamber client] §fСписок сохраненных конфигов:", "§a[bamber client] §fSaved configs:"));
+                        CommandManager.addChatMessage(CommandManager.tr("§a[anvil visual] §fСписок сохраненных конфигов:", "§a[anvil visual] §fSaved configs:"));
 
                         for (String config : configs) {
                             CommandManager.addChatMessage("§7- §f" + config);
@@ -108,11 +108,11 @@ public class ConfigCommand extends Command {
                     String deleteName = args[1];
                     if (ConfigManager.INSTANCE.deleteConfig(deleteName)) {
                         CommandManager.addChatMessage(
-                            CommandManager.tr("§a[bamber client] §fКонфиг удален: §e", "§a[bamber client] §fConfig removed: §e") + deleteName
+                            CommandManager.tr("§a[anvil visual] §fКонфиг удален: §e", "§a[anvil visual] §fConfig removed: §e") + deleteName
                         );
                     } else {
                         CommandManager.addChatMessage(
-                            CommandManager.tr("§c[bamber client] Конфиг не найден: ", "§c[bamber client] Config not found: ") + deleteName
+                            CommandManager.tr("§c[anvil visual] Конфиг не найден: ", "§c[anvil visual] Config not found: ") + deleteName
                         );
                     }
                     break;

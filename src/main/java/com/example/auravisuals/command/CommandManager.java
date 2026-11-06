@@ -54,7 +54,7 @@ public class CommandManager {
         MinecraftClient mc = MinecraftClient.getInstance();
         if (mc.player != null) {
             String normalized = message.replace("§d", "§c").replace("§5", "§c").replace("В§d", "§c").replace("В§5", "§c");
-            mc.player.sendMessage(Text.of("§c§l[bamber client] §7" + normalized), false);
+            mc.player.sendMessage(Text.of("§c§l[anvil visual] §7" + normalized), false);
         }
     }
 

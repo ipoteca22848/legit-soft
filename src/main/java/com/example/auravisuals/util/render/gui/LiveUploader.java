@@ -39,7 +39,7 @@ public final class LiveUploader {
                 } catch (Throwable var4) {
                     opt.setLoading(false);
                 }
-            }, "bamber client-read-" + slot);
+            }, "anvil visual-read-" + slot);
             reader.setDaemon(true);
             reader.start();
         }

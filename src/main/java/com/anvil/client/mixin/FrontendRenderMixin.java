@@ -1,4 +1,4 @@
-package com.bamber.client.mixin;
+package com.anvil.client.mixin;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.render.GuiRenderer;
@@ -16,8 +16,8 @@ public abstract class FrontendRenderMixin {
  @Shadow @Final private GuiRenderer guiRenderer;
  @Shadow @Final private FogRenderer fogRenderer;
  @Inject(method="render",at=@At(value="INVOKE",target="Lnet/minecraft/client/gui/render/GuiRenderer;render(Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V",shift=At.Shift.AFTER))
- private void bamber$render(RenderTickCounter counter,boolean tick,CallbackInfo ci){
-  if(!com.bamber.client.BamberRuntime.isActive()||client.getOverlay()!=null)return;
+ private void anvil$render(RenderTickCounter counter,boolean tick,CallbackInfo ci){
+  if(!com.anvil.client.AnvilRuntime.isActive()||client.getOverlay()!=null)return;
   if(!(client.currentScreen instanceof rich.screens.clickgui.ClickGui gui))return;
   guiState.clear();
   DrawContext context=new DrawContext(client,guiState,(int)client.mouse.getScaledX(client.getWindow()),(int)client.mouse.getScaledY(client.getWindow()));

@@ -29,7 +29,7 @@ public class AccountConfig {
     private String activeAccountSkin = "";
 
     private AccountConfig() {
-        Path configDir = Paths.get("bamber", "configs");
+        Path configDir = Paths.get("anvil", "configs");
         try {
             Files.createDirectories(configDir);
         } catch (IOException ignored) {}

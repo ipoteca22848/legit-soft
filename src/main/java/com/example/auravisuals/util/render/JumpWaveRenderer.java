@@ -173,7 +173,7 @@ public final class JumpWaveRenderer {
                             sceneCopy.delete();
                         }
 
-                        sceneCopy = new SimpleFramebuffer("bamber client-jumpwave-scene", main.textureWidth, main.textureHeight, false);
+                        sceneCopy = new SimpleFramebuffer("anvil visual-jumpwave-scene", main.textureWidth, main.textureHeight, false);
                     }
 
                     GpuTexture sceneTex = sceneCopy.getColorAttachment();

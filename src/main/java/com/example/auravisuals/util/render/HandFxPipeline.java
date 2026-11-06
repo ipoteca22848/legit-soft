@@ -106,7 +106,7 @@ public final class HandFxPipeline {
             dataBuffer = MemoryUtil.memAlloc(128);
             ByteBuffer dummy = MemoryUtil.memAlloc(4);
             dummy.putInt(0).flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hand_fx_dummy", 32, dummy);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hand_fx_dummy", 32, dummy);
             MemoryUtil.memFree(dummy);
             initialized = true;
         }
@@ -118,13 +118,13 @@ public final class HandFxPipeline {
         }
 
         closeTextures();
-        beforeTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_before", 14, format, w, h, 1, 1);
-        afterTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_after", 14, format, w, h, 1, 1);
-        mainHandTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_main_hand", 14, format, w, h, 1, 1);
+        beforeTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_before", 14, format, w, h, 1, 1);
+        afterTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_after", 14, format, w, h, 1, 1);
+        mainHandTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_main_hand", 14, format, w, h, 1, 1);
         int depthUsage = 5;
-        beforeDepthTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_depth_before", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
-        mainHandDepthTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_depth_main", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
-        afterDepthTex = RenderSystem.getDevice().createTexture(() -> "bamber client:hand_fx_depth_after", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
+        beforeDepthTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_depth_before", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
+        mainHandDepthTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_depth_main", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
+        afterDepthTex = RenderSystem.getDevice().createTexture(() -> "anvil visual:hand_fx_depth_after", depthUsage, TextureFormat.DEPTH32, w, h, 1, 1);
         beforeView = RenderSystem.getDevice().createTextureView(beforeTex);
         mainHandView = RenderSystem.getDevice().createTextureView(mainHandTex);
         afterView = RenderSystem.getDevice().createTextureView(afterTex);
@@ -262,9 +262,9 @@ public final class HandFxPipeline {
                     afterHitBuffer.close();
                 }
 
-                beforeHitBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hand_fx_hit_before", 9, requiredBufferSize);
-                mainHitBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hand_fx_hit_main", 9, requiredBufferSize);
-                afterHitBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hand_fx_hit_after", 9, requiredBufferSize);
+                beforeHitBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hand_fx_hit_before", 9, requiredBufferSize);
+                mainHitBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hand_fx_hit_main", 9, requiredBufferSize);
+                afterHitBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hand_fx_hit_after", 9, requiredBufferSize);
             }
 
             MinecraftClient client = MinecraftClient.getInstance();
@@ -507,7 +507,7 @@ public final class HandFxPipeline {
                     .write(RenderSystem.getModelViewMatrix(), COLOR_MODULATOR, MODEL_OFFSET, TEXTURE_MATRIX);
 
                 try (RenderPass pass = encoder.createRenderPass(
-                        () -> "bamber client:hand_fx", fb.getColorAttachmentView(), OptionalInt.empty(), null, OptionalDouble.empty()
+                        () -> "anvil visual:hand_fx", fb.getColorAttachmentView(), OptionalInt.empty(), null, OptionalDouble.empty()
                     )) {
                     pass.setPipeline(PIPELINE);
                     pass.setVertexBuffer(0, dummyVertexBuffer);
@@ -564,7 +564,7 @@ public final class HandFxPipeline {
                 uniformBuffer.close();
             }
 
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:hand_fx_uniform", 136, size);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:hand_fx_uniform", 136, size);
         }
     }
 

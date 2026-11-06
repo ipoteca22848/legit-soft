@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IconRenderer {
-    private static final Logger LOGGER = LoggerFactory.getLogger("bamber/IconRenderer");
+    private static final Logger LOGGER = LoggerFactory.getLogger("anvil/IconRenderer");
     private static final Map<String, Identifier> ICONS = new HashMap<>();
     private static final Map<Character, float[]> ATLAS_UVS = new HashMap<>();
 

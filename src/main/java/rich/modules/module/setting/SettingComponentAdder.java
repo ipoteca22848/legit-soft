@@ -10,9 +10,9 @@ public class SettingComponentAdder {
 
     public void addSettingComponent(List<Setting> settings, List<AbstractSettingComponent> components) {
         settings.forEach(setting -> {
-            if(setting instanceof com.bamber.client.PreviewSetting preview)components.add(new com.bamber.client.PreviewComponent(preview));
-            if (setting instanceof com.bamber.client.LabelSetting label) {
-                components.add(new com.bamber.client.LabelComponent(label));
+            if(setting instanceof com.anvil.client.PreviewSetting preview)components.add(new com.anvil.client.PreviewComponent(preview));
+            if (setting instanceof com.anvil.client.LabelSetting label) {
+                components.add(new com.anvil.client.LabelComponent(label));
             }
             if (setting instanceof BooleanSetting booleanSetting) {
                 components.add(new CheckboxComponent(booleanSetting));

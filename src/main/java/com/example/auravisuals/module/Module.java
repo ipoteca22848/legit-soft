@@ -95,7 +95,7 @@ public abstract class Module {
             this.mc = MinecraftClient.getInstance();
         }
 
-        return com.bamber.client.BamberRuntime.isActive() && this.enabled;
+        return com.anvil.client.AnvilRuntime.isActive() && this.enabled;
     }
 
     public void setEnabled(boolean enabled) {

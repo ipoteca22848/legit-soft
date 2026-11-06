@@ -125,7 +125,7 @@ public class ClickGui extends Screen {
     static final float HEADER_TEXT_X = 67.82F;
     static final float HEADER_TITLE_BASELINE = 34.936F;
     static final float HEADER_BUILD_BASELINE = 49.313F;
-    static final String HEADER_TITLE = "bamber client";
+    static final String HEADER_TITLE = "anvil visual";
     static final String HEADER_BUILD = "Build: #2.1";
     static final float SEARCH_X = 10.0F;
     static final float SEARCH_Y = 74.0F;
@@ -535,7 +535,7 @@ public class ClickGui extends Screen {
             IconRender.draw(context, "logo", 32.0F, 30.0F, IconRender.getDesignSize("logo"), -1);
         }
 
-        TextRender.draw(context, "bamber client", 67.82F, 34.936F, 10.0F, -1);
+        TextRender.draw(context, "anvil visual", 67.82F, 34.936F, 10.0F, -1);
         TextRender.draw(context, "Build: #2.1", 67.82F, 49.313F, 12.206F, -2130706433);
     }
 
@@ -624,7 +624,7 @@ public class ClickGui extends Screen {
     void renderUser(DrawContext context) {
         RoundedRenderer.drawRoundedRect(context, 10.0F, 472.0F, 224.0F, 54.0F, 12.0F, 1073741824);
         MinecraftClient client = MinecraftClient.getInstance();
-        String name = "bamber client";
+        String name = "anvil visual";
         String role = Profile.role != null ? "(" + Profile.role.name() + ")" : "(User)";
         String expiry = Profile.subscriptionEndDate != null && !Profile.subscriptionEndDate.isEmpty()
             ? "Till: " + Profile.subscriptionEndDate

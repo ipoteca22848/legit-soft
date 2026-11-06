@@ -13,7 +13,7 @@ import net.minecraft.util.math.MathHelper;
 public final class CustomHotbar implements HudElement {
     public static boolean replacesVanilla(){
         var client=MinecraftClient.getInstance();var module=ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.render.Hud.class);
-        return com.bamber.client.BamberRuntime.isActive()&&module!=null&&module.isEnabled()&&com.example.auravisuals.module.render.Hud.customHotbar.getValue()&&client.player!=null&&!client.player.isSpectator();
+        return com.anvil.client.AnvilRuntime.isActive()&&module!=null&&module.isEnabled()&&com.example.auravisuals.module.render.Hud.customHotbar.getValue()&&client.player!=null&&!client.player.isSpectator();
     }
     public static final CustomHotbar INSTANCE = new CustomHotbar();
     private static final float X = 769.0F;

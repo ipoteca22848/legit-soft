@@ -74,7 +74,7 @@ public final class CosmeticsNetworkClient {
     }
 
     public synchronized void connect() {
-        if (!com.bamber.client.BamberRuntime.isActive()) return;
+        if (!com.anvil.client.AnvilRuntime.isActive()) return;
         if (!this.connecting.get()) {
             WebSocket current = this.socketRef.get();
             if (current == null) {

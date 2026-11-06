@@ -399,7 +399,7 @@ public final class HudPresetManager {
     }
 
     private static File file() {
-        return FabricLoader.getInstance().getGameDir().resolve("bamber client").resolve("hud-presets.json").toFile();
+        return FabricLoader.getInstance().getGameDir().resolve("anvil visual").resolve("hud-presets.json").toFile();
     }
 
     private static String findName(String requested) {

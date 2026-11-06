@@ -15,7 +15,7 @@ public class HUD implements HudRenderCallback {
     private final MinecraftClient mc = MinecraftClient.getInstance();
 
     public void onHudRender(DrawContext context, RenderTickCounter tickCounter) {
-        if (!com.bamber.client.BamberRuntime.isActive()) return;
+        if (!com.anvil.client.AnvilRuntime.isActive()) return;
         if (!this.mc.options.hudHidden) {
             Hud hudModule = ModuleManager.INSTANCE.getModule(Hud.class);
             if (hudModule == null || hudModule.isEnabled()) {
@@ -42,7 +42,7 @@ public class HUD implements HudRenderCallback {
     }
 
     public void renderNotifications(DrawContext context, RenderTickCounter tickCounter) {
-        if (!com.bamber.client.BamberRuntime.isActive()) return;
+        if (!com.anvil.client.AnvilRuntime.isActive()) return;
         if (!this.mc.options.hudHidden) {
             Hud hudModule = ModuleManager.INSTANCE.getModule(Hud.class);
             if (hudModule == null || hudModule.isEnabled()) {

@@ -779,7 +779,7 @@ public class FriendScreen extends Module {
             }
 
             framebuffer = new SimpleFramebuffer(
-                "bamber client-friend-screen-stream-" + view.name().toLowerCase(Locale.ROOT), profile.width, profile.height, false
+                "anvil visual-friend-screen-stream-" + view.name().toLowerCase(Locale.ROOT), profile.width, profile.height, false
             );
             if (view == FriendScreenClient$StreamView.WORLD) {
                 this.worldStreamFramebuffer = framebuffer;

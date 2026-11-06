@@ -17,7 +17,7 @@ public class ThemeManager {
     private static final String SELECTED_THEME_FILE = "selected_theme.json";
     private final List<Theme> themes = new ArrayList<>();
     private Theme currentTheme;
-    private final File themeDir = new File(MinecraftClient.getInstance().runDirectory, "bamber/themes");
+    private final File themeDir = new File(MinecraftClient.getInstance().runDirectory, "anvil/themes");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public ThemeManager() {

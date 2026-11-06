@@ -1,1 +1,0 @@
-{"required":true,"package":"com.bamber.client.mixin","compatibilityLevel":"JAVA_21","client":["FrontendRenderMixin"],"injectors":{"defaultRequire":1}}

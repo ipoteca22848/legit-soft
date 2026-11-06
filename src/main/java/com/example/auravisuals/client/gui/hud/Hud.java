@@ -204,8 +204,8 @@ public final class Hud {
     private void renderAnchoredHotbar(DrawContext context,float opacity){
         context.getMatrices().pushMatrix();
         context.getMatrices().identity();
-        context.getMatrices().translate(context.getScaledWindowWidth()/2f,com.bamber.client.HudViewport.hotbarBottom(context.getScaledWindowHeight()));
-        float fixed=com.bamber.client.HudViewport.hotbarScale();context.getMatrices().scale(fixed,fixed);
+        context.getMatrices().translate(context.getScaledWindowWidth()/2f,com.anvil.client.HudViewport.hotbarBottom(context.getScaledWindowHeight()));
+        float fixed=com.anvil.client.HudViewport.hotbarScale();context.getMatrices().scale(fixed,fixed);
         context.getMatrices().translate(-(CustomHotbar.INSTANCE.x()+CustomHotbar.INSTANCE.width()/2),-(CustomHotbar.INSTANCE.y()+CustomHotbar.INSTANCE.height()));
         this.currentElementId=CustomHotbar.INSTANCE.id();this.currentElementOpacity=opacity;this.currentDragAnimation=0;
         try{CustomHotbar.INSTANCE.render(context,this);}finally{this.currentElementId=null;this.currentElementOpacity=1;context.getMatrices().popMatrix();}
@@ -220,7 +220,7 @@ public final class Hud {
             float screenWidth = 182.0F;
             float screenHeight = element.height() * screenWidth / Math.max(1.0F, element.width());
             float centerX = MinecraftClient.getInstance().getWindow().getScaledWidth()/2f;
-            bottom = com.bamber.client.HudViewport.hotbarBottom(MinecraftClient.getInstance().getWindow().getScaledHeight());
+            bottom = com.anvil.client.HudViewport.hotbarBottom(MinecraftClient.getInstance().getWindow().getScaledHeight());
             left = centerX - screenWidth / 2.0F;
             right = centerX + screenWidth / 2.0F;
             top = bottom - screenHeight;

@@ -152,7 +152,7 @@ public class AutoLogin extends Module {
 
     private Path passwordsDir() {
         MinecraftClient client = MinecraftClient.getInstance();
-        return client.runDirectory.toPath().resolve("bamber client").resolve("passwords");
+        return client.runDirectory.toPath().resolve("anvil visual").resolve("passwords");
     }
 
     private String currentNick() {

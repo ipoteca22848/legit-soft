@@ -58,7 +58,7 @@ public final class LiquidGlassRenderer {
                         sceneCopy.delete();
                     }
 
-                    sceneCopy = new SimpleFramebuffer("bamber client-liquidglass-scene", main.textureWidth, main.textureHeight, false);
+                    sceneCopy = new SimpleFramebuffer("anvil visual-liquidglass-scene", main.textureWidth, main.textureHeight, false);
                 }
 
                 GpuTexture sceneTex = sceneCopy.getColorAttachment();

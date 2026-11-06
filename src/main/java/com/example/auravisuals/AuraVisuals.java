@@ -15,7 +15,7 @@ public class AuraVisuals implements ModInitializer {
     public void onInitialize() {
         SoundUtil.init();
         CustomSoundUtil.init();
-        LOGGER.info("bamber client initialized!");
+        LOGGER.info("anvil visual initialized!");
         this.prefetchAvatar();
     }
 

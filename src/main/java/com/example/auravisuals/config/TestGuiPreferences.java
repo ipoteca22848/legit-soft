@@ -29,7 +29,7 @@ public final class TestGuiPreferences {
     private static boolean loaded = false;
 
     private static File prefsFile() {
-        return new File(MinecraftClient.getInstance().runDirectory, "bamber/test_gui_prefs.json");
+        return new File(MinecraftClient.getInstance().runDirectory, "anvil/test_gui_prefs.json");
     }
 
     public static void ensureLoaded() {

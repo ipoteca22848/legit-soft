@@ -1,4 +1,4 @@
-package com.bamber.client;
+package com.anvil.client;
 public final class LabelComponent extends rich.util.interfaces.AbstractSettingComponent {
  public LabelComponent(LabelSetting setting){super(setting);}
  private java.util.List<String> lines(){

@@ -35,7 +35,7 @@ public final class SyncedLyricsService {
     static final SyncedLyricsService$LyricsTrack NOT_FOUND = new SyncedLyricsService$LyricsTrack(List.of(), SyncedLyricsService$State.NOT_FOUND, false);
     final Map<String, SyncedLyricsService$LyricsTrack> cache = new ConcurrentHashMap<>();
     final ExecutorService executor = Executors.newSingleThreadExecutor(runnable -> {
-        Thread thread = new Thread(runnable, "bamber client-Lyrics");
+        Thread thread = new Thread(runnable, "anvil visual-Lyrics");
         thread.setDaemon(true);
         thread.setPriority(1);
         return thread;
@@ -154,8 +154,8 @@ public final class SyncedLyricsService {
         HttpRequest request = HttpRequest.newBuilder(URI.create(url))
             .timeout(Duration.ofSeconds(7L))
             .header("Accept", "application/json")
-            .header("User-Agent", "bamber/1.0.2 (WorldLyrics)")
-            .header("Lrclib-Client", "bamber/1.0.2")
+            .header("User-Agent", "anvil/1.0.2 (WorldLyrics)")
+            .header("Lrclib-Client", "anvil/1.0.2")
             .GET()
             .build();
         HttpResponse<String> response = this.client.send(request, BodyHandlers.ofString(StandardCharsets.UTF_8));
@@ -183,7 +183,7 @@ public final class SyncedLyricsService {
         HttpRequest searchRequest = HttpRequest.newBuilder(URI.create("https://lyrics.ws/api/search"))
             .timeout(Duration.ofSeconds(7L))
             .header("Content-Type", "application/x-www-form-urlencoded")
-            .header("User-Agent", "bamber/1.0.2 (WorldLyrics)")
+            .header("User-Agent", "anvil/1.0.2 (WorldLyrics)")
             .POST(BodyPublishers.ofString("query=" + encode(title), StandardCharsets.UTF_8))
             .build();
         String searchHtml = this.sendText(searchRequest);
@@ -217,7 +217,7 @@ public final class SyncedLyricsService {
         if (bestPath != null && bestScore >= 100) {
             HttpRequest pageRequest = HttpRequest.newBuilder(URI.create("https://lyrics.ws" + bestPath))
                 .timeout(Duration.ofSeconds(7L))
-                .header("User-Agent", "bamber/1.0.2 (WorldLyrics)")
+                .header("User-Agent", "anvil/1.0.2 (WorldLyrics)")
                 .GET()
                 .build();
             String page = this.sendText(pageRequest);

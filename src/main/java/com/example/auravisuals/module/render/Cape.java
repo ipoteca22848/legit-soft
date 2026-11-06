@@ -22,7 +22,7 @@ public class Cape extends Module {
     private boolean texturesGenerated = false;
 
     public Cape() {
-        super("Cape", "Плащ с логотипом bamber client", Category.VISUALS);
+        super("Cape", "Плащ с логотипом anvil visual", Category.VISUALS);
         this.addSettings(this.capeColor, this.onlyMe);
     }
 

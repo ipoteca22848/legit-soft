@@ -50,7 +50,7 @@ public class AuraAccountsScreen extends Screen {
     long lastClearClick;
 
     public AuraAccountsScreen(Screen parent) {
-        super(Text.literal("bamber client — Accounts"));
+        super(Text.literal("anvil visual — Accounts"));
         this.parent = parent;
     }
 

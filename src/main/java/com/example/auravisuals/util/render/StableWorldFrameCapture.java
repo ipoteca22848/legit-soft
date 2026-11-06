@@ -54,7 +54,7 @@ public final class StableWorldFrameCapture {
             width = framebuffer.textureWidth;
             height = framebuffer.textureHeight;
             colorFormat = nextFormat;
-            colorTexture = RenderSystem.getDevice().createTexture(() -> "bamber client:stable_world_color", 12, colorFormat, width, height, 1, 1);
+            colorTexture = RenderSystem.getDevice().createTexture(() -> "anvil visual:stable_world_color", 12, colorFormat, width, height, 1, 1);
             colorView = RenderSystem.getDevice().createTextureView(colorTexture);
         }
     }

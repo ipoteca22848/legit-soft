@@ -51,7 +51,7 @@ public class AuraMainMenuScreen extends Screen {
     int menuHeight;
 
     public AuraMainMenuScreen() {
-        super(Text.literal("bamber client"));
+        super(Text.literal("anvil visual"));
     }
 
     @Override
@@ -116,7 +116,7 @@ public class AuraMainMenuScreen extends Screen {
         float dt = this.frameDelta();
         this.renderMenuBackground(context);
         context.fill(0, 0, this.width, this.height, 1895825408);
-        context.drawCenteredTextWithShadow(this.textRenderer, "bamber client", this.width / 2, 14, 0xFFFFFFFF);
+        context.drawCenteredTextWithShadow(this.textRenderer, "anvil visual", this.width / 2, 14, 0xFFFFFFFF);
         int previousMenuWidth = this.menuWidth;
         int previousMenuHeight = this.menuHeight;
         this.updateMenuMetrics();
@@ -292,7 +292,7 @@ public class AuraMainMenuScreen extends Screen {
             context, this.updateDate, x + w - FontManager.getScaledTextWidth(this.updateDate, 0.23F) - 14.0F, y + 36, -1191182337, false, 0.23F
         );
         FontManager.drawCustomTextScaled(
-            context, "bamber client", x + w - FontManager.getScaledTextWidth("bamber client", 0.23F) - 14.0F, y + 49, -1191182337, false, 0.23F
+            context, "anvil visual", x + w - FontManager.getScaledTextWidth("anvil visual", 0.23F) - 14.0F, y + 49, -1191182337, false, 0.23F
         );
         RenderUtil.drawRoundedRect(context, x + 1.15F, y + 55.0F, w - 2.3F, 1.15F, 0.6F, this.withAlpha(-1824962, 155));
         context.enableScissor(x + 10, y + 60, x + w - 12, y + h - 10);

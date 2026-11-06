@@ -34,11 +34,11 @@ public final class HitColorRenderLayers {
     }
 
     public static RenderLayer tint(Identifier texture) {
-        return TINT_LAYERS.computeIfAbsent(texture, id -> create("bamber client_hit_color_tint", TINT_PIPELINE, id));
+        return TINT_LAYERS.computeIfAbsent(texture, id -> create("anvil visual_hit_color_tint", TINT_PIPELINE, id));
     }
 
     public static RenderLayer full(Identifier texture) {
-        return FULL_LAYERS.computeIfAbsent(texture, id -> create("bamber client_hit_color_full", FULL_PIPELINE, id));
+        return FULL_LAYERS.computeIfAbsent(texture, id -> create("anvil visual_hit_color_full", FULL_PIPELINE, id));
     }
 
     private static RenderLayer create(String name, RenderPipeline pipeline, Identifier texture) {

@@ -26,9 +26,9 @@ public final class Optimization extends Module {
         super("Optimization", "Поднимает FPS: куллинг сущностей, частиц и тайлов, дистанция, облака.", Category.MISC);
         instance = this;
         this.addSettings(this.mode, this.entityCulling, this.limitRenderDistance,
-            new com.example.auravisuals.setting.ActionSetting("Minecraft: Баланс FPS",()->{this.setEnabled(true);this.mode.setValue("Средний");com.bamber.client.MinecraftPerformanceProfiles.apply(false);}),
-            new com.example.auravisuals.setting.ActionSetting("Minecraft: Максимум FPS",()->{this.setEnabled(true);this.mode.setValue("Ультра");com.bamber.client.MinecraftPerformanceProfiles.apply(true);}),
-            new com.example.auravisuals.setting.ActionSetting("Восстановить настройки Minecraft",com.bamber.client.MinecraftPerformanceProfiles::restore));
+            new com.example.auravisuals.setting.ActionSetting("Minecraft: Баланс FPS",()->{this.setEnabled(true);this.mode.setValue("Средний");com.anvil.client.MinecraftPerformanceProfiles.apply(false);}),
+            new com.example.auravisuals.setting.ActionSetting("Minecraft: Максимум FPS",()->{this.setEnabled(true);this.mode.setValue("Ультра");com.anvil.client.MinecraftPerformanceProfiles.apply(true);}),
+            new com.example.auravisuals.setting.ActionSetting("Восстановить настройки Minecraft",com.anvil.client.MinecraftPerformanceProfiles::restore));
     }
 
     public static Optimization getInstance() {
@@ -170,7 +170,7 @@ public final class Optimization extends Module {
         };
     }
 
-    @Override public void onDisable(){com.bamber.client.MinecraftPerformanceProfiles.restore();}
+    @Override public void onDisable(){com.anvil.client.MinecraftPerformanceProfiles.restore();}
 
     public int tier() {
         return this.mode.is("Ультра") ? 2 : (this.mode.is("Средний") ? 1 : 0);

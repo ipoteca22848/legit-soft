@@ -409,6 +409,6 @@ public final class MessengerPreferences {
     private static File file() {
         MinecraftClient client = MinecraftClient.getInstance();
         File runDirectory = client == null ? new File(".") : client.runDirectory;
-        return new File(runDirectory, "bamber/messenger_preferences.json");
+        return new File(runDirectory, "anvil/messenger_preferences.json");
     }
 }

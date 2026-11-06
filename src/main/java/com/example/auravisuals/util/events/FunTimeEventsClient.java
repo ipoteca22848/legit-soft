@@ -44,7 +44,7 @@ public final class FunTimeEventsClient {
         .connectTimeout(Duration.ofSeconds(15L))
         .build();
     static final ExecutorService ASYNC = Executors.newFixedThreadPool(2, r -> {
-        Thread t = new Thread(r, "bamber client-FunTimeAPI");
+        Thread t = new Thread(r, "anvil visual-FunTimeAPI");
         t.setDaemon(true);
         return t;
     });

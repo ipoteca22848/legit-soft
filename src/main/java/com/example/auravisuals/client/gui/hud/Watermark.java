@@ -31,7 +31,7 @@ public final class Watermark implements HudElement {
     private static final float COMPACT_LOGO_SIZE = 15.75F;
     private static final float BOSS_BAR_WATERMARK_TOP = 54.0F;
     private static final Identifier GLOW_TEXTURE = Identifier.of("auravisuals", "textures/glow.png");
-    private static final String CLIENT_NAME = "bamber client";
+    private static final String CLIENT_NAME = "anvil visual";
     private static final String FPS_UNIT = "fps";
     private static final String PING_UNIT = "ping";
     private static float currentWidth = 368.308F;
@@ -81,7 +81,7 @@ public final class Watermark implements HudElement {
         String playerName = Hud.playerName();
         String fpsText = String.valueOf(Math.max(0, Math.round(animatedFps)));
         String pingText = String.valueOf(Math.max(0, Math.round(animatedPing)));
-        float nameWidth = TextRender.width("bamber client", 14.241F);
+        float nameWidth = TextRender.width("anvil visual", 14.241F);
         float userWidth = TextRender.width(playerName, 13.224F);
         float fpsWidth = TextRender.width(fpsText, 13.224F);
         float fpsUnitWidth = TextRender.width("fps", 13.224F);
@@ -119,7 +119,7 @@ public final class Watermark implements HudElement {
             );
         }
 
-        TextRender.draw(context, "bamber client", nameX, 56.583F, 14.241F, Hud.animatedColor(-2434342));
+        TextRender.draw(context, "anvil visual", nameX, 56.583F, 14.241F, Hud.animatedColor(-2434342));
         Hud.separator(context, userSepX, 45.5F, 12.0F, 452984831);
         IconRender.draw(context, "person", userIconX, 45.5F, IconRender.getDesignSize("person"), Hud.animatedColor(Hud.accent()));
         TextRender.draw(context, playerName, userTextX, 56.583F, 13.224F, Hud.animatedColor(-2434342));
@@ -142,7 +142,7 @@ public final class Watermark implements HudElement {
         float iconX = centerX - size / 2.0F;
         float iconY = centerY - size / 2.0F;
         drawCompactGlow(context, iconX, iconY, size, color);
-        TextRender.draw(context,"Б",centerX-TextRender.width("Б",size)/2,centerY+size*.35F,size,color);
+        TextRender.draw(context,"A",centerX-TextRender.width("A",size)/2,centerY+size*.35F,size,color);
         return true;
     }
 

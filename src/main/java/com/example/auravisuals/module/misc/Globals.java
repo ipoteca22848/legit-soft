@@ -22,7 +22,7 @@ public final class Globals {
     public static void shutdown() {connection.disconnect();GlobalsRegistry.clear();}
 
     public static boolean shouldShowIcon() {
-        return com.bamber.client.BamberRuntime.isActive();
+        return com.anvil.client.AnvilRuntime.isActive();
     }
 
     public static String getDisplayName(MinecraftClient mc) {

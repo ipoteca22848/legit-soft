@@ -466,7 +466,7 @@ public final class CosmeticsManager {
     }
 
     public void renderWorld(WorldRenderContext context) {
-        if (!com.bamber.client.BamberRuntime.isActive()) return;
+        if (!com.anvil.client.AnvilRuntime.isActive()) return;
         MinecraftClient mc = MinecraftClient.getInstance();
         if (mc.player != null && mc.world != null) {
             float tickDelta = context.tickCounter().getTickProgress(true);

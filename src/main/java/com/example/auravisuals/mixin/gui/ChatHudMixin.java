@@ -133,8 +133,8 @@ public abstract class ChatHudMixin {
         }
 
         String raw = message.getString();
-        String prefix = "[bamber client]";
-        int index = raw.indexOf("[bamber client]");
+        String prefix = "[anvil visual]";
+        int index = raw.indexOf("[anvil visual]");
         if (index < 0) {
             return message;
         }

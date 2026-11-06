@@ -1,4 +1,4 @@
-package com.bamber.client;
+package com.anvil.client;
 /** Native GUI coordinates, independent of the 1920x1080 HUD design canvas. */
 public final class HudViewport {
  public static final float HOTBAR_WIDTH=182, HOTBAR_DESIGN_WIDTH=382, HOTBAR_DESIGN_HEIGHT=48;

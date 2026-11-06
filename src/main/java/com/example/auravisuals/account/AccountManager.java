@@ -35,7 +35,7 @@ public final class AccountManager {
     static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy").withZone(ZoneId.systemDefault());
     static final Random RANDOM = new Random();
     static final String[] RANDOM_LEFT = new String[]{
-        "bamber",
+        "anvil",
         "Crimson",
         "Void",
         "Night",
@@ -86,7 +86,7 @@ public final class AccountManager {
         "Echo"
     };
     static final String[] RANDOM_RIGHT = new String[]{
-        "bamber",
+        "anvil",
         "Shade",
         "Strike",
         "Core",
@@ -214,7 +214,7 @@ public final class AccountManager {
             }
         }
 
-        return addAccount("bamber" + (1000 + RANDOM.nextInt(9000)));
+        return addAccount("anvil" + (1000 + RANDOM.nextInt(9000)));
     }
 
     public static void select(AccountManager$Account account) {
@@ -327,7 +327,7 @@ public final class AccountManager {
     }
 
     static File accountsFile() {
-        return new File(MinecraftClient.getInstance().runDirectory, "bamber/accounts.json");
+        return new File(MinecraftClient.getInstance().runDirectory, "anvil/accounts.json");
     }
 
     static void load() {

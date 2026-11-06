@@ -1,4 +1,4 @@
-package com.bamber.client;
+package com.anvil.client;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,6 @@ public final class FrontendBridge {
  }
  public static void refresh(){for(var module:modules())if(module instanceof Adapter a)a.refresh();}
  private static ModuleCategory category(com.example.auravisuals.module.Module m){
-  if(m instanceof TriggerBot)return ModuleCategory.COMBAT;
   if(m instanceof com.example.auravisuals.module.render.Hud)return ModuleCategory.HUD;
   if(m instanceof com.example.auravisuals.module.render.ClickGui)return ModuleCategory.SETTINGS;
   return switch(m.getCategory()){

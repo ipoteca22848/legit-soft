@@ -36,7 +36,7 @@ public class ClickGui extends Screen implements IMinecraft {
     private final BackgroundComponent background = new BackgroundComponent();
     private final ModuleComponent moduleComponent = new ModuleComponent();
     private final DragHandler dragHandler = new DragHandler();
-    private final com.bamber.client.CosmeticsGallery cosmeticsGallery = new com.bamber.client.CosmeticsGallery();
+    private final com.anvil.client.CosmeticsGallery cosmeticsGallery = new com.anvil.client.CosmeticsGallery();
     private ModuleCategory selectedCategory = ModuleCategory.RENDER;
 
     private final GuiAnimation openAnimation = new GuiAnimation();
@@ -54,7 +54,7 @@ public class ClickGui extends Screen implements IMinecraft {
     private float lastDelta;
 
     public ClickGui() {
-        super(Text.of("bamber client"));
+        super(Text.of("anvil visual"));
     }
 
     public boolean isClosing() {
@@ -92,7 +92,7 @@ public class ClickGui extends Screen implements IMinecraft {
                 }
             }
         } catch (Exception ignored) {}
-        modules.addAll(com.bamber.client.NativeSections.cards(selectedCategory));
+        modules.addAll(com.anvil.client.NativeSections.cards(selectedCategory));
         moduleComponent.updateModules(modules, selectedCategory);
     }
 
@@ -156,8 +156,8 @@ public class ClickGui extends Screen implements IMinecraft {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        com.bamber.client.FrontendBridge.refresh();
-        if(com.bamber.client.NativeSections.consumeRefresh()){updateModules();}
+        com.anvil.client.FrontendBridge.refresh();
+        if(com.anvil.client.NativeSections.consumeRefresh()){updateModules();}
         lastMouseX = mouseX;
         lastMouseY = mouseY;
         lastDelta = delta;
@@ -178,7 +178,7 @@ public class ClickGui extends Screen implements IMinecraft {
     public void renderOverlay(DrawContext context, RenderTickCounter tickCounter) {
         if (mc.getWindow() == null) return;
 
-        com.bamber.client.FrontendBridge.refresh();
+        com.anvil.client.FrontendBridge.refresh();
         float delta = lastDelta;
         int mouseX = lastMouseX;
         int mouseY = lastMouseY;

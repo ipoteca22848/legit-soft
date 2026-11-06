@@ -32,7 +32,7 @@ public final class GifTextureUtil {
     static final Map<Identifier, GifTextureUtil$GifAnimation> CACHE = new ConcurrentHashMap<>();
     static final Set<Identifier> LOADING = ConcurrentHashMap.newKeySet();
     static final ExecutorService LOADER = Executors.newFixedThreadPool(2, r -> {
-        Thread t = new Thread(r, "bamber client-GifLoader");
+        Thread t = new Thread(r, "anvil visual-GifLoader");
         t.setDaemon(true);
         return t;
     });

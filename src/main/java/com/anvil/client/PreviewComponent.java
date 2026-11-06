@@ -1,4 +1,4 @@
-package com.bamber.client;
+package com.anvil.client;
 public final class PreviewComponent extends rich.util.interfaces.AbstractSettingComponent {
  public PreviewComponent(PreviewSetting s){super(s);}
  @Override public void render(net.minecraft.client.gui.DrawContext context,int mouseX,int mouseY,float delta){

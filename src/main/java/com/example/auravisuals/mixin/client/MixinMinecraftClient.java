@@ -53,6 +53,6 @@ public abstract class MixinMinecraftClient {
 
     @Inject(method = "getWindowTitle", at = @At("RETURN"), cancellable = true, require = 0)
     private void onGetWindowTitle(CallbackInfoReturnable<String> cir) {
-        cir.setReturnValue("bamber client");
+        cir.setReturnValue("anvil visual");
     }
 }

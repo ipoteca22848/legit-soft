@@ -64,19 +64,19 @@ public class AuraVisualsClient implements ClientModInitializer {
     static boolean clickGuiBindWasPressed;
 
     public void onInitializeClient() {
-        com.bamber.client.BamberRuntime.init();
+        com.anvil.client.AnvilRuntime.init();
         FontManager.init();
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new AuraVisualsClient$1(this));
         CosmeticsManager.INSTANCE.load();
         ThemeManager.INSTANCE.init();
         openGuiKey = KeyBindingHelper.registerKeyBinding(
-            new KeyBinding("key.bamber.opengui", Type.KEYSYM, 344, Category.create(Identifier.of("auravisuals", "main")))
+            new KeyBinding("key.anvil.opengui", Type.KEYSYM, 344, Category.create(Identifier.of("auravisuals", "main")))
         );
-        ClientSendMessageEvents.ALLOW_CHAT.register((AllowChat)message -> !com.bamber.client.BamberRuntime.isActive() || !CommandManager.INSTANCE.execute(message));
+        ClientSendMessageEvents.ALLOW_CHAT.register((AllowChat)message -> !com.anvil.client.AnvilRuntime.isActive() || !CommandManager.INSTANCE.execute(message));
         this.registerRenderCallbacks();
         this.registerLogicCallbacks();
         ClientPlayConnectionEvents.JOIN.register((Join)(handler, sender, client) -> {
-            if (!com.bamber.client.BamberRuntime.isActive()) return;
+            if (!com.anvil.client.AnvilRuntime.isActive()) return;
             AutoReconnectTracker.captureCurrentServer(client);
             HolyServerPolicy.enforceDisabledModulesForCurrentServer();
             CosmeticsNetworkClient.INSTANCE.sendHello();
@@ -91,11 +91,11 @@ public class AuraVisualsClient implements ClientModInitializer {
             ThemeManager.INSTANCE.loadPersistedSelectedTheme();
             CosmeticsNetworkClient.INSTANCE.init();
             LiveScriptManager.INSTANCE.init();
-            DiscordRPC.start();
+            if (ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.misc.DiscordRCP.class).isEnabled()) DiscordRPC.start();
         });
         ClientLifecycleEvents.CLIENT_STOPPING.register((ClientStopping)client -> {
             LiveScriptManager.INSTANCE.clearVisuals();
-            if (com.bamber.client.BamberRuntime.isActive()) ConfigManager.INSTANCE.saveConfig("default");
+            if (com.anvil.client.AnvilRuntime.isActive()) ConfigManager.INSTANCE.saveConfig("default");
             DiscordRPC.shutdown();
         });
     }
@@ -107,7 +107,7 @@ public class AuraVisualsClient implements ClientModInitializer {
             VanillaHudElements.CROSSHAIR, Identifier.of("auravisuals", "notifications_above_crosshair"), hudRenderer::renderNotifications
         );
         WorldRenderEvents.END_MAIN.register((EndMain)fabricContext -> {
-            if (!com.bamber.client.BamberRuntime.isActive()) return;
+            if (!com.anvil.client.AnvilRuntime.isActive()) return;
             StableWorldFrameCapture.captureCleanWorld();
             FogBlur.renderIfEnabled();
             Saturation.renderIfEnabled();
@@ -128,7 +128,7 @@ public class AuraVisualsClient implements ClientModInitializer {
 
     void registerLogicCallbacks() {
         ClientTickEvents.END_CLIENT_TICK.register((EndTick)client -> {
-            if (!com.bamber.client.BamberRuntime.isActive()) return;
+            if (!com.anvil.client.AnvilRuntime.isActive()) return;
             LiveScriptManager.INSTANCE.tick();
             MessengerService.tick();
             CosmeticsNetworkClient.INSTANCE.tick();
@@ -177,7 +177,7 @@ public class AuraVisualsClient implements ClientModInitializer {
             }
         });
         ClientReceiveMessageEvents.GAME.register((Game)(message, overlay) -> {
-            if (!com.bamber.client.BamberRuntime.isActive()) return;
+            if (!com.anvil.client.AnvilRuntime.isActive()) return;
             String text = Formatting.strip(message.getString());
             if (text == null) {
                 text = message.getString();

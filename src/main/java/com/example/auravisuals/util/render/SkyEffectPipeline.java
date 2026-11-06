@@ -54,7 +54,7 @@ public final class SkyEffectPipeline {
             ByteBuffer dummy = MemoryUtil.memAlloc(4);
             dummy.putInt(0);
             dummy.flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:sky_effect_dummy_vertex", 32, dummy);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:sky_effect_dummy_vertex", 32, dummy);
             MemoryUtil.memFree(dummy);
             initialized = true;
         }
@@ -77,7 +77,7 @@ public final class SkyEffectPipeline {
                 GpuTextureView depthView = main.useDepthAttachment ? main.getDepthAttachmentView() : null;
 
                 try (RenderPass pass = encoder.createRenderPass(
-                        () -> "bamber client:sky_effect", colorView, OptionalInt.empty(), depthView, OptionalDouble.empty()
+                        () -> "anvil visual:sky_effect", colorView, OptionalInt.empty(), depthView, OptionalDouble.empty()
                     )) {
                     pass.setPipeline(PIPELINE);
                     pass.setVertexBuffer(0, dummyVertexBuffer);
@@ -111,7 +111,7 @@ public final class SkyEffectPipeline {
                 uniformBuffer.close();
             }
 
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:sky_effect_uniform", 136, size);
+            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:sky_effect_uniform", 136, size);
         }
     }
 

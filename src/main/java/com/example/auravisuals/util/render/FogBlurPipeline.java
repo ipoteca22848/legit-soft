@@ -139,10 +139,10 @@ public final class FogBlurPipeline {
             dataBuffer = MemoryUtil.memAlloc(48);
             ByteBuffer dummy = MemoryUtil.memAlloc(4);
             dummy.putInt(0).flip();
-            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "bamber client:fogblur_dummy", 40, dummy);
+            dummyVertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:fogblur_dummy", 40, dummy);
             MemoryUtil.memFree(dummy);
-            kawaseUniform = RenderSystem.getDevice().createBuffer(() -> "bamber client:fogblur_kawase_uniform", 136, 48L);
-            compositeUniform = RenderSystem.getDevice().createBuffer(() -> "bamber client:fogblur_composite_uniform", 136, 48L);
+            kawaseUniform = RenderSystem.getDevice().createBuffer(() -> "anvil visual:fogblur_kawase_uniform", 136, 48L);
+            compositeUniform = RenderSystem.getDevice().createBuffer(() -> "anvil visual:fogblur_composite_uniform", 136, 48L);
             initialized = true;
         }
     }
@@ -162,12 +162,12 @@ public final class FogBlurPipeline {
             int ch = targetH;
 
             for (int i = 0; i < passes; i++) {
-                downTextures[i] = create("bamber client:fogblur_down_" + i, cw, ch, 12, format);
+                downTextures[i] = create("anvil visual:fogblur_down_" + i, cw, ch, 12, format);
                 downViews[i] = RenderSystem.getDevice().createTextureView(downTextures[i]);
                 downW[i] = cw;
                 downH[i] = ch;
                 if (i < passes - 1) {
-                    upTextures[i] = create("bamber client:fogblur_up_" + i, cw, ch, 12, format);
+                    upTextures[i] = create("anvil visual:fogblur_up_" + i, cw, ch, 12, format);
                     upViews[i] = RenderSystem.getDevice().createTextureView(upTextures[i]);
                     upW[i] = cw;
                     upH[i] = ch;
@@ -224,7 +224,7 @@ public final class FogBlurPipeline {
             encoder.writeToBuffer(kawaseUniform.slice(), dataBuffer);
             GpuSampler sampler = RenderSystem.getSamplerCache().get(FilterMode.LINEAR);
 
-            try (RenderPass pass = encoder.createRenderPass(() -> "bamber client:fogblur_kawase", target, OptionalInt.of(0), null, OptionalDouble.empty())) {
+            try (RenderPass pass = encoder.createRenderPass(() -> "anvil visual:fogblur_kawase", target, OptionalInt.of(0), null, OptionalDouble.empty())) {
                 pass.setPipeline(pipeline);
                 pass.setVertexBuffer(0, dummyVertexBuffer);
                 pass.bindTexture("Sampler0", source, sampler);
@@ -254,7 +254,7 @@ public final class FogBlurPipeline {
             GpuSampler colorSampler = RenderSystem.getSamplerCache().get(FilterMode.LINEAR);
             GpuSampler depthSampler = RenderSystem.getSamplerCache().get(FilterMode.NEAREST);
 
-            try (RenderPass pass = encoder.createRenderPass(() -> "bamber client:fogblur_composite", target, OptionalInt.empty(), null, OptionalDouble.empty())) {
+            try (RenderPass pass = encoder.createRenderPass(() -> "anvil visual:fogblur_composite", target, OptionalInt.empty(), null, OptionalDouble.empty())) {
                 pass.setPipeline(COMPOSITE_PIPELINE);
                 pass.setVertexBuffer(0, dummyVertexBuffer);
                 pass.bindTexture("BlurSampler", blur, colorSampler);
