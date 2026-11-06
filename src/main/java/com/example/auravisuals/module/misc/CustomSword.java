@@ -141,6 +141,7 @@ public final class CustomSword extends Module {
         "Yoru"
     };
     public static CustomSword INSTANCE;
+    private static final java.util.Set<ItemStack> PREVIEW_STACKS=java.util.Collections.newSetFromMap(new java.util.WeakHashMap<>());
     private final MultiBooleanSetting applyTo = new MultiBooleanSetting(
         "Применять на:", "Деревянный меч", "Каменный меч", "Железный меч", "Золотой меч", "Алмазный меч", "Незеритовый меч"
     );
@@ -154,11 +155,23 @@ public final class CustomSword extends Module {
     public CustomSword() {
         super("Custom Sword", "Заменяет визуальную модель меча в руках", Category.MISC);
         INSTANCE = this;
-        this.addSettings(this.applyTo, this.modelWooden, this.modelStone, this.modelIron, this.modelGolden, this.modelDiamond, this.modelNetherite);
+        this.addSettings(new com.example.auravisuals.setting.ActionSetting("Каталог моделей с превью",()->rich.screens.clickgui.ClickGui.INSTANCE.selectCategory(rich.modules.module.category.ModuleCategory.SWORDS)),this.applyTo, this.modelWooden, this.modelStone, this.modelIron, this.modelGolden, this.modelDiamond, this.modelNetherite);
+    }
+
+    public static List<String> modelNames(){return List.of(MODELS);}
+    public static final String[] SWORD_TYPES={WOODEN,STONE,IRON,GOLDEN,DIAMOND,NETHERITE};
+    private ModeSetting modelSetting(int type){return switch(type){case 0->modelWooden;case 1->modelStone;case 2->modelIron;case 3->modelGolden;case 4->modelDiamond;case 5->modelNetherite;default->throw new IllegalArgumentException("Sword type");};}
+    public String selectedModel(int type){return modelSetting(type).getValue();}
+    public boolean appliesTo(int type){return applyTo.isEnabled(SWORD_TYPES[type]);}
+    public void setAppliesTo(int type,boolean enabled){applyTo.set(SWORD_TYPES[type],enabled);}
+    public void selectModel(int type,String model){if(!modelNames().contains(model))throw new IllegalArgumentException("Unknown sword model");modelSetting(type).setValue(model);setAppliesTo(type,true);setEnabled(true);}
+    public static ItemStack previewStack(int type,String model){
+        var item=switch(type){case 0->Items.WOODEN_SWORD;case 1->Items.STONE_SWORD;case 2->Items.IRON_SWORD;case 3->Items.GOLDEN_SWORD;case 4->Items.DIAMOND_SWORD;case 5->Items.NETHERITE_SWORD;default->throw new IllegalArgumentException("Sword type");};
+        var stack=new ItemStack(item);stack.set(DataComponentTypes.CUSTOM_MODEL_DATA,new CustomModelDataComponent(List.of(),List.of(),List.of(model),List.of()));PREVIEW_STACKS.add(stack);return stack;
     }
 
     public ItemStack getRenderStack(ItemStack stack) {
-        if (!this.isEnabled() || stack == null || stack.isEmpty()) {
+        if (!this.isEnabled() || stack == null || stack.isEmpty() || PREVIEW_STACKS.contains(stack)) {
             return stack;
         } else if (!this.isSword(stack)) {
             return stack;

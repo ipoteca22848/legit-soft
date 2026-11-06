@@ -36,6 +36,7 @@ public class ClickGui extends Screen implements IMinecraft {
     private final BackgroundComponent background = new BackgroundComponent();
     private final ModuleComponent moduleComponent = new ModuleComponent();
     private final DragHandler dragHandler = new DragHandler();
+    private final com.anvil.client.SwordGallery swordGallery = new com.anvil.client.SwordGallery();
     private final com.anvil.client.CosmeticsGallery cosmeticsGallery = new com.anvil.client.CosmeticsGallery();
     private ModuleCategory selectedCategory = ModuleCategory.RENDER;
 
@@ -245,7 +246,7 @@ public class ClickGui extends Screen implements IMinecraft {
             boolean shouldRenderModules = isModuleCategory(selectedCategory);
             boolean slidingToModuleCategory = isAutoBuySliding && isModuleCategory(selectedCategory);
 
-            if ((shouldRenderModules || slidingToModuleCategory) && selectedCategory != ModuleCategory.COSMETICS) {
+            if ((shouldRenderModules || slidingToModuleCategory) && selectedCategory != ModuleCategory.COSMETICS && selectedCategory != ModuleCategory.SWORDS) {
                 moduleComponent.updateScroll(delta, scrollSpeed);
                 moduleComponent.updateScrollFades(delta, scrollSpeed, mlH, spH);
                 moduleComponent.renderModuleList(context, mlX, mlY, mlW, mlH, mx, my, FIXED_GUI_SCALE, alphaMultiplier * normalAlpha);
@@ -254,6 +255,7 @@ public class ClickGui extends Screen implements IMinecraft {
 
         }
 
+        if (normalAlpha > .01f && selectedCategory == ModuleCategory.SWORDS) swordGallery.render(context,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46,mx,my,FIXED_GUI_SCALE,alphaMultiplier*normalAlpha);
         if (normalAlpha > .01f && selectedCategory == ModuleCategory.COSMETICS) cosmeticsGallery.render(context,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46,mx,my,FIXED_GUI_SCALE,alphaMultiplier*normalAlpha);
 
         if (searchAlpha > 0.01f) {
@@ -366,6 +368,7 @@ public class ClickGui extends Screen implements IMinecraft {
             return true;
         }
 
+        if(selectedCategory==ModuleCategory.SWORDS && swordGallery.mouseClicked(mx,my,click.button(),bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
         if(selectedCategory==ModuleCategory.COSMETICS && cosmeticsGallery.mouseClicked(mx,my,click.button(),bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
         if (isModuleCategory(selectedCategory)) {
             ModuleStructure starModule = moduleComponent.getModuleForStarClick(mx, my, mlX, mlY, mlW, mlH);
@@ -434,6 +437,7 @@ public class ClickGui extends Screen implements IMinecraft {
         float[] bg = calculateBackground(scale);
         float bgX = bg[0], bgY = bg[1];
         if(background.scrollCategories(mx,my,vertical,bgX,bgY))return true;
+        if(selectedCategory==ModuleCategory.SWORDS && !background.isSearchActive() && swordGallery.mouseScrolled(mx,my,vertical,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
         if(selectedCategory==ModuleCategory.COSMETICS && !background.isSearchActive() && cosmeticsGallery.mouseScrolled(mx,my,vertical,bgX+96,bgY+38,294,BackgroundComponent.BG_HEIGHT-46))return true;
 
         if (background.isSearchActive()) {
