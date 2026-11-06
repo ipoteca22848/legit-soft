@@ -124,7 +124,7 @@ public final class MirageGlassPipeline {
         MinecraftClient client = MinecraftClient.getInstance();
         int sw = client.getWindow().getScaledWidth();
         int sh = client.getWindow().getScaledHeight();
-        Matrix4f ortho = new Matrix4f().setOrtho(0.0F, sw, sh, 0.0F, -1000.0F, 1000.0F);
+        Matrix4f ortho = GuiProjection.get(sw,sh);
         draw(ortho, tl.x, tl.y, w * sx, h * sy, radius * sx, 3.0F, 12.0F, shine, tint != null ? tint : DEFAULT_TINT, alpha, 0.0F);
     }
 
@@ -197,7 +197,7 @@ public final class MirageGlassPipeline {
         MinecraftClient client = MinecraftClient.getInstance();
         int sw = client.getWindow().getScaledWidth();
         int sh = client.getWindow().getScaledHeight();
-        Matrix4f ortho = new Matrix4f().setOrtho(0.0F, sw, sh, 0.0F, -1000.0F, 1000.0F);
+        Matrix4f ortho = GuiProjection.get(sw,sh);
         drawInternal(
             ortho,
             tl.x,
@@ -234,7 +234,7 @@ public final class MirageGlassPipeline {
         MinecraftClient client = MinecraftClient.getInstance();
         int sw = client.getWindow().getScaledWidth();
         int sh = client.getWindow().getScaledHeight();
-        Matrix4f ortho = new Matrix4f().setOrtho(0.0F, sw, sh, 0.0F, -1000.0F, 1000.0F);
+        Matrix4f ortho = GuiProjection.get(sw,sh);
         drawInternal(
             ortho,
             tl.x,
@@ -260,7 +260,7 @@ public final class MirageGlassPipeline {
         MinecraftClient client = MinecraftClient.getInstance();
         int sw = client.getWindow().getScaledWidth();
         int sh = client.getWindow().getScaledHeight();
-        Matrix4f ortho = new Matrix4f().setOrtho(0.0F, sw, sh, 0.0F, -1000.0F, 1000.0F);
+        Matrix4f ortho = GuiProjection.get(sw,sh);
         drawInternal(ortho, x, y, w, h, radius, Math.max(0.75F, blur), 0.0F, 0.0F, new Color(0, 0, 0, 0), alpha, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.0F);
     }
 

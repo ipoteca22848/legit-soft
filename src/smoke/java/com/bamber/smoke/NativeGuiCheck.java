@@ -10,6 +10,18 @@ public final class NativeGuiCheck {
  private static void click(ModuleStructure m,String name){((ButtonSetting)m.get(name)).getRunnable().run();}
  private static void text(ModuleStructure m,String name,String value){((TextSetting)m.get(name)).setText(value);}
  public static void verify(net.minecraft.client.MinecraftClient client) throws Exception {
+  for(int[] viewport:new int[][]{{427,240},{640,360},{320,240},{640,270}}){
+   float top=HudViewport.hotbarTop(viewport[1]);
+   check(top>viewport[1]-30,"Hotbar overlaps survival health/food");
+   check(HudViewport.hotbarBottom(viewport[1])<=viewport[1],"Hotbar outside viewport");
+   check(Math.abs(HudViewport.hotbarLeft(viewport[0])+91-viewport[0]/2f)<.01f,"Hotbar not centered");
+  }
+  var options=client.options;int view=options.getViewDistance().getValue(),simulation=options.getSimulationDistance().getValue();
+  var clouds=options.getCloudRenderMode().getValue();var particles=options.getParticles().getValue();boolean shadows=options.getEntityShadows().getValue();
+  MinecraftPerformanceProfiles.apply(false);check(options.getViewDistance().getValue()<=view,"Balance raises render distance");
+  MinecraftPerformanceProfiles.apply(true);check(options.getViewDistance().getValue()<=6,"Maximum render distance");check(options.getSimulationDistance().getValue()==Math.min(simulation,5),"Valid simulation distance");
+  MinecraftPerformanceProfiles.restore();check(options.getViewDistance().getValue()==view&&options.getSimulationDistance().getValue()==simulation&&options.getCloudRenderMode().getValue()==clouds&&options.getParticles().getValue()==particles&&options.getEntityShadows().getValue()==shadows&&!MinecraftPerformanceProfiles.applied(),"Performance settings restoration");
+  System.out.println("BAMBER PERFORMANCE PASSED: hotbar geometry at four viewports and reversible Minecraft profiles");
   for(var cat:TABS)check(!NativeSections.cards(cat).isEmpty(),"Missing native tab "+cat);
   var config=NativeSections.cards(ModuleCategory.CONFIGS).get(0);text(config,"Название конфига","native-ui-smoke");click(config,"Сохранить новый");
   check(com.example.auravisuals.config.ConfigManager.INSTANCE.listConfigs().contains("native-ui-smoke"),"Native config creation");

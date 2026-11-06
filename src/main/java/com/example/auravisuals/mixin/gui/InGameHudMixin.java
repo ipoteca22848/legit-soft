@@ -32,13 +32,14 @@ public abstract class InGameHudMixin {
 
     @Inject(method = "render", at = @At("HEAD"), require = 0)
     private void auravisuals$captureStableGlassFrame(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
-        MirageGlassPipeline.captureHudFrame();
+        var module=ModuleManager.INSTANCE.getModule(Hud.class);
+        if(com.bamber.client.BamberRuntime.isActive()&&module!=null&&module.isEnabled())MirageGlassPipeline.captureHudFrame();
     }
 
     @Inject(method = "renderHotbar", at = @At("HEAD"), cancellable = true, require = 0)
     private void auravisuals$replaceVanillaHotbar(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (Hud.customHotbar.getValue() && client.player != null && !client.player.isSpectator()) {
+        if (com.example.auravisuals.client.gui.hud.CustomHotbar.replacesVanilla()) {
             ci.cancel();
         }
     }
@@ -112,7 +113,7 @@ public abstract class InGameHudMixin {
     @Inject(method = "renderHotbar", at = @At("TAIL"), require = 0)
     private void onRenderHotbarTail(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         try {
-            if (Hud.customHotbar.getValue()) {
+            if (com.example.auravisuals.client.gui.hud.CustomHotbar.replacesVanilla()) {
                 return;
             }
 

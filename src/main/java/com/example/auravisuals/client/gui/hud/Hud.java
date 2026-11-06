@@ -147,6 +147,7 @@ public final class Hud {
             ELEMENT_ANIMS.put(element.id(), current);
             if (!(current < 0.035F)) {
                 float ease = current * current * (3.0F - 2.0F * current);
+                if(element==CustomHotbar.INSTANCE){renderAnchoredHotbar(context,ease);return;}
                 boolean fadeOnly = element == Notifications.INSTANCE && target <= 0.0F;
                 float slideY = fadeOnly ? 0.0F : (1.0F - ease) * 14.0F;
                 float editorScale = HudEditor.scale(element.id());
@@ -200,6 +201,16 @@ public final class Hud {
         }
     }
 
+    private void renderAnchoredHotbar(DrawContext context,float opacity){
+        context.getMatrices().pushMatrix();
+        context.getMatrices().identity();
+        context.getMatrices().translate(context.getScaledWindowWidth()/2f,com.bamber.client.HudViewport.hotbarBottom(context.getScaledWindowHeight()));
+        float fixed=com.bamber.client.HudViewport.hotbarScale();context.getMatrices().scale(fixed,fixed);
+        context.getMatrices().translate(-(CustomHotbar.INSTANCE.x()+CustomHotbar.INSTANCE.width()/2),-(CustomHotbar.INSTANCE.y()+CustomHotbar.INSTANCE.height()));
+        this.currentElementId=CustomHotbar.INSTANCE.id();this.currentElementOpacity=opacity;this.currentDragAnimation=0;
+        try{CustomHotbar.INSTANCE.render(context,this);}finally{this.currentElementId=null;this.currentElementOpacity=1;context.getMatrices().popMatrix();}
+    }
+
     private boolean hiddenBehindClickGui(HudElement element) {
         float left;
         float top;
@@ -208,8 +219,8 @@ public final class Hud {
         if (element == CustomHotbar.INSTANCE) {
             float screenWidth = 182.0F;
             float screenHeight = element.height() * screenWidth / Math.max(1.0F, element.width());
-            float centerX = this.originX + (element.x() + element.width() / 2.0F) * this.scale;
-            bottom = this.originY + (element.y() + element.height()) * this.scale;
+            float centerX = MinecraftClient.getInstance().getWindow().getScaledWidth()/2f;
+            bottom = com.bamber.client.HudViewport.hotbarBottom(MinecraftClient.getInstance().getWindow().getScaledHeight());
             left = centerX - screenWidth / 2.0F;
             right = centerX + screenWidth / 2.0F;
             top = bottom - screenHeight;
@@ -270,7 +281,8 @@ public final class Hud {
         String material = style.material(com.example.auravisuals.module.render.Hud.hudStyle.getValue());
         boolean liquidGlass = material.equalsIgnoreCase("Liquid Glass") || material.equalsIgnoreCase("Жидкое стекло");
         radius = style.radius(radius);
-        boolean shadowEnabled = style.shadow(com.example.auravisuals.module.render.Hud.shadow.getValue());
+        boolean hotbarPanel=CustomHotbar.INSTANCE.id().equals(this.currentElementId);
+        boolean shadowEnabled = !hotbarPanel && style.shadow(com.example.auravisuals.module.render.Hud.shadow.getValue());
         if (shadowEnabled) {
             float shadowSigma = MathHelper.lerp(this.currentDragAnimation, 16.0F, 20.0F) * style.shadowStrength(1.0F);
             int defaultShadow = liquidGlass ? 1979711488 : -352321536;
@@ -279,7 +291,7 @@ public final class Hud {
         }
 
         boolean defaultGlow = liquidGlass && com.example.auravisuals.module.render.Hud.hudGlassGlow.getValue();
-        if (style.glow(defaultGlow)) {
+        if (!hotbarPanel && style.glow(defaultGlow)) {
             int defaultGlowRgb = com.example.auravisuals.module.render.Hud.hudGlassColor.getValue() & 16777215;
             int glowRgb = style.glowColor(style.accentColor(defaultGlowRgb));
             float glowStrength = style.glowStrength(com.example.auravisuals.module.render.Hud.hudGlowStrength.getFloatValue());

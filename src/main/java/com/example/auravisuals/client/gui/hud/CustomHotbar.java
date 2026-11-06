@@ -11,6 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 
 public final class CustomHotbar implements HudElement {
+    public static boolean replacesVanilla(){
+        var client=MinecraftClient.getInstance();var module=ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.render.Hud.class);
+        return com.bamber.client.BamberRuntime.isActive()&&module!=null&&module.isEnabled()&&com.example.auravisuals.module.render.Hud.customHotbar.getValue()&&client.player!=null&&!client.player.isSpectator();
+    }
     public static final CustomHotbar INSTANCE = new CustomHotbar();
     private static final float X = 769.0F;
     private static final float Y = 1032.0F;
@@ -83,7 +87,6 @@ public final class CustomHotbar implements HudElement {
 
             float selectionX = 780.0F + this.selectedSlot * 40.0F;
             int accent = Hud.animatedColor(Hud.accent());
-            ShadowRender.draw(context, selectionX, 1037.0F, 38.0F, 38.0F, 10.0F, 9.0F, Hud.fade(1426063360 | accent & 16777215, Hud.animatedOpacity()));
             RoundedRenderer.drawRoundedRect(context, selectionX, 1037.0F, 38.0F, 38.0F, 10.0F, Hud.animatedColor(419430399));
             RoundedRenderer.drawAntialiasedRoundedOutline(context, selectionX, 1037.0F, 38.0F, 38.0F, 10.0F, 2.0F, accent);
 

@@ -22,6 +22,8 @@ public final class OcclusionCuller {
     static final Mutable POS = new Mutable();
     static ClientWorld lastLevel;
     static int checksThisFrame;
+    static long spentNanos;
+    static final long[] TIME_BUDGET_NANOS={250000,400000,600000};
     static long lastSweep;
     static long frameTimeMs;
 
@@ -48,9 +50,11 @@ public final class OcclusionCuller {
                     return entry.visible;
                 }
 
-                if (checksThisFrame < BUDGET[n2]) {
+                if (checksThisFrame < BUDGET[n2] && spentNanos < TIME_BUDGET_NANOS[n2]) {
                     checksThisFrame++;
+                    long start=System.nanoTime();
                     boolean bl = raycastVisible(clientWorld, d, d2, d3, box.expand(0.1));
+                    spentNanos+=System.nanoTime()-start;
                     if (entry == null) {
                         entry = new OcclusionCuller$Entry();
                         CACHE.put(entity.getId(), entry);
@@ -72,6 +76,7 @@ public final class OcclusionCuller {
 
     public static void beginFrame() {
         checksThisFrame = 0;
+        spentNanos=0;
         MinecraftClient minecraftClient = MinecraftClient.getInstance();
         if (minecraftClient.world != lastLevel) {
             CACHE.clear();

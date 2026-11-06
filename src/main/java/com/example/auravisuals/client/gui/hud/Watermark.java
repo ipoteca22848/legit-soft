@@ -1,6 +1,5 @@
 package com.example.auravisuals.client.gui.hud;
 
-import com.example.auravisuals.client.gui.font.icon.IconTtfBridge;
 import com.example.auravisuals.client.gui.render.IconRender;
 import com.example.auravisuals.client.gui.render.RoundedRenderer;
 import com.example.auravisuals.client.gui.render.TextRender;
@@ -143,7 +142,8 @@ public final class Watermark implements HudElement {
         float iconX = centerX - size / 2.0F;
         float iconY = centerY - size / 2.0F;
         drawCompactGlow(context, iconX, iconY, size, color);
-        return IconTtfBridge.tryDrawIconsFontChar(context, '|', iconX, iconY, size, color);
+        TextRender.draw(context,"Б",centerX-TextRender.width("Б",size)/2,centerY+size*.35F,size,color);
+        return true;
     }
 
     private static void drawCompactGlow(DrawContext context, float x, float y, float size, int color) {

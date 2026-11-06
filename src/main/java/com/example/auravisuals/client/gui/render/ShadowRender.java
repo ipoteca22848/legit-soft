@@ -45,6 +45,8 @@ public final class ShadowRender {
     private static GpuBuffer uniformBuffer;
     private static GpuBuffer vertexBuffer;
     private static ByteBuffer data;
+    private static final Matrix3x2f scratchMatrix=new Matrix3x2f();
+    private static final Vector2f scratchCorner=new Vector2f();
 
     private ShadowRender() {
     }
@@ -64,8 +66,8 @@ public final class ShadowRender {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.getFramebuffer() != null && !(sigma <= 0.0F) && !(width <= 0.0F) && !(height <= 0.0F)) {
             init();
-            Matrix3x2f matrix = new Matrix3x2f(context.getMatrices());
-            Vector2f corner = matrix.transformPosition(x, y, new Vector2f());
+            Matrix3x2f matrix = scratchMatrix.set(context.getMatrices());
+            Vector2f corner = matrix.transformPosition(x, y, scratchCorner);
             float scaleX = (float)Math.sqrt(matrix.m00() * matrix.m00() + matrix.m01() * matrix.m01());
             float scaleY = (float)Math.sqrt(matrix.m10() * matrix.m10() + matrix.m11() * matrix.m11());
             float scale = Math.min(scaleX, scaleY);
@@ -76,7 +78,7 @@ public final class ShadowRender {
             float quadHeight = height * scaleY + padding * 2.0F;
             int screenWidth = client.getWindow().getScaledWidth();
             int screenHeight = client.getWindow().getScaledHeight();
-            Matrix4f projection = new Matrix4f().setOrtho(0.0F, screenWidth, screenHeight, 0.0F, -1000.0F, 1000.0F);
+            Matrix4f projection = com.example.auravisuals.util.render.GuiProjection.get(screenWidth,screenHeight);
             data.clear();
             putMatrix(projection);
             data.putFloat(quadX).putFloat(quadY).putFloat(quadWidth).putFloat(quadHeight);
