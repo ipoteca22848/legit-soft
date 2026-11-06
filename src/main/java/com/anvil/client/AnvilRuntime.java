@@ -20,6 +20,7 @@ public final class AnvilRuntime {
   }
   com.example.auravisuals.live.LiveScriptManager.INSTANCE.clearVisuals();
   com.example.auravisuals.util.integration.DiscordRPC.shutdown();
+  com.example.auravisuals.client.gui.render.ShadowRender.shutdown();
   active=false;
   com.example.auravisuals.module.misc.Globals.shutdown();
   com.example.auravisuals.util.media.MediaSessionReader.getInstance().stop();

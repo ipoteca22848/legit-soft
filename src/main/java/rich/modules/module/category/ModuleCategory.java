@@ -6,8 +6,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public enum ModuleCategory {
-    COMBAT("Combat"),
-    MOVEMENT("Movement"),
     RENDER("Render"),
     SWORDS("Мечи"),
     PLAYER("Player"),

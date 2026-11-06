@@ -1,148 +1,73 @@
 package com.example.auravisuals.client.gui.render;
 
-import com.mojang.blaze3d.buffers.GpuBuffer;
-import com.mojang.blaze3d.buffers.GpuBufferSlice;
-import com.mojang.blaze3d.pipeline.BlendFunction;
-import com.mojang.blaze3d.pipeline.RenderPipeline;
-import com.mojang.blaze3d.platform.DepthTestFunction;
-import com.mojang.blaze3d.systems.CommandEncoder;
-import com.mojang.blaze3d.systems.RenderPass;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.VertexFormat.DrawMode;
-import java.nio.ByteBuffer;
-import java.util.OptionalDouble;
-import java.util.OptionalInt;
+import java.util.*;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gl.RenderPipelines;
-import net.minecraft.client.gl.UniformType;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.texture.NativeImage;
+import net.minecraft.client.texture.NativeImageBackedTexture;
 import net.minecraft.util.Identifier;
-import org.joml.Matrix3x2f;
-import org.joml.Matrix4f;
-import org.joml.Vector2f;
-import org.joml.Vector3f;
-import org.joml.Vector4f;
-import org.lwjgl.system.MemoryUtil;
+import com.example.auravisuals.compat.Gui;
 
+/** Static alpha masks submitted through the same deferred GUI queue as HUD panels. */
 public final class ShadowRender {
-    public static final float REACH = 3.0F;
-    private static final int BUFFER_SIZE = 128;
-    private static final RenderPipeline PIPELINE = RenderPipeline.builder(RenderPipelines.TRANSFORMS_AND_PROJECTION_SNIPPET)
-        .withLocation(Identifier.of("auravisuals", "pipeline/shadow"))
-        .withVertexShader(Identifier.of("auravisuals", "core/shadow"))
-        .withFragmentShader(Identifier.of("auravisuals", "core/shadow"))
-        .withVertexFormat(VertexFormats.EMPTY, DrawMode.TRIANGLES)
-        .withUniform("ShadowData", UniformType.UNIFORM_BUFFER)
-        .withBlend(BlendFunction.TRANSLUCENT)
-        .withDepthTestFunction(DepthTestFunction.NO_DEPTH_TEST)
-        .withDepthWrite(false)
-        .withCull(false)
-        .build();
-    private static final Vector4f COLOR_MODULATOR = new Vector4f(1.0F, 1.0F, 1.0F, 1.0F);
-    private static final Vector3f MODEL_OFFSET = new Vector3f();
-    private static final Matrix4f TEXTURE_MATRIX = new Matrix4f();
-    private static GpuBuffer uniformBuffer;
-    private static GpuBuffer vertexBuffer;
-    private static ByteBuffer data;
-    private static final Matrix3x2f scratchMatrix=new Matrix3x2f();
-    private static final Vector2f scratchCorner=new Vector2f();
-
-    private ShadowRender() {
-    }
-
-    private static void init() {
-        if (data == null) {
-            data = MemoryUtil.memAlloc(128);
-            ByteBuffer empty = MemoryUtil.memAlloc(4);
-            empty.putInt(0);
-            empty.flip();
-            vertexBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:shadow_vertex", 32, empty);
-            MemoryUtil.memFree(empty);
-        }
-    }
-
-    public static void draw(DrawContext context, float x, float y, float width, float height, float radius, float sigma, int color) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        if (client.getFramebuffer() != null && !(sigma <= 0.0F) && !(width <= 0.0F) && !(height <= 0.0F)) {
-            init();
-            Matrix3x2f matrix = scratchMatrix.set(context.getMatrices());
-            Vector2f corner = matrix.transformPosition(x, y, scratchCorner);
-            float scaleX = (float)Math.sqrt(matrix.m00() * matrix.m00() + matrix.m01() * matrix.m01());
-            float scaleY = (float)Math.sqrt(matrix.m10() * matrix.m10() + matrix.m11() * matrix.m11());
-            float scale = Math.min(scaleX, scaleY);
-            float padding = 3.0F * sigma * scale;
-            float quadX = corner.x - padding;
-            float quadY = corner.y - padding;
-            float quadWidth = width * scaleX + padding * 2.0F;
-            float quadHeight = height * scaleY + padding * 2.0F;
-            int screenWidth = client.getWindow().getScaledWidth();
-            int screenHeight = client.getWindow().getScaledHeight();
-            Matrix4f projection = com.example.auravisuals.util.render.GuiProjection.get(screenWidth,screenHeight);
-            data.clear();
-            putMatrix(projection);
-            data.putFloat(quadX).putFloat(quadY).putFloat(quadWidth).putFloat(quadHeight);
-            data.putFloat(radius * scale).putFloat(sigma * scale).putFloat(padding).putFloat(0.0F);
-            data.putFloat((color >> 16 & 0xFF) / 255.0F)
-                .putFloat((color >> 8 & 0xFF) / 255.0F)
-                .putFloat((color & 0xFF) / 255.0F)
-                .putFloat((color >>> 24) / 255.0F);
-            data.flip();
-            ensureBuffer();
-            CommandEncoder encoder = RenderSystem.getDevice().createCommandEncoder();
-            encoder.writeToBuffer(uniformBuffer.slice(), data);
-            GpuBufferSlice transforms = RenderSystem.getDynamicUniforms()
-                .write(RenderSystem.getModelViewMatrix(), COLOR_MODULATOR, MODEL_OFFSET, TEXTURE_MATRIX);
-
-            try (RenderPass pass = encoder.createRenderPass(
-                    () -> "anvil visual:shadow",
-                    client.getFramebuffer().getColorAttachmentView(),
-                    OptionalInt.empty(),
-                    client.getFramebuffer().getDepthAttachmentView(),
-                    OptionalDouble.empty()
-                )) {
-                pass.setPipeline(PIPELINE);
-                pass.setVertexBuffer(0, vertexBuffer);
-                RenderSystem.bindDefaultUniforms(pass);
-                pass.setUniform("DynamicTransforms", transforms);
-                pass.setUniform("ShadowData", uniformBuffer);
-                pass.draw(0, 6);
-            }
-        }
-    }
-
-    private static void putMatrix(Matrix4f matrix) {
-        data.putFloat(matrix.m00()).putFloat(matrix.m01()).putFloat(matrix.m02()).putFloat(matrix.m03());
-        data.putFloat(matrix.m10()).putFloat(matrix.m11()).putFloat(matrix.m12()).putFloat(matrix.m13());
-        data.putFloat(matrix.m20()).putFloat(matrix.m21()).putFloat(matrix.m22()).putFloat(matrix.m23());
-        data.putFloat(matrix.m30()).putFloat(matrix.m31()).putFloat(matrix.m32()).putFloat(matrix.m33());
-    }
-
-    private static void ensureBuffer() {
-        int size = data.remaining();
-        if (uniformBuffer == null || uniformBuffer.size() < size) {
-            if (uniformBuffer != null) {
-                uniformBuffer.close();
-            }
-
-            uniformBuffer = RenderSystem.getDevice().createBuffer(() -> "anvil visual:shadow_uniform", 136, size);
-        }
-    }
-
-    public static void shutdown() {
-        if (uniformBuffer != null) {
-            uniformBuffer.close();
-            uniformBuffer = null;
-        }
-
-        if (vertexBuffer != null) {
-            vertexBuffer.close();
-            vertexBuffer = null;
-        }
-
-        if (data != null) {
-            MemoryUtil.memFree(data);
-            data = null;
-        }
-    }
+ public static final float REACH=3;
+ private static final int CACHE_LIMIT=48;
+ private record Shape(int width,int height,int radius,int sigma){}
+ private record Mask(Identifier texture,float padding){}
+ private static final Map<Shape,Mask> CACHE=new LinkedHashMap<>(64,.75f,true);
+ private static long serial;
+ private ShadowRender(){}
+ /** Trim only at the next frame: this frame's queued elements still own their textures. */
+ public static void beginFrame(){
+  var it=CACHE.entrySet().iterator();
+  while(CACHE.size()>CACHE_LIMIT&&it.hasNext()){
+   var entry=it.next();MinecraftClient.getInstance().getTextureManager().destroyTexture(entry.getValue().texture());it.remove();
+  }
+ }
+ public static void draw(DrawContext context,float x,float y,float width,float height,float radius,float sigma,int color){
+  if(!(width>0&&height>0&&sigma>0)||!Float.isFinite(width+height+radius+sigma)||(color>>>24)==0)return;
+  var shape=new Shape(Math.max(2,Math.round(width/2)*2),Math.max(2,Math.round(height/2)*2),Math.max(0,Math.round(radius)),Math.max(1,Math.round(sigma)));
+  var mask=CACHE.computeIfAbsent(shape,ShadowRender::bake);float pad=mask.padding();
+  var batch=Gui.tex(context,mask.texture());
+  batch.quad(x-pad,y-pad,0,0,x+width+pad,y-pad,1,0,x+width+pad,y+height+pad,1,1,x-pad,y+height+pad,0,1,color).submit(context);
+ }
+ private static Mask bake(Shape shape){
+  float padding=shape.sigma()*REACH;
+  float scale=Math.min(.5f,512f/Math.max(shape.width()+2*padding,shape.height()+2*padding));
+  int width=Math.max(1,(int)Math.ceil((shape.width()+2*padding)*scale));
+  int height=Math.max(1,(int)Math.ceil((shape.height()+2*padding)*scale));
+  float[] inside=new float[width*height];float halfW=shape.width()*scale/2,halfH=shape.height()*scale/2;
+  float radius=Math.min(shape.radius()*scale,Math.min(halfW,halfH));
+  for(int y=0;y<height;y++)for(int x=0;x<width;x++){
+   float qx=Math.abs(x+.5f-width/2f)-halfW+radius,qy=Math.abs(y+.5f-height/2f)-halfH+radius;
+   float distance=(float)Math.hypot(Math.max(0,qx),Math.max(0,qy))+Math.min(Math.max(qx,qy),0)-radius;
+   inside[y*width+x]=Math.max(0,Math.min(1,.5f-distance));
+  }
+  float[] blurred=inside.clone(),scratch=new float[inside.length];
+  // Three box filters approximate a Gaussian in linear time, once per cached shape.
+  double sigma=shape.sigma()*scale;int lower=(int)Math.floor(Math.sqrt(4*sigma*sigma+1));if((lower&1)==0)lower--;lower=Math.max(1,lower);
+  int count=(int)Math.round((12*sigma*sigma-3.0*lower*lower-12.0*lower-9)/(-4.0*lower-4));
+  for(int i=0;i<3;i++){int r=((i<count?lower:lower+2)-1)/2;blur(blurred,scratch,width,height,r,true);blur(scratch,blurred,width,height,r,false);}
+  NativeImage image=new NativeImage(width,height,false);
+  for(int y=0;y<height;y++)for(int x=0;x<width;x++){
+   int index=y*width+x,alpha=Math.max(0,Math.min(255,Math.round(255*blurred[index]*(1-inside[index]))));
+   image.setColorArgb(x,y,(alpha<<24)|0xffffff);
+  }
+  Identifier id=Identifier.of("anvil","hud_shadow/"+(serial++));
+  MinecraftClient.getInstance().getTextureManager().registerTexture(id,new NativeImageBackedTexture(()->"anvil HUD shadow",image));
+  return new Mask(id,padding);
+ }
+ private static void blur(float[] source,float[] target,int width,int height,int radius,boolean horizontal){
+  int lines=horizontal?height:width,length=horizontal?width:height,step=horizontal?1:width;float divisor=2*radius+1;
+  for(int line=0;line<lines;line++){
+   int start=horizontal?line*width:line;float sum=0;
+   for(int i=0;i<=Math.min(radius,length-1);i++)sum+=source[start+i*step];
+   for(int i=0;i<length;i++){
+    target[start+i*step]=sum/divisor;
+    int remove=i-radius,add=i+radius+1;
+    if(remove>=0)sum-=source[start+remove*step];if(add<length)sum+=source[start+add*step];
+   }
+  }
+ }
+ public static void shutdown(){for(var mask:CACHE.values())MinecraftClient.getInstance().getTextureManager().destroyTexture(mask.texture());CACHE.clear();}
 }

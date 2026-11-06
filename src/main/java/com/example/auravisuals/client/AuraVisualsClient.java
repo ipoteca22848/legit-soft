@@ -97,6 +97,7 @@ public class AuraVisualsClient implements ClientModInitializer {
             LiveScriptManager.INSTANCE.clearVisuals();
             if (com.anvil.client.AnvilRuntime.isActive()) ConfigManager.INSTANCE.saveConfig("default");
             DiscordRPC.shutdown();
+            com.example.auravisuals.client.gui.render.ShadowRender.shutdown();
         });
     }
 

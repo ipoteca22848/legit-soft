@@ -84,6 +84,7 @@ public final class MirageGlassPipeline {
     }
 
     public static void beginRenderFrame() {
+        com.example.auravisuals.client.gui.render.ShadowRender.beginFrame();
         StableWorldFrameCapture.beginFrame();
         hudFrameCaptureLocked = false;
     }

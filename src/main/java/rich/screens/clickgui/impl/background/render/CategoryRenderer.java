@@ -20,7 +20,7 @@ public final class CategoryRenderer {
    float anim=animations.getOrDefault(cat,0f);int a=(int)((128+127*anim)*alpha);int c=(a<<24)|0xd0d0d0;
    if(cat==selected)Render2D.rect(x+12,row+3,3,3,(a<<24)|0xffffff,1.5f);
    Fonts.CATEGORY_ICONS.draw(""+(char)('a'+i%7),x+18+anim*3,row+.5f,6,c);
-   String title=switch(cat){case MISC->"Утилиты";case RENDER->"Визуалы";case PLAYER->"Игрок";case COMBAT->"Combat";case MOVEMENT->"Movement";default->cat.getReadableName();};
+   String title=switch(cat){case MISC->"Утилиты";case RENDER->"Визуалы";case PLAYER->"Игрок";default->cat.getReadableName();};
    Fonts.BOLD.draw(title,x+29+anim*3,row,6,c);
   }
   float viewport=BackgroundComponent.BG_HEIGHT-96,content=6+CATEGORIES.length*15;

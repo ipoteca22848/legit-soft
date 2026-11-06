@@ -10,6 +10,7 @@ public final class SmokeCheck implements ClientModInitializer {
    if(client.getOverlay()!=null||++ticks%60!=0)return;
    try{
     int step=stage++;
+    if(step==10){client.setScreen(new ShadowCheckScreen());return;}
     if(step>=2&&step<=10){rich.screens.clickgui.ClickGui.INSTANCE.selectCategory(step==2?rich.modules.module.category.ModuleCategory.SWORDS:NativeGuiCheck.TABS[step-2]);System.out.println("ANVIL TAB: "+(step==2?"SWORDS":NativeGuiCheck.TABS[step-2]));return;}
     switch(step){
      case 0 -> {

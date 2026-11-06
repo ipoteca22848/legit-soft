@@ -4,8 +4,9 @@ import com.example.auravisuals.module.misc.CustomSword;
 import net.minecraft.component.DataComponentTypes;
 public final class SwordGalleryCheck {
  public static void verify(){
+  for(var category:rich.modules.module.category.ModuleCategory.values())if(category.name().equals("COMBAT")||category.name().equals("MOVEMENT"))throw new AssertionError("Removed category remains");
   var categories=new rich.screens.clickgui.impl.background.render.CategoryRenderer();
-  if(categories.getCategoryAtPosition(40,108,0,0)!=rich.modules.module.category.ModuleCategory.SWORDS)throw new AssertionError("Swords not visible/clickable without sidebar scrolling");
+  if(categories.getCategoryAtPosition(40,78,0,0)!=rich.modules.module.category.ModuleCategory.SWORDS)throw new AssertionError("Swords not visible/clickable without sidebar scrolling");
 
   var module=CustomSword.INSTANCE;var gallery=new SwordGallery();
   if(gallery.items().size()!=119)throw new AssertionError("Incomplete sword catalogue");
