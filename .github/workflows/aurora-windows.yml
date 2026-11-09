@@ -1,0 +1,44 @@
+name: Windows release
+on:
+  workflow_dispatch:
+  push:
+    tags: ['aurora-v*']
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: aurora-launcher
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: aurora-launcher/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: aurora-launcher/src-tauri -> target
+      - run: npm ci
+      - run: cargo test --manifest-path src-tauri/Cargo.toml
+      - run: npm run tauri build
+      - name: Package portable executable and checksums
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force artifacts
+          Copy-Item src-tauri/target/release/aurora-launcher.exe artifacts/Aurora-Launcher-Portable.exe
+          Copy-Item src-tauri/target/release/bundle/nsis/*.exe artifacts/
+          Get-ChildItem artifacts/*.exe | ForEach-Object { "$((Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower())  $($_.Name)" } | Set-Content artifacts/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aurora-windows-x64
+          path: aurora-launcher/artifacts/*
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: gh release create $env:GITHUB_REF_NAME artifacts/* --title "Aurora Launcher $env:GITHUB_REF_NAME" --notes-file RELEASE_NOTES.md
