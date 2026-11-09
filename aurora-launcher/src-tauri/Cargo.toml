@@ -1,6 +1,6 @@
 [package]
 name = "aurora-launcher"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 [build-dependencies]
@@ -19,6 +19,7 @@ md5 = "0.7"
 sha1 = "0.10"
 sha2 = "0.10"
 hex = "0.4"
+base64 = "0.22"
 zip = { version = "2", default-features = false, features = ["deflate"] }
 sysinfo = "0.33"
 regex = "1"

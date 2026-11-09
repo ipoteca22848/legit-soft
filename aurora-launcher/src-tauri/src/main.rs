@@ -50,7 +50,7 @@ fn memory() -> u64 {
 #[tauri::command]
 async fn bootstrap(s: tauri::State<'_, State>) -> Result<Value, String> {
     Ok(
-        json!({"config":s.config.lock().await.clone(),"memoryMb":memory(),"dataDirectory":s.root,"running":s.running.load(Ordering::Relaxed)}),
+        json!({"config":s.config.lock().await.clone(),"memoryMb":memory(),"dataDirectory":s.root,"running":s.running.load(Ordering::Relaxed),"lastGameResult":std::fs::read_to_string(s.root.join("last-game-result.txt")).ok()}),
     )
 }
 #[tauri::command]

@@ -20,7 +20,7 @@ impl Net {
     pub fn new(cancel: Arc<AtomicBool>) -> Result<Self> {
         Ok(Self {
             client: reqwest::Client::builder()
-                .user_agent("AuroraLauncher/0.1.1 (github.com/ipoteca22848/legit-soft)")
+                .user_agent("AuroraLauncher/0.1.2 (github.com/ipoteca22848/legit-soft)")
                 .connect_timeout(std::time::Duration::from_secs(20))
                 .timeout(std::time::Duration::from_secs(600))
                 .build()?,
@@ -166,10 +166,14 @@ pub async fn batch(
     }))
     .buffer_unordered(parallel.clamp(1, 16));
     let mut done = 0;
+    let mut last_update = std::time::Instant::now();
     while let Some(r) = stream.next().await {
         r?;
         done += 1;
-        progress(app, stage, done, total)
+        if done == total || last_update.elapsed() >= std::time::Duration::from_millis(100) {
+            progress(app, stage, done, total);
+            last_update = std::time::Instant::now();
+        }
     }
     Ok(())
 }

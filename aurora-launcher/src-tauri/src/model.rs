@@ -21,6 +21,10 @@ pub struct Account {
     pub id: String,
     pub name: String,
     pub kind: String,
+    #[serde(default)]
+    pub xuid: String,
+    #[serde(default)]
+    pub client_id: String,
 }
 #[derive(Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -69,10 +73,20 @@ pub struct Version {
     pub asset_index: Option<Artifact>,
     pub assets: Option<String>,
     pub java_version: Option<JavaVersion>,
+    pub logging: Option<Logging>,
     #[serde(default)]
     pub downloads: HashMap<String, Artifact>,
     #[serde(rename = "type")]
     pub kind: Option<String>,
+}
+#[derive(Clone, Deserialize, Serialize)]
+pub struct Logging {
+    pub client: Option<ClientLogging>,
+}
+#[derive(Clone, Deserialize, Serialize)]
+pub struct ClientLogging {
+    pub argument: String,
+    pub file: Artifact,
 }
 #[derive(Clone, Deserialize, Serialize, Default)]
 pub struct Arguments {
@@ -160,6 +174,8 @@ pub fn offline_account(name: &str) -> Result<Account> {
         id: uuid::Uuid::from_bytes(bytes).simple().to_string(),
         name: name.into(),
         kind: "offline".into(),
+        xuid: String::new(),
+        client_id: String::new(),
     })
 }
 #[cfg(test)]

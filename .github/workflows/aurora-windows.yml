@@ -24,8 +24,32 @@ jobs:
           workspaces: aurora-launcher/src-tauri -> target
           cache-on-failure: true
       - run: npm ci
-      - run: cargo test --locked --manifest-path src-tauri/Cargo.toml
+      - run: npm run build
+      - run: cargo test --locked --release --features tauri/custom-protocol --manifest-path src-tauri/Cargo.toml
       - run: npm run tauri build
+      - name: Smoke test Windows executable
+        shell: pwsh
+        run: |
+          $webview = Get-ChildItem "${env:ProgramFiles(x86)}/Microsoft/EdgeWebView/Application/*/msedgewebview2.exe" -ErrorAction SilentlyContinue
+          if (!$webview) {
+            Invoke-WebRequest 'https://go.microsoft.com/fwlink/p/?LinkId=2124703' -OutFile "$env:RUNNER_TEMP/webview-setup.exe"
+            $setup = Start-Process "$env:RUNNER_TEMP/webview-setup.exe" -ArgumentList '/silent /install' -Wait -PassThru
+            if ($setup.ExitCode -notin @(0,3010)) { throw "WebView2 install failed: $($setup.ExitCode)" }
+          }
+          $exe = (Resolve-Path 'src-tauri/target/release/aurora-launcher.exe').Path
+          $process = Start-Process $exe -PassThru
+          try {
+            for ($attempt=0; $attempt -lt 20; $attempt++) {
+              Start-Sleep -Seconds 1
+              $process.Refresh()
+              if ($process.HasExited) { throw "Launcher exited unexpectedly: $($process.ExitCode)" }
+              if ($process.MainWindowTitle -like 'Aurora*') { break }
+            }
+            if ($process.MainWindowTitle -notlike 'Aurora*') { throw 'Launcher did not create its main window' }
+            Write-Host "Startup verified: $($process.MainWindowTitle), PID $($process.Id)"
+          } finally {
+            taskkill /PID $process.Id /T /F | Out-Null
+          }
       - name: Package portable executable and checksums
         shell: pwsh
         run: |

@@ -88,6 +88,9 @@ fn merge(mut base: Version, child: Version) -> Version {
     if child.main_class.is_some() {
         base.main_class = child.main_class
     }
+    if child.logging.is_some() {
+        base.logging = child.logging;
+    }
     if child.java_version.is_some() {
         base.java_version = child.java_version
     }
@@ -185,6 +188,8 @@ async fn java(net: &Net, app: &AppHandle, dir: &Path, major: u32) -> Result<Path
 }
 #[derive(Clone, serde::Serialize, serde::Deserialize)]
 pub struct Prepared {
+    #[serde(default)]
+    pub schema_version: u32,
     pub version: Version,
     pub java: PathBuf,
     pub client: PathBuf,
@@ -324,6 +329,22 @@ async fn artifacts(
         }
         batch(net, app, "Ресурсы игры", jobs, parallel).await?;
     }
+    if let Some(logging) = version.logging.as_ref().and_then(|l| l.client.as_ref()) {
+        let path = safe_join(
+            &dir.join("assets/log_configs"),
+            logging
+                .file
+                .id
+                .as_deref()
+                .context("Имя конфигурации логирования")?,
+        )?;
+        net.file(
+            &logging.file.url,
+            &path,
+            logging.file.sha1.as_deref().map(|h| ("sha1", h)),
+        )
+        .await?;
+    }
     Ok((client, cp, natives))
 }
 pub async fn prepare(
@@ -336,7 +357,8 @@ pub async fn prepare(
     tokio::fs::create_dir_all(dir).await?;
     if let Ok(bytes) = tokio::fs::read(dir.join("prepared.json")).await {
         if let Ok(prepared) = serde_json::from_slice::<Prepared>(&bytes) {
-            if prepared.java.is_file()
+            if prepared.schema_version == 2
+                && prepared.java.is_file()
                 && prepared.client.is_file()
                 && prepared.natives.is_dir()
                 && prepared.classpath.iter().all(|p| p.is_file())
@@ -373,7 +395,7 @@ pub async fn prepare(
     let major = if requested == 16 { 17 } else { requested };
     let java = java(net, app, dir, major).await?;
     let resolved_path = dir.join("resolved-version.json");
-    let version = if resolved_path.exists() {
+    let mut version = if resolved_path.exists() {
         serde_json::from_slice(&tokio::fs::read(&resolved_path).await?)?
     } else {
         let version = match p.loader.as_str() {
@@ -416,7 +438,24 @@ pub async fn prepare(
                     .context("Forge недоступен для этой версии")?;
                 let coord = format!("{}-{forge}", p.version);
                 let installer = dir.join("downloads/forge-installer.jar");
-                net.file(&format!("https://maven.minecraftforge.net/net/minecraftforge/forge/{coord}/forge-{coord}-installer.jar"),&installer,None).await?;
+                let installer_url=format!("https://maven.minecraftforge.net/net/minecraftforge/forge/{coord}/forge-{coord}-installer.jar");
+                let checksum = net
+                    .client
+                    .get(format!("{installer_url}.sha1"))
+                    .send()
+                    .await?
+                    .error_for_status()?
+                    .text()
+                    .await?;
+                let checksum = checksum
+                    .split_whitespace()
+                    .next()
+                    .context("SHA-1 установщика Forge")?;
+                if checksum.len() != 40 || !checksum.bytes().all(|b| b.is_ascii_hexdigit()) {
+                    bail!("Некорректная SHA-1 Forge")
+                }
+                net.file(&installer_url, &installer, Some(("sha1", checksum)))
+                    .await?;
                 let lp = dir.join("launcher_profiles.json");
                 if !lp.exists() {
                     tokio::fs::write(lp, b"{\"profiles\":{}}").await?;
@@ -456,6 +495,9 @@ pub async fn prepare(
         tokio::fs::write(&resolved_path, serde_json::to_vec_pretty(&version)?).await?;
         version
     };
+    if version.logging.is_none() {
+        version.logging = base.logging.clone();
+    }
     let (client, classpath, natives) =
         artifacts(net, app, dir, &version, &p.version, parallel).await?;
     if p.performance && p.loader != "vanilla" {
@@ -469,6 +511,7 @@ pub async fn prepare(
     }
     progress(app, "Готово", 1, 1);
     let prepared = Prepared {
+        schema_version: 2,
         version,
         java,
         client,
@@ -598,10 +641,26 @@ pub fn launch_command(
         ),
         ("library_directory", libs),
         ("user_properties", "{}".into()),
-        ("clientid", String::new()),
-        ("auth_xuid", String::new()),
+        ("clientid", account.client_id.clone()),
+        ("auth_xuid", account.xuid.clone()),
     ]);
     let mut jvm = arguments(&prepared.version.arguments.jvm, &vars)?;
+    if let Some(logging) = prepared
+        .version
+        .logging
+        .as_ref()
+        .and_then(|l| l.client.as_ref())
+    {
+        let path = safe_join(
+            &prepared.game_dir.join("assets/log_configs"),
+            logging.file.id.as_deref().context("Имя log config")?,
+        )?;
+        jvm.push(expand(
+            &logging.argument,
+            &HashMap::from([("path", path.to_string_lossy().into_owned())]),
+        )?);
+    }
+    jvm.push("-Dlog4j2.formatMsgNoLookups=true".into());
     if !jvm.iter().any(|s| s == "-cp" || s == "-classpath") {
         jvm.extend(["-cp".into(), cp]);
     }
@@ -689,6 +748,7 @@ mod command_tests {
         let version:Version=serde_json::from_value(json!({
    "id":"1.21.1","mainClass":"net.minecraft.client.main.Main",
    "assetIndex":{"id":"17","url":"https://example.com/index.json"},
+            "logging":{"client":{"argument":"-Dlog4j.configurationFile=${path}","file":{"id":"client.xml","url":"https://example.com/client.xml"}}},
    "arguments":{"jvm":["-Djava.library.path=${natives_directory}","-cp","${classpath}"],
    "game":["--username","${auth_player_name}","--uuid","${auth_uuid}","--accessToken","${auth_access_token}","--gameDir","${game_directory}","--assetsDir","${assets_root}","--assetIndex","${assets_index_name}"]}
   })).unwrap();
@@ -702,6 +762,7 @@ mod command_tests {
             background: String::new(),
         };
         let prepared = Prepared {
+            schema_version: 2,
             version,
             java: dir.join("javaw.exe"),
             client: dir.join("client.jar"),
@@ -722,6 +783,10 @@ mod command_tests {
         )));
         assert!(args.contains(&"net.minecraft.client.main.Main".to_owned()));
         assert!(args.contains(&account.id));
+        assert!(args.contains(&format!(
+            "-Dlog4j.configurationFile={}",
+            dir.join("assets/log_configs/client.xml").display()
+        )));
         let index = args.iter().position(|a| a == "--gameDir").unwrap();
         assert_eq!(args[index + 1], dir.to_string_lossy());
         let index = args.iter().position(|a| a == "-cp").unwrap();

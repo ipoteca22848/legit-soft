@@ -58,6 +58,7 @@ type Boot = {
   memoryMb: number;
   dataDirectory: string;
   running: boolean;
+  lastGameResult?: string | null;
 };
 type Progress = {
   stage: string;
@@ -144,7 +145,7 @@ function App() {
   const profile =
     config.profiles.find((p) => p.id === selected) || config.profiles[0];
   const account = config.accounts.find((a) => a.id === config.selectedAccount);
-  async function refresh() {
+  async function refresh(initial = false) {
     if (!tauri) return;
     const b = await invoke<Boot>("bootstrap");
     setConfig(b.config);
@@ -152,6 +153,7 @@ function App() {
     setHardware(b.memoryMb);
     setDataDir(b.dataDirectory);
     setRunning(b.running);
+    if(initial && b.lastGameResult) notify(b.lastGameResult,!b.lastGameResult.startsWith("Игра завершена"));
   }
   function notify(text: string, error = false) {
     setNotice({ text, error });
@@ -179,7 +181,7 @@ function App() {
       );
       return;
     }
-    refresh().catch((e) => notify(String(e), true));
+    refresh(true).catch((e) => notify(String(e), true));
     invoke<string[]>("versions")
       .then((v) => {
         if (v.length) setVersionList(v);
@@ -373,7 +375,7 @@ function App() {
         <div className="sidebar-footer">
           <div className="edition">
             <span className="status-dot" />
-            JAVA EDITION<span>v0.1.1</span>
+            JAVA EDITION<span>v0.1.2</span>
           </div>
           <button className="account-card" onClick={() => setTab("accounts")}>
             <span className="avatar">

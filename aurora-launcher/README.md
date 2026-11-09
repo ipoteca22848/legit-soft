@@ -112,7 +112,7 @@ Portable: `src-tauri/target/release/aurora-launcher.exe`. NSIS: `src-tauri/targe
 
 ## Проверки и ограничения preview
 
-Unit-тесты проверяют эталон UUID Notch, traversal, Maven classifiers, feature rules, неизвестные placeholders. CI запускает Rust tests, TypeScript и Vite, затем собирает Windows portable и NSIS. Успешная компиляция не заменяет end-to-end проверку реального Minecraft и OAuth на Windows.
+Unit-тесты проверяют эталон UUID Notch, traversal, Maven classifiers, feature rules, неизвестные placeholders. CI запускает Rust tests, TypeScript и Vite, затем собирает Windows portable и NSIS и проверяет появление главного окна EXE на Windows runner. Успешная компиляция не заменяет end-to-end проверку реального Minecraft и OAuth на Windows.
 
 Цель релиза — Windows x64. В списке release-версии от 1.16.5; snapshots и legacy assets не поддерживаются. Auto-Java пока только Windows. Полный Aikar preset предназначен серверу, поэтому здесь используется консервативный G1 набор.
 
@@ -125,3 +125,5 @@ Unit-тесты проверяют эталон UUID Notch, traversal, Maven cla
 EXE не подписан сертификатом издателя. Неофициальный проект, не связан с Mojang/Microsoft.
 
 Java 16, запрашиваемая Minecraft 1.17, заменяется на Java 17. Совместимость конкретных старых Forge-модов с Java 17 требует проверки.
+
+В 0.1.2 добавлены официальный logging config Mojang, передача client ID/XUID, контроль SHA-1 Forge installer, ограничение частоты событий прогресса до 10 Гц и восстановление результата игры при пересоздании WebView.

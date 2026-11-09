@@ -45,10 +45,10 @@ pub async fn poll(net: &Net, client: &str, device: &str) -> Result<Value> {
         }
         bail!("Microsoft: {e}")
     }
-    let (account, _) = exchange(net, &response).await?;
+    let (account, _) = exchange(net, &response, client).await?;
     Ok(json!({"pending":false,"account":account}))
 }
-async fn exchange(net: &Net, oauth: &Value) -> Result<(Account, String)> {
+async fn exchange(net: &Net, oauth: &Value, client: &str) -> Result<(Account, String)> {
     let msa = oauth["access_token"]
         .as_str()
         .context("Нет Microsoft access_token")?;
@@ -99,6 +99,12 @@ async fn exchange(net: &Net, oauth: &Value) -> Result<(Account, String)> {
         id: profile["id"].as_str().context("UUID Minecraft")?.into(),
         name: profile["name"].as_str().context("Ник Minecraft")?.into(),
         kind: "microsoft".into(),
+        client_id: client.into(),
+        xuid: xsts["DisplayClaims"]["xui"][0]["xid"]
+            .as_str()
+            .map(str::to_owned)
+            .or_else(|| token_xuid(access))
+            .unwrap_or_default(),
     };
     let refresh = oauth["refresh_token"]
         .as_str()
@@ -131,9 +137,21 @@ pub async fn access(net: &Net, client: &str, account: &Account) -> Result<String
         .error_for_status()?
         .json()
         .await?;
-    let (fresh, token) = exchange(net, &oauth).await?;
+    let (fresh, token) = exchange(net, &oauth, client).await?;
     if fresh.id != account.id {
         bail!("UUID аккаунта изменился; войдите заново")
     };
     Ok(token)
+}
+
+fn token_xuid(token: &str) -> Option<String> {
+    use base64::Engine;
+    let payload = base64::engine::general_purpose::URL_SAFE_NO_PAD
+        .decode(token.split('.').nth(1)?)
+        .ok()?;
+    let data: Value = serde_json::from_slice(&payload).ok()?;
+    data["xuid"]
+        .as_str()
+        .map(str::to_owned)
+        .or_else(|| data["xuid"].as_u64().map(|n| n.to_string()))
 }
