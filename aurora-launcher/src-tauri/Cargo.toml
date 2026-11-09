@@ -1,6 +1,6 @@
 [package]
 name = "aurora-launcher"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [build-dependencies]
@@ -24,3 +24,7 @@ sysinfo = "0.33"
 regex = "1"
 shlex = "1"
 keyring = { version = "3", features = ["windows-native", "apple-native", "sync-secret-service"] }
+
+[profile.release]
+strip = true
+lto = "thin"

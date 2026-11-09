@@ -22,8 +22,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: aurora-launcher/src-tauri -> target
+          cache-on-failure: true
       - run: npm ci
-      - run: cargo test --manifest-path src-tauri/Cargo.toml
+      - run: cargo test --locked --manifest-path src-tauri/Cargo.toml
       - run: npm run tauri build
       - name: Package portable executable and checksums
         shell: pwsh
@@ -41,4 +42,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         shell: pwsh
-        run: gh release create $env:GITHUB_REF_NAME artifacts/* --title "Aurora Launcher $env:GITHUB_REF_NAME" --notes-file RELEASE_NOTES.md
+        run: gh release create $env:GITHUB_REF_NAME artifacts/* --title "Aurora Launcher $env:GITHUB_REF_NAME" --notes-file RELEASE_NOTES.md --prerelease
