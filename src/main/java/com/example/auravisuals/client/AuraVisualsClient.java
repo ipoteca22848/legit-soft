@@ -64,6 +64,8 @@ public class AuraVisualsClient implements ClientModInitializer {
     static boolean clickGuiBindWasPressed;
 
     public void onInitializeClient() {
+        com.anvil.client.atmosphere.AtmospherePackManager.init();
+        ClientTickEvents.END_CLIENT_TICK.register(com.anvil.client.atmosphere.AtmospherePackManager::sub_4);
         com.anvil.client.AnvilRuntime.init();
         FontManager.init();
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new AuraVisualsClient$1(this));

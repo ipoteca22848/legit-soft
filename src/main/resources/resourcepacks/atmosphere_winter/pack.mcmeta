@@ -1,0 +1,13 @@
+{
+  "pack": {
+    "description": "anvil visual \u2014 Snowstorm by Ewan Howell",
+    "min_format": [
+      75,
+      0
+    ],
+    "max_format": [
+      75,
+      0
+    ]
+  }
+}

@@ -124,6 +124,7 @@ public class ModuleManager {
     private long lastFarWorldTeleportMs = 0L;
 
     private ModuleManager() {
+        this.addModule(new com.anvil.client.atmosphere.AtmosphereModule());
         this.addModule(new com.example.auravisuals.module.misc.DiscordRCP());
         this.addModule(new com.anvil.client.Unhook());
         this.addModule(new QuickRespawn());

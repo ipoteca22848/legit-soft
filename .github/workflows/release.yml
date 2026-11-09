@@ -24,11 +24,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: anvil-visual-1.21.11
-          path: build/libs/anvil-visual-1.1.4.jar
+          path: build/libs/anvil-visual-1.2.0.jar
       - name: Publish downloadable JAR
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$RELEASE_TAG" build/libs/anvil-visual-1.1.4.jar --title "anvil visual $RELEASE_TAG" --notes-file .github/release-notes.md
+          gh release create "$RELEASE_TAG" build/libs/anvil-visual-1.2.0.jar --title "anvil visual $RELEASE_TAG" --notes-file .github/release-notes.md

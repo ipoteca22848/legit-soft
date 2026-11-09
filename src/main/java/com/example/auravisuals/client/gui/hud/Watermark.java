@@ -52,7 +52,7 @@ public final class Watermark implements HudElement {
 
     @Override
     public float x() {
-        return 776.0F;
+        return island()?960.0F-width()/2:776.0F;
     }
 
     @Override
@@ -62,7 +62,7 @@ public final class Watermark implements HudElement {
 
     @Override
     public float width() {
-        return currentWidth;
+        return island()?240.0F:currentWidth;
     }
 
     @Override
@@ -77,6 +77,7 @@ public final class Watermark implements HudElement {
 
     @Override
     public void render(DrawContext context, Hud hud) {
+        if(island()){renderIsland(context);return;}
         updateAnimations();
         String playerName = Hud.playerName();
         String fpsText = String.valueOf(Math.max(0, Math.round(animatedFps)));
@@ -131,6 +132,21 @@ public final class Watermark implements HudElement {
         IconRender.draw(context, "ping", pingIconX, 44.75F, IconRender.getDesignSize("ping"), Hud.animatedColor(Hud.accent()));
         TextRender.draw(context, pingText, pingValX, 56.583F, 13.224F, Hud.animatedColor(-2434342));
         TextRender.draw(context, "ping", pingUnitX, 56.583F, 13.224F, Hud.animatedColor(-1076176166));
+    }
+
+    private static boolean island(){return com.example.auravisuals.module.render.Hud.watermarkStyle.is("Островок");}
+    private void renderIsland(DrawContext context){
+        float x=x(),y=y();int text=Hud.animatedColor(0xffefedf7);
+        String time=java.time.LocalTime.now().format(java.time.format.DateTimeFormatter.ofPattern("HH:mm"));
+        TextRender.draw(context,time,x+1,y+24,14.2F,text);
+        RoundedRenderer.drawRoundedRect(context,x+61,y+3,143,32,16,Hud.animatedColor(0xe0100e18));
+        RoundedRenderer.drawRoundedRect(context,x+73,y+15,9,9,4.5F,Hud.animatedColor(0xff77717f));
+        TextRender.draw(context,"anvil visual",x+91,y+24,14.2F,text);
+        var plane=Gui.color(context);float px=x+226,py=y+19;
+        plane.tri(px-2,py-10,text,px+2,py-10,text,px+2,py+9,text);
+        plane.tri(px-2,py-10,text,px+2,py+9,text,px-2,py+9,text);
+        plane.tri(px,py-3,text,px-10,py+3,text,px+10,py+3,text);
+        plane.tri(px,py+5,text,px-5,py+10,text,px+5,py+10,text);plane.submit(context);
     }
 
     private static boolean drawCompactLogo(DrawContext context, float tileX, float tileY) {

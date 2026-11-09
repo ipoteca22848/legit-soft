@@ -6,6 +6,7 @@ import com.example.auravisuals.module.ModuleManager;
 public final class SmokeCheck implements ClientModInitializer {
  private int ticks,stage;
  public void onInitializeClient(){
+  if(Boolean.getBoolean("anvil.worldSmoke")){MythWorldCheck.install();return;}
   ClientTickEvents.END_CLIENT_TICK.register(client->{
    if(client.getOverlay()!=null||++ticks%60!=0)return;
    try{
@@ -28,8 +29,8 @@ public final class SmokeCheck implements ClientModInitializer {
      case 1 -> {
       NativeGuiCheck.verify(client);
       SwordGalleryCheck.verify();
-      if(ModuleManager.INSTANCE.getModules().size()!=96)throw new AssertionError("Expected 96 modules");
-      if(FrontendBridge.modules().size()!=96)throw new AssertionError("GUI module coverage");
+      if(ModuleManager.INSTANCE.getModules().size()!=97)throw new AssertionError("Expected 97 modules");
+      if(FrontendBridge.modules().size()!=97)throw new AssertionError("GUI module coverage");
       client.setScreen(rich.screens.clickgui.ClickGui.INSTANCE);
       System.out.println("ANVIL SMOKE: GUI loaded with all modules");
      }
@@ -46,7 +47,7 @@ public final class SmokeCheck implements ClientModInitializer {
       if(AnvilRuntime.isActive())throw new AssertionError("Unhook active flag");
       for(var m:ModuleManager.INSTANCE.getModules())if(m.isEnabled())throw new AssertionError("Module still enabled: "+m.getName());
       if(client.currentScreen!=null && !(client.currentScreen instanceof net.minecraft.client.gui.screen.TitleScreen))throw new AssertionError("Custom GUI still open");
-      System.out.println("ANVIL SMOKE PASSED: menu, GUI, 96 modules, Discord RPC, unhook");
+      System.out.println("ANVIL SMOKE PASSED: menu, GUI, 97 modules, Discord RPC, unhook");
       client.scheduleStop();
      }
     }
