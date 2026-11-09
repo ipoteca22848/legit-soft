@@ -5,9 +5,23 @@
   "client": [
     "FrontendRenderMixin",
     "AtmosphereFogMixin",
-    "AtmosphereWeatherMixin"
+    "AtmosphereWeatherMixin",
+    "performance.TextRendererGlyphDrawerMixin",
+    "performance.GlyphAtlasTextureMixin",
+    "performance.ClientWorldMixin",
+    "performance.AbstractSignBlockEntityRendererMixin",
+    "performance.ItemEntityMixin",
+    "performance.ToastManagerMixin",
+    "performance.EntityRenderDispatcherMixin",
+    "performance.ParticleManagerMixin",
+    "performance.BlockEntityRenderManagerMixin",
+    "performance.InactivityFpsLimiterMixin",
+    "performance.LightmapTextureManagerMixin",
+    "performance.LeavesCullingMixin",
+    "performance.SkyColorMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "com.anvil.client.performance.PulseMixinCompatibility"
 }

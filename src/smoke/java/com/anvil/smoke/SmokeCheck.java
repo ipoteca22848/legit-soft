@@ -12,6 +12,7 @@ public final class SmokeCheck implements ClientModInitializer {
    try{
     int step=stage++;
     if(step==10){client.setScreen(new ShadowCheckScreen());return;}
+    if(step==5){var f=rich.screens.clickgui.ClickGui.class.getDeclaredField("cosmeticsGallery");f.setAccessible(true);((CosmeticsGallery)f.get(rich.screens.clickgui.ClickGui.INSTANCE)).setCategory(6);}
     if(step>=2&&step<=10){rich.screens.clickgui.ClickGui.INSTANCE.selectCategory(step==2?rich.modules.module.category.ModuleCategory.SWORDS:NativeGuiCheck.TABS[step-2]);System.out.println("ANVIL TAB: "+(step==2?"SWORDS":NativeGuiCheck.TABS[step-2]));return;}
     switch(step){
      case 0 -> {
@@ -29,6 +30,7 @@ public final class SmokeCheck implements ClientModInitializer {
      case 1 -> {
       NativeGuiCheck.verify(client);
       SwordGalleryCheck.verify();
+      PulsePortCheck.verify(client);
       if(ModuleManager.INSTANCE.getModules().size()!=97)throw new AssertionError("Expected 97 modules");
       if(FrontendBridge.modules().size()!=97)throw new AssertionError("GUI module coverage");
       client.setScreen(rich.screens.clickgui.ClickGui.INSTANCE);

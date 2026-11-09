@@ -56,6 +56,7 @@ public class BedrockModel$Bone {
             entry.rotate(RotationAxis.POSITIVE_X.rotationDegrees(rotX));
         }
 
+        if(animation!=null&&animation.hasScale(this.name)){var scale=new Vector3f(1);animation.applyScale(this.name,animTime,scale);entry.scale(Math.abs(scale.x)<.00001f?.00001f:scale.x,Math.abs(scale.y)<.00001f?.00001f:scale.y,Math.abs(scale.z)<.00001f?.00001f:scale.z);}
         entry.translate(-this.pivot[0] / 16.0F, -this.pivot[1] / 16.0F, -this.pivot[2] / 16.0F);
 
         for (BedrockModel$Cube cube : this.cubes) {
@@ -97,6 +98,7 @@ public class BedrockModel$Bone {
             entry.rotate(RotationAxis.POSITIVE_X.rotationDegrees(rotX));
         }
 
+        if(animation!=null&&animation.hasScale(this.name)){var scale=new Vector3f(1);animation.applyScale(this.name,animTime,scale);entry.scale(Math.abs(scale.x)<.00001f?.00001f:scale.x,Math.abs(scale.y)<.00001f?.00001f:scale.y,Math.abs(scale.z)<.00001f?.00001f:scale.z);}
         entry.translate(-this.pivot[0] / 16.0F, -this.pivot[1] / 16.0F, -this.pivot[2] / 16.0F);
 
         for (BedrockModel$Cube cube : this.cubes) {

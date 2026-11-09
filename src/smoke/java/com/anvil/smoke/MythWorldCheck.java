@@ -17,6 +17,7 @@ public final class MythWorldCheck {
    if(stage==2&&client.world!=null&&client.player!=null){
     ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.render.Hud.class).setEnabled(true);
     ModuleManager.INSTANCE.getModule(AtmosphereModule.class).setEnabled(true);
+    var optimization=ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.render.Optimization.class);optimization.setEnabled(true);optimization.onTick();
     client.player.setPitch(-10);stage=3;ticks=0;return;
    }
    if(stage==3&&++ticks>100){
@@ -24,6 +25,7 @@ public final class MythWorldCheck {
     if(!client.getResourcePackManager().getEnabledIds().contains("anvil:atmosphere_winter"))throw new AssertionError("Winter pack not enabled");
     if(!AtmosphereModule.val2())throw new AssertionError("Winter fog not active");
     var f=AtmosphereModule.class.getDeclaredField("val1");f.setAccessible(true);if(((java.util.List<?>)f.get(module)).isEmpty())throw new AssertionError("Snow particles not spawned");
+    PulsePortCheck.verifyWorld(client);
     System.out.println("ANVIL WORLD: ATMOSPHERE");stage=4;ticks=0;return;
    }
    if(stage==4&&++ticks>80){
@@ -33,6 +35,7 @@ public final class MythWorldCheck {
    if(stage==5&&++ticks>40){
     if(client.getResourcePackManager().getEnabledIds().contains("anvil:atmosphere_winter"))throw new AssertionError("Winter pack not removed");
     ModuleManager.INSTANCE.getModule(AtmosphereModule.class).setEnabled(false);
+    ModuleManager.INSTANCE.getModule(com.example.auravisuals.module.render.Optimization.class).setEnabled(false);
     if(AtmosphereModule.val2())throw new AssertionError("Winter fog remains active");
     System.out.println("ANVIL WORLD PASSED: flat world, snow rendering, winter textures, fog, island HUD, resource restoration");client.scheduleStop();stage=6;
    }

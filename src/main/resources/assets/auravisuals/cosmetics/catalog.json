@@ -1186,5 +1186,992 @@
       0,
       1.0
     ]
+  },
+  {
+    "id": "5b141449-4f75-53af-9c53-c046148292c9",
+    "slug": "pulse_bundled_cape",
+    "name": "Pulse — Original Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundled_cape/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundled_cape/texture.png",
+    "previewPath": "cosmetics/pulse_bundled_cape/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ce0a4229-ee7c-5a37-b868-84b8de6367d8",
+    "slug": "pulse_bundle_0",
+    "name": "Pulse — Cape 2",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_0/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_0/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_0/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_0/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "d2ddf92e-494a-571d-a6c4-e7a17a2d0232",
+    "slug": "pulse_bundle_1",
+    "name": "Pulse — Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_1/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_1/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_1/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_1/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "f3cbb2b6-de34-5b86-b860-009fbe472983",
+    "slug": "pulse_bundle_2",
+    "name": "Pulse — Dark Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_2/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_2/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_2/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_2/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "6475e63e-580e-5e3e-8283-617980cc257d",
+    "slug": "pulse_bundle_3",
+    "name": "Pulse — akvi4 Cape 2",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_3/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_3/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_3/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_3/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "8b75c3aa-76bb-5235-913d-f83588cedc6d",
+    "slug": "pulse_bundle_4",
+    "name": "Pulse — bro9i Cape 3",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_4/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_4/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_4/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_4/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "6f622fd5-5249-5e5d-97a6-e3c737119b2a",
+    "slug": "pulse_bundle_5",
+    "name": "Pulse — bro9i Cape 2",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_5/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_5/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_5/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_5/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "760ed72b-08bc-50e8-ad1e-2c117394eac2",
+    "slug": "pulse_bundle_6",
+    "name": "Pulse — fluger Fluger2 Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_6/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_6/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_6/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_6/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "19309ff6-7584-580e-8556-2ff15ed83e95",
+    "slug": "pulse_bundle_7",
+    "name": "Pulse — fluger Fluger3 Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_7/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_7/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_7/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_7/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "975c10c6-1fbd-5995-9ae3-16590248339e",
+    "slug": "pulse_bundle_8",
+    "name": "Pulse — fluger Fluger5 Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_8/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_8/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_8/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_8/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "faf8b0c7-4bfa-56d3-ac42-b0d342a3ff0d",
+    "slug": "pulse_bundle_9",
+    "name": "Pulse — bro9i Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_9/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_9/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_9/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_9/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "91cbe8cc-c02d-5ee7-999e-29d9c2764290",
+    "slug": "pulse_bundle_10",
+    "name": "Pulse — akvi4 Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_10/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_10/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_10/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_10/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "056d0122-0c3d-5f02-afb9-1c1edec8a454",
+    "slug": "pulse_bundle_11",
+    "name": "Pulse — Diamond sword Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_11/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_11/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_11/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_11/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "09459630-06d1-56d1-9b3c-19736cc0e253",
+    "slug": "pulse_bundle_12",
+    "name": "Pulse — Glitch Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_12/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_12/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_12/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_12/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "734b9556-17a4-58d3-bd64-1c1f847f03fb",
+    "slug": "pulse_bundle_13",
+    "name": "Pulse — Sweatgod Cape",
+    "category": "capes",
+    "modelPath": "cosmetics/pulse_bundle_13/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_13/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_13/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_13/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "759d8333-968e-55c2-b173-97b80cf0bb57",
+    "slug": "pulse_bundle_14",
+    "name": "Pulse — Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_14/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_14/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_14/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_14/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_14/animation.json"
+  },
+  {
+    "id": "68397f83-f883-56d6-937c-b5706b2050ee",
+    "slug": "pulse_bundle_15",
+    "name": "Pulse — Dark Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_15/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_15/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_15/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_15/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_15/animation.json"
+  },
+  {
+    "id": "e003df3c-37d1-50d5-a2ee-aa747005eae6",
+    "slug": "pulse_bundle_16",
+    "name": "Pulse — Ghoul Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_16/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_16/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_16/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_16/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_16/animation.json"
+  },
+  {
+    "id": "7b602443-e104-5a2e-b01a-d910d2b364d1",
+    "slug": "pulse_bundle_17",
+    "name": "Pulse — Rocker Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_17/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_17/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_17/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_17/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_17/animation.json"
+  },
+  {
+    "id": "b7911c53-0da0-5702-87e2-a8f6929ae0c7",
+    "slug": "pulse_bundle_18",
+    "name": "Pulse — wota Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_18/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_18/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_18/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_18/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_18/animation.json"
+  },
+  {
+    "id": "b06f0e59-740a-5d65-be9e-6a29e9cdfffa",
+    "slug": "pulse_bundle_19",
+    "name": "Pulse — fluger Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_19/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_19/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_19/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_19/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_19/animation.json"
+  },
+  {
+    "id": "ddc0f32c-8265-541b-b9f2-2239cb7d97ce",
+    "slug": "pulse_bundle_20",
+    "name": "Pulse — bro9i Trident Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_20/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_20/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_20/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_20/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_20/animation.json"
+  },
+  {
+    "id": "a6c06b8b-4598-59ec-84c2-3466f299129e",
+    "slug": "pulse_bundle_21",
+    "name": "Pulse — Easter Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_21/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_21/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_21/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_21/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_21/animation.json"
+  },
+  {
+    "id": "3f8c0bf9-e8d0-5c8c-a9ef-6a66ef4ffb68",
+    "slug": "pulse_bundle_22",
+    "name": "Pulse — Angel Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_22/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_22/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_22/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_22/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_22/animation.json"
+  },
+  {
+    "id": "cda1b58a-7c20-5f36-8d62-e1b29e935dc9",
+    "slug": "pulse_bundle_23",
+    "name": "Pulse — Baby Dragon Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_23/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_23/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_23/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_23/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_23/animation.json"
+  },
+  {
+    "id": "040e75a8-1ab2-5b5b-ad85-01eb7ab29041",
+    "slug": "pulse_bundle_24",
+    "name": "Pulse — Dragon Wings Blue",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_24/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_24/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_24/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_24/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_24/animation.json"
+  },
+  {
+    "id": "5320c14a-33dd-56df-b617-8c4b898647dc",
+    "slug": "pulse_bundle_25",
+    "name": "Pulse — Spider Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_25/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_25/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_25/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_25/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_25/animation.json"
+  },
+  {
+    "id": "c74af50a-0ab2-5ef8-ae86-6541b7bfa152",
+    "slug": "pulse_bundle_26",
+    "name": "Pulse — Vulcano Wings",
+    "category": "wings",
+    "modelPath": "cosmetics/pulse_bundle_26/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_26/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_26/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_26/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_26/animation.json"
+  },
+  {
+    "id": "987d925e-260e-5c59-8e15-72869d5111b5",
+    "slug": "pulse_bundle_27",
+    "name": "Pulse — Katana Back",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_27/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_27/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_27/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_27/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "bbb120b2-146d-5530-a29a-139a10203adb",
+    "slug": "pulse_bundle_28",
+    "name": "Pulse — Frog Backpack",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_28/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_28/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_28/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_28/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "9560c54e-cf23-5ef0-85e4-17e5b3c2408e",
+    "slug": "pulse_bundle_29",
+    "name": "Pulse — Backpack 5",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_29/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_29/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_29/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_29/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "2bc4fcd1-e27f-5235-86b3-0968be295f8f",
+    "slug": "pulse_bundle_30",
+    "name": "Pulse — Backpack 6",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_30/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_30/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_30/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_30/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "760d240c-d3eb-5862-8c83-00cf25c80602",
+    "slug": "pulse_bundle_31",
+    "name": "Pulse — Backpack 7",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_31/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_31/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_31/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_31/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "bf059036-7ea2-51fa-83b6-e9eb23e7190a",
+    "slug": "pulse_bundle_32",
+    "name": "Pulse — Backpack 8",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_32/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_32/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_32/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_32/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "6bf7b275-ce78-59f4-8d55-b9bbe570e24b",
+    "slug": "pulse_bundle_33",
+    "name": "Pulse — Backpack 4",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_33/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_33/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_33/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_33/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "bb73f460-f651-5ccf-a4ee-43adb99a0cdb",
+    "slug": "pulse_bundle_34",
+    "name": "Pulse — Backpack 9",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_34/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_34/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_34/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_34/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "f47d3453-d8c2-565d-8972-3623b777d979",
+    "slug": "pulse_bundle_35",
+    "name": "Pulse — Backpack 3",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_35/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_35/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_35/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_35/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "703f264b-a1a3-5817-8ab9-97565f4c1248",
+    "slug": "pulse_bundle_36",
+    "name": "Pulse — Backpack 2",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_36/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_36/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_36/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_36/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "9048ccf2-0b36-5a7d-bd64-b465fe4d998e",
+    "slug": "pulse_bundle_37",
+    "name": "Pulse — Backpack 1",
+    "category": "back",
+    "modelPath": "cosmetics/pulse_bundle_37/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_37/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_37/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_37/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "900938b4-7e63-56d6-afb8-30bd7b817769",
+    "slug": "pulse_bundle_38",
+    "name": "Pulse — Pet 4",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_38/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_38/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_38/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_38/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_38/animation.json"
+  },
+  {
+    "id": "569ad27e-46cb-501c-8327-ce6817153833",
+    "slug": "pulse_bundle_39",
+    "name": "Pulse — Pet 3",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_39/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_39/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_39/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_39/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_39/animation.json"
+  },
+  {
+    "id": "605a8dea-2834-5827-b0e0-fb99d2725a74",
+    "slug": "pulse_bundle_40",
+    "name": "Pulse — Pet 2",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_40/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_40/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_40/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_40/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_40/animation.json"
+  },
+  {
+    "id": "a633ff3b-6fbc-5406-ab77-210290920026",
+    "slug": "pulse_bundle_41",
+    "name": "Pulse — Pet 1",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_41/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_41/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_41/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_41/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_41/animation.json"
+  },
+  {
+    "id": "ca942047-7f6c-523b-be82-d8dd06359c93",
+    "slug": "pulse_bundle_42",
+    "name": "Pulse — Cake Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_42/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_42/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_42/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_42/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_42/animation.json"
+  },
+  {
+    "id": "2f177ac0-2eca-5eb7-aafa-91b857ccc717",
+    "slug": "pulse_bundle_43",
+    "name": "Pulse — Bee",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_43/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_43/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_43/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_43/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_43/animation.json"
+  },
+  {
+    "id": "51733f12-5c13-50af-b383-2b3909351ee4",
+    "slug": "pulse_bundle_44",
+    "name": "Pulse — akvi4 Pet 2",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_44/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_44/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_44/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_44/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_44/animation.json"
+  },
+  {
+    "id": "c78336b2-d99c-5615-a5a9-bd704d48a80a",
+    "slug": "pulse_bundle_45",
+    "name": "Pulse — fluger Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_45/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_45/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_45/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_45/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_45/animation.json"
+  },
+  {
+    "id": "f7708586-07d0-5a44-91bd-3f5fb5cd9bff",
+    "slug": "pulse_bundle_46",
+    "name": "Pulse — bro9i Diamond Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_46/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_46/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_46/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_46/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_46/animation.json"
+  },
+  {
+    "id": "b452d0e0-b30d-5220-8ea3-fca2e2660b93",
+    "slug": "pulse_bundle_47",
+    "name": "Pulse — Radish Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_47/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_47/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_47/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_47/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_47/animation.json"
+  },
+  {
+    "id": "de0a809f-d138-54cf-a2a7-0c8a950dd548",
+    "slug": "pulse_bundle_48",
+    "name": "Pulse — Demon Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_48/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_48/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_48/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_48/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_48/animation.json"
+  },
+  {
+    "id": "8c3f76bd-8b09-59be-a4df-cf9435e28abd",
+    "slug": "pulse_bundle_49",
+    "name": "Pulse — Angel Pet",
+    "category": "pets",
+    "modelPath": "cosmetics/pulse_bundle_49/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_49/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_49/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_49/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_49/animation.json"
+  },
+  {
+    "id": "83efab83-a45f-5553-b96c-b35a744a3846",
+    "slug": "pulse_bundle_50",
+    "name": "Pulse — Dark Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_50/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_50/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_50/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_50/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "4c1deb81-636b-5569-ab63-2f183d85374d",
+    "slug": "pulse_bundle_51",
+    "name": "Pulse — Nimb",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_51/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_51/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_51/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_51/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_51/animation.json"
+  },
+  {
+    "id": "13bc637e-a485-53f5-ad8e-2fcf1d03b277",
+    "slug": "pulse_bundle_52",
+    "name": "Pulse — Leaf Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_52/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_52/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_52/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_52/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_52/animation.json"
+  },
+  {
+    "id": "9e61ae91-0785-593c-b1c6-ceb15fc75a50",
+    "slug": "pulse_bundle_53",
+    "name": "Pulse — Frog Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_53/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_53/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_53/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_53/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "44c29f8c-5738-58ea-99b0-3e96bd5a6587",
+    "slug": "pulse_bundle_54",
+    "name": "Pulse — bro9i Hat Mask",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_54/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_54/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_54/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_54/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "0fd552f5-452b-5dd2-af6d-a7e3f521c92e",
+    "slug": "pulse_bundle_55",
+    "name": "Pulse — akvi4 Penguin Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_55/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_55/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_55/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_55/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "animationPath": "cosmetics/pulse_bundle_55/animation.json"
+  },
+  {
+    "id": "c9b39bf9-665c-547a-a49f-e58f13930e1b",
+    "slug": "pulse_bundle_56",
+    "name": "Pulse — fluger Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_56/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_56/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_56/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_56/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "b0e4a04c-2267-5b98-a0ff-c5836c43dfd3",
+    "slug": "pulse_bundle_57",
+    "name": "Pulse — Bear Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_57/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_57/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_57/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_57/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "840d0dcc-12c9-54ea-a282-65c6c43c32e1",
+    "slug": "pulse_bundle_58",
+    "name": "Pulse — Armadillo Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_58/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_58/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_58/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_58/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "c7384b1f-7e31-58d1-b8b1-bcf7305bf462",
+    "slug": "pulse_bundle_59",
+    "name": "Pulse — Camel Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_59/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_59/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_59/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_59/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "eb82aa6f-f2d7-5755-ab98-b690a458a9fe",
+    "slug": "pulse_bundle_60",
+    "name": "Pulse — Chicken Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_60/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_60/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_60/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_60/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "c0aa51bd-cf43-5c42-9700-045d1cc8461c",
+    "slug": "pulse_bundle_61",
+    "name": "Pulse — Frog Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_61/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_61/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_61/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_61/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "de781f7a-bba8-5b9d-b32a-480c0c109070",
+    "slug": "pulse_bundle_62",
+    "name": "Pulse — Sheep Hat",
+    "category": "hats",
+    "modelPath": "cosmetics/pulse_bundle_62/model.geo.json",
+    "texturePath": "cosmetics/pulse_bundle_62/texture.png",
+    "metaPath": "cosmetics/pulse_bundle_62/meta.json",
+    "previewPath": "cosmetics/pulse_bundle_62/texture.png",
+    "offset": [
+      0,
+      0,
+      0
+    ]
   }
 ]

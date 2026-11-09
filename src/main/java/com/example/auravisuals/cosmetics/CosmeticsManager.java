@@ -121,6 +121,7 @@ public final class CosmeticsManager {
         this.byCategory.put("hats", new ArrayList<>());
         this.byCategory.put("back", new ArrayList<>());
         this.byCategory.put("pets", new ArrayList<>());
+        this.byCategory.put("capes", new ArrayList<>());
     }
 
     public synchronized void load() {
@@ -189,6 +190,8 @@ public final class CosmeticsManager {
             try (InputStream stream = openCosmeticResource(metaPath)) {
                 if (stream != null) {
                     JsonObject meta = JsonParser.parseReader(new InputStreamReader(stream, StandardCharsets.UTF_8)).getAsJsonObject();
+                    if(meta.has("pulsePlacement")){var pose=meta.getAsJsonObject("pulsePlacement");item.setPulsePlacement(vector(pose,"translation",new float[]{0,0,0}),vector(pose,"rotation",new float[]{0,0,0}),pose.get("scale").getAsFloat());}
+                    if(meta.has("textureAnimation")){var a=meta.getAsJsonObject("textureAnimation");item.setTextureAnimation(a.get("frameCount").getAsInt(),a.get("frameTime").getAsInt());}
                     if (meta.has("locationRotation") && meta.get("locationRotation").isJsonObject()) {
                         JsonObject locations = meta.getAsJsonObject("locationRotation");
                         if (locations.has("normal") && locations.get("normal").isJsonObject()) {
@@ -546,6 +549,7 @@ public final class CosmeticsManager {
     }
 
     static void applyPlacement(MatrixStack matrices, CosmeticItem item, String category) {
+        if(item.applyPulsePlacement(matrices))return;
         CosmeticsManager$Placement placement = PLACEMENT_CACHE.computeIfAbsent(item, key -> placement(key, category));
         CosmeticsManager$ModelAdjustment modelAdjustment = FIXED_MODEL_ADJUSTMENTS.getOrDefault(item.getSlug(), NO_MODEL_ADJUSTMENT);
         float customHeight = "wings".equals(category) ? INSTANCE.getWingHeightAdjustment(item.getSlug()) : 0.0F;
@@ -660,7 +664,7 @@ public final class CosmeticsManager {
             return new CosmeticsManager$Placement(
                 -center(bounds[0], bounds[3]) * scale, targetY - center(bounds[1], bounds[4]) * scale, targetZ - bounds[2] * scale, scale, autoYaw
             );
-        } else if ("back".equals(category)) {
+        } else if ("back".equals(category)||"capes".equals(category)) {
             float scale = Math.min(1.0F, Math.min(safeRatio(1.18F, width), Math.min(safeRatio(1.48F, height), safeRatio(1.05F, depth))));
             return new CosmeticsManager$Placement(
                 -center(bounds[0], bounds[3]) * scale, -0.3F - center(bounds[1], bounds[4]) * scale, 0.1F - bounds[2] * scale, scale, autoYaw

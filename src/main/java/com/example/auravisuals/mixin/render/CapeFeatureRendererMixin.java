@@ -33,6 +33,8 @@ public class CapeFeatureRendererMixin {
         float limbDistance,
         CallbackInfo ci
     ) {
+        var client=MinecraftClient.getInstance();
+        if(com.anvil.client.AnvilRuntime.isActive()&&client.world!=null){var entity=client.world.getEntityById(state.id);if(entity instanceof net.minecraft.entity.player.PlayerEntity player&&com.example.auravisuals.cosmetics.CosmeticsManager.INSTANCE.resolvePlayerCosmetics(player).containsKey("capes")){ci.cancel();return;}}
         if (CustomModels.shouldReplaceState(state)) {
             ci.cancel();
         } else {

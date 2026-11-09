@@ -19,6 +19,19 @@ public class CosmeticItem {
     private final float[] orientationRotation = new float[]{0.0F, 0.0F, 0.0F};
     private final float[] orientationSign = new float[]{1.0F, 1.0F, 1.0F};
     private BedrockModel model;
+    private float[] pulseTranslation,pulseRotation;private float pulseScale=1;
+    private int textureFrames=1,textureFrameTicks=1;
+    public void setTextureAnimation(int frames,int ticks){textureFrames=Math.max(1,frames);textureFrameTicks=Math.max(1,ticks);if(model!=null)model.setTextureAnimation(textureFrames,textureFrameTicks);}
+    public int getTextureFrames(){return textureFrames;}
+    public void setPulsePlacement(float[] translation,float[] rotation,float scale){pulseTranslation=translation.clone();pulseRotation=rotation.clone();pulseScale=scale;}
+    public boolean applyPulsePlacement(net.minecraft.client.util.math.MatrixStack matrices){
+        if(pulseTranslation==null)return false;
+        matrices.translate(pulseTranslation[0],pulseTranslation[1],pulseTranslation[2]);
+        matrices.multiply(net.minecraft.util.math.RotationAxis.POSITIVE_Y.rotationDegrees(pulseRotation[1]));
+        matrices.multiply(net.minecraft.util.math.RotationAxis.POSITIVE_X.rotationDegrees(pulseRotation[0]));
+        matrices.multiply(net.minecraft.util.math.RotationAxis.POSITIVE_Z.rotationDegrees(pulseRotation[2]));
+        matrices.scale(pulseScale,pulseScale,pulseScale);return true;
+    }
     private BedrockAnimation animation;
 
     public CosmeticItem(
@@ -153,6 +166,7 @@ public class CosmeticItem {
 
     public void setModel(BedrockModel model) {
         this.model = model;
+        if(model!=null)model.setTextureAnimation(textureFrames,textureFrameTicks);
     }
 
     public BedrockAnimation getAnimation() {

@@ -20,6 +20,7 @@ public final class BedrockAnimationParser {
             }
 
             JsonObject anims = root.getAsJsonObject("animations");
+            boolean pulse=root.has("anvil_pulse")&&root.get("anvil_pulse").getAsBoolean();
 
             for (Entry<String, JsonElement> entry : anims.entrySet()) {
                 if (entry.getValue().isJsonObject()) {
@@ -36,13 +37,14 @@ public final class BedrockAnimationParser {
                                 JsonObject bData = boneEntry.getValue().getAsJsonObject();
                                 BedrockAnimation$BoneTimeline timeline = new BedrockAnimation$BoneTimeline();
                                 if (bData.has("rotation")) {
-                                    parseKeyframes(bData.get("rotation"), timeline.rotationKeyframes);
+                                    parseKeyframes(bData.get("rotation"), timeline.rotationKeyframes,pulse);
                                 }
 
                                 if (bData.has("position")) {
-                                    parseKeyframes(bData.get("position"), timeline.positionKeyframes);
+                                    parseKeyframes(bData.get("position"), timeline.positionKeyframes,pulse);
                                 }
 
+                                if(pulse&&bData.has("scale"))parseKeyframes(bData.get("scale"),timeline.scaleKeyframes,true);
                                 animation.bones.put(boneName, timeline);
                             }
                         }
@@ -59,7 +61,7 @@ public final class BedrockAnimationParser {
         }
     }
 
-    private static void parseKeyframes(JsonElement el, List<BedrockAnimation$Keyframe> outList) {
+    private static void parseKeyframes(JsonElement el, List<BedrockAnimation$Keyframe> outList,boolean pulse) {
         if (el.isJsonObject()) {
             JsonObject obj = el.getAsJsonObject();
 
@@ -71,22 +73,24 @@ public final class BedrockAnimationParser {
                     continue;
                 }
 
-                float[] vals = parseVec3(entry.getValue());
+                float[] vals = parseVec3(entry.getValue(),pulse);
                 if (vals != null) {
-                    outList.add(new BedrockAnimation$Keyframe(time, vals[0], vals[1], vals[2]));
+                    var keyframe=new BedrockAnimation$Keyframe(time,vals[0],vals[1],vals[2]);
+                    if(pulse&&entry.getValue().isJsonObject()){var o=entry.getValue().getAsJsonObject();if(o.has("easing"))keyframe.easing=o.get("easing").getAsString();else if(o.has("lerp_mode"))keyframe.easing=o.get("lerp_mode").getAsString();}
+                    outList.add(keyframe);
                 }
             }
 
             outList.sort(Comparator.comparingDouble(k -> k.time));
         } else if (el.isJsonArray()) {
-            float[] vals = parseVec3(el);
+            float[] vals = parseVec3(el,pulse);
             if (vals != null) {
                 outList.add(new BedrockAnimation$Keyframe(0.0F, vals[0], vals[1], vals[2]));
             }
         }
     }
 
-    private static float[] parseVec3(JsonElement el) {
+    private static float[] parseVec3(JsonElement el,boolean pulse) {
         if (el.isJsonArray()) {
             JsonArray arr = el.getAsJsonArray();
             if (arr.size() >= 3) {
@@ -94,6 +98,7 @@ public final class BedrockAnimationParser {
             }
         } else if (el.isJsonObject()) {
             JsonObject o = el.getAsJsonObject();
+            if(pulse&&o.has("vector"))return parseVec3(o.get("vector"),true);
             if (o.has("post") && o.get("post").isJsonArray()) {
                 JsonArray arr = o.getAsJsonArray("post");
                 if (arr.size() >= 3) {

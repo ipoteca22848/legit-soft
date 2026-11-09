@@ -9,18 +9,18 @@ import rich.util.render.font.Fonts;
 import rich.util.render.shader.Scissor;
 /** Image-first catalogue rendered directly in the new Click GUI. */
 public final class CosmeticsGallery {
- private static final String[] KEYS={"all","wings","hats","back","pets"};
- private static final String[] NAMES={"Все","Крылья","Шляпы","Спина","Питомцы"};
+ private static final String[] KEYS={"all","wings","hats","back","pets","capes","pulse"};
+ private static final String[] NAMES={"Все","Крылья","Шляпы","Спина","Питомцы","Плащи","Pulse"};
  private int category;
  private float scroll;
  public void setCategory(int value){category=Math.max(0,Math.min(KEYS.length-1,value));scroll=0;}
- public List<CosmeticItem> items(){CosmeticsManager.INSTANCE.ensureLoaded();return CosmeticsManager.INSTANCE.getByCategory(KEYS[category]);}
+ public List<CosmeticItem> items(){CosmeticsManager.INSTANCE.ensureLoaded();return category==6?CosmeticsManager.INSTANCE.getAllCosmetics().stream().filter(item->item.getSlug().startsWith("pulse_")).toList():CosmeticsManager.INSTANCE.getByCategory(KEYS[category]);}
  private static boolean inside(double mx,double my,float x,float y,float w,float h){return mx>=x&&mx<=x+w&&my>=y&&my<=y+h;}
  private static int alpha(int rgb,float opacity){return ((int)(255*Math.max(0,Math.min(1,opacity)))<<24)|(rgb&0xffffff);}
  private static String fit(String text,float width,float size){if(Fonts.BOLD.getWidth(text,size)<=width)return text;while(!text.isEmpty()&&Fonts.BOLD.getWidth(text+"…",size)>width)text=text.substring(0,text.length()-1);return text+"…";}
  public void render(DrawContext context,float x,float y,float width,float height,float mx,float my,int guiScale,float opacity){
-  var list=items();float tabW=(width-4*4)/5;
-  for(int i=0;i<5;i++){float xx=x+i*(tabW+4);boolean hover=inside(mx,my,xx,y,tabW,17);Render2D.rect(xx,y,tabW,17,alpha(i==category?0x4a4a4a:hover?0x363636:0x272727,opacity),4);Fonts.BOLD.drawCentered(NAMES[i],xx+tabW/2,y+5,6,alpha(i==category?0xffffff:0xaaaaaa,opacity));}
+  var list=items();float tabW=(width-(KEYS.length-1)*4)/KEYS.length;
+  for(int i=0;i<KEYS.length;i++){float xx=x+i*(tabW+4);boolean hover=inside(mx,my,xx,y,tabW,17);Render2D.rect(xx,y,tabW,17,alpha(i==category?0x4a4a4a:hover?0x363636:0x272727,opacity),4);Fonts.BOLD.drawCentered(NAMES[i],xx+tabW/2,y+5,6,alpha(i==category?0xffffff:0xaaaaaa,opacity));}
   float top=y+23,areaH=height-23,gap=6,cardW=(width-gap*2)/3,cardH=84;
   int rows=(list.size()+2)/3;scroll=Math.min(scroll,Math.max(0,rows*(cardH+gap)-gap-areaH));
   Scissor.enable(x,top,width,areaH,guiScale);context.enableScissor((int)x,(int)top,(int)(x+width),(int)(top+areaH));
@@ -38,8 +38,8 @@ public final class CosmeticsGallery {
  }
  public boolean mouseClicked(double mx,double my,int button,float x,float y,float width,float height){
   if(!inside(mx,my,x,y,width,height))return false;
-  if(button!=0)return true;float tabW=(width-16)/5;
-  if(my<=y+17){for(int i=0;i<5;i++)if(inside(mx,my,x+i*(tabW+4),y,tabW,17)){setCategory(i);return true;}}
+  if(button!=0)return true;float tabW=(width-(KEYS.length-1)*4)/KEYS.length;
+  if(my<=y+17){for(int i=0;i<KEYS.length;i++)if(inside(mx,my,x+i*(tabW+4),y,tabW,17)){setCategory(i);return true;}}
   float top=y+23,gap=6,cardW=(width-12)/3,cardH=84;if(my<top)return true;
   var list=items();for(int i=0;i<list.size();i++){float xx=x+(i%3)*(cardW+gap),yy=top+(i/3)*(cardH+gap)-scroll;if(inside(mx,my,xx,yy,cardW,cardH)){
    CosmeticsManager.INSTANCE.toggleEquip(list.get(i));com.example.auravisuals.config.ConfigManager.INSTANCE.saveConfig("default");return true;

@@ -42,7 +42,8 @@ public final class CosmeticFeatureRenderer extends FeatureRenderer<PlayerEntityR
 
                         CosmeticItem wings = (CosmeticItem)equipped.get("wings");
                         CosmeticItem back = (CosmeticItem)equipped.get("back");
-                        if (wings != null || back != null) {
+                        CosmeticItem cape = (CosmeticItem)equipped.get("capes");
+                        if (wings != null || back != null || cape != null) {
                             matrices.push();
                             this.getContextModel().getRootPart().applyTransform(matrices);
                             this.getContextModel().body.applyTransform(matrices);
@@ -53,6 +54,7 @@ public final class CosmeticFeatureRenderer extends FeatureRenderer<PlayerEntityR
                                 matrices.pop();
                             }
 
+                            if(cape!=null){matrices.push();manager.renderFeatureItem(matrices,queue,cape,"capes",animationTime,light);matrices.pop();}
                             if (back != null) {
                                 matrices.push();
                                 manager.renderFeatureItem(matrices, queue, back, "back", animationTime, light);

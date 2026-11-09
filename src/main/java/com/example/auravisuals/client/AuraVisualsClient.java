@@ -65,6 +65,7 @@ public class AuraVisualsClient implements ClientModInitializer {
 
     public void onInitializeClient() {
         com.anvil.client.atmosphere.AtmospherePackManager.init();
+        ClientTickEvents.END_CLIENT_TICK.register(com.anvil.client.performance.PulseOptimization::worldTick);
         ClientTickEvents.END_CLIENT_TICK.register(com.anvil.client.atmosphere.AtmospherePackManager::sub_4);
         com.anvil.client.AnvilRuntime.init();
         FontManager.init();

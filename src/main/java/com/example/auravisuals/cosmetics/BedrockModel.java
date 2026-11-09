@@ -13,6 +13,9 @@ import net.minecraft.client.util.math.MatrixStack.Entry;
 import net.minecraft.util.Identifier;
 
 public class BedrockModel {
+    private int textureFrames=1,textureFrameTicks=1;
+    public void setTextureAnimation(int frames,int ticks){textureFrames=Math.max(1,frames);textureFrameTicks=Math.max(1,ticks);}
+    public int textureFrame(float time){return Math.floorMod((int)(time*20)/textureFrameTicks,textureFrames);}
     public final float textureWidth;
     public final float textureHeight;
     public float minY = 0.0F;
@@ -59,6 +62,7 @@ public class BedrockModel {
         BedrockAnimation animation,
         float animTime
     ) {
+        if(textureFrames>1)consumer=new FrameUvConsumer(consumer,textureFrames,textureFrame(animTime));
         for (BedrockModel$Bone bone : this.bones) {
             if (bone.parent == null || bone.parent.isEmpty()) {
                 bone.render(entry, consumer, light, overlay, red, green, blue, alpha, animation, animTime);
@@ -82,9 +86,10 @@ public class BedrockModel {
         quads.sort(Comparator.comparingDouble(BedrockModel$GuiQuad::depth));
         Gui$Tex batch = Gui.texNearest(context, texture, AuraRender.POS_TEX_COLOR_QUADS_NODEPTH, quads.size() * 4);
 
+        int frame=textureFrame(animTime);float inverseFrames=1f/textureFrames;
         for (BedrockModel$GuiQuad quad : quads) {
             for (BedrockModel$GuiVertex vertex : quad.vertices) {
-                batch.vertex(vertex.x, vertex.y, vertex.u, vertex.v, -1);
+                batch.vertex(vertex.x, vertex.y, vertex.u, (vertex.v+frame)*inverseFrames, -1);
             }
         }
 

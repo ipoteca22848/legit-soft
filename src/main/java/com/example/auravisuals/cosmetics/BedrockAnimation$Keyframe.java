@@ -4,6 +4,7 @@ import org.joml.Vector3f;
 
 public class BedrockAnimation$Keyframe {
     public final float time;
+    public String easing="linear";
     public final Vector3f value;
 
     public BedrockAnimation$Keyframe(float time, float x, float y, float z) {

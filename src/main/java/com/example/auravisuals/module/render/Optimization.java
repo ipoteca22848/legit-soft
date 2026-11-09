@@ -11,7 +11,7 @@ import net.minecraft.client.render.Camera;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.Vec3d;
 
-public final class Optimization extends Module {
+public final class Optimization extends com.anvil.client.performance.PulseOptimization {
     private static final int[] RENDER_DISTANCE_CAP = new int[]{0, 12, 8};
     private static final double[] VIEW_SCALE = new double[]{1.0, 0.8, 0.6};
     private static final double[] PARTICLE_DIST_SQ = new double[]{2304.0, 1024.0, 484.0};
@@ -19,13 +19,13 @@ public final class Optimization extends Module {
     private static Optimization instance;
     private static final boolean EXTERNAL_ENTITY_CULLING=net.fabricmc.loader.api.FabricLoader.getInstance().isModLoaded("entityculling");
     public final ModeSetting mode = new ModeSetting("Режим", "Средний", "Низкий", "Средний", "Ультра");
-    public final BooleanSetting entityCulling = new BooleanSetting("Куллинг сущностей", true);
     public final BooleanSetting limitRenderDistance = new BooleanSetting("Ограничение прорисовки", true, () -> this.tier() >= 1);
 
     public Optimization() {
-        super("Optimization", "Поднимает FPS: куллинг сущностей, частиц и тайлов, дистанция, облака.", Category.MISC);
+        super();
         instance = this;
-        this.addSettings(this.mode, this.entityCulling, this.limitRenderDistance,
+        this.mode.setDisplayName("Качество эффектов Anvil");
+        this.addSettings(this.mode, this.limitRenderDistance,
             new com.example.auravisuals.setting.ActionSetting("Minecraft: Баланс FPS",()->{this.setEnabled(true);this.mode.setValue("Средний");com.anvil.client.MinecraftPerformanceProfiles.apply(false);}),
             new com.example.auravisuals.setting.ActionSetting("Minecraft: Максимум FPS",()->{this.setEnabled(true);this.mode.setValue("Ультра");com.anvil.client.MinecraftPerformanceProfiles.apply(true);}),
             new com.example.auravisuals.setting.ActionSetting("Восстановить настройки Minecraft",com.anvil.client.MinecraftPerformanceProfiles::restore));
@@ -83,7 +83,7 @@ public final class Optimization extends Module {
     }
 
     public static boolean shouldRenderEntity(boolean bl, Entity entity, double d, double d2, double d3) {
-        return bl && active() && !EXTERNAL_ENTITY_CULLING && instance.entityCulling.getValue() ? OcclusionCuller.isVisible(entity, d, d2, d3, instance.tier()) : bl;
+        return bl && (!active() || !instance.a(entity));
     }
 
     public static boolean shaderTransparency(boolean bl) {
@@ -170,7 +170,7 @@ public final class Optimization extends Module {
         };
     }
 
-    @Override public void onDisable(){com.anvil.client.MinecraftPerformanceProfiles.restore();}
+    @Override public void onDisable(){super.onDisable();com.anvil.client.MinecraftPerformanceProfiles.restore();}
 
     public int tier() {
         return this.mode.is("Ультра") ? 2 : (this.mode.is("Средний") ? 1 : 0);

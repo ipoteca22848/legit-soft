@@ -84,6 +84,7 @@ public final class MirageGlassPipeline {
     }
 
     public static void beginRenderFrame() {
+        var pulse=com.anvil.client.performance.PulseOptimization.instance();if(pulse!=null)pulse.beginFrame();
         com.example.auravisuals.client.gui.render.ShadowRender.beginFrame();
         StableWorldFrameCapture.beginFrame();
         hudFrameCaptureLocked = false;
