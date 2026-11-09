@@ -7,7 +7,7 @@ Minecraft Java Edition launcher — **Tauri 2 / Rust, React 19, Tailwind CSS, Fr
 Windows EXE публикуются в Releases репозитория `ipoteca22848/legit-soft`, теги `aurora-v*`:
 
 - `Aurora-Launcher-Portable.exe` — запуск без установки лаунчера; нужен Microsoft Edge WebView2.
-- `Aurora Launcher_*_x64-setup.exe` — NSIS установщик с установкой WebView2 при необходимости.
+- `*x64-setup.exe` — NSIS установщик с установкой WebView2 при необходимости.
 - `SHA256SUMS.txt` — контрольные суммы файлов.
 
 Portable сохраняет данные в AppData. Игровые файлы не включены: скачиваются с официальных источников. Интернет нужен для первой установки. Установленный offline-профиль запускается без обращения к Mojang.

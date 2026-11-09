@@ -55,7 +55,9 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force artifacts
           Copy-Item src-tauri/target/release/aurora-launcher.exe artifacts/Aurora-Launcher-Portable.exe
-          Copy-Item src-tauri/target/release/bundle/nsis/*.exe artifacts/
+          Get-ChildItem src-tauri/target/release/bundle/nsis/*.exe | ForEach-Object {
+            Copy-Item -LiteralPath $_.FullName -Destination (Join-Path artifacts ($_.Name.Replace(' ', '-')))
+          }
           Get-ChildItem artifacts/*.exe | ForEach-Object { "$((Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower())  $($_.Name)" } | Set-Content artifacts/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
