@@ -375,7 +375,7 @@ function App() {
         <div className="sidebar-footer">
           <div className="edition">
             <span className="status-dot" />
-            JAVA EDITION<span>v0.1.2</span>
+            JAVA EDITION<span>v0.1.3</span>
           </div>
           <button className="account-card" onClick={() => setTab("accounts")}>
             <span className="avatar">

@@ -783,10 +783,15 @@ mod command_tests {
         )));
         assert!(args.contains(&"net.minecraft.client.main.Main".to_owned()));
         assert!(args.contains(&account.id));
-        assert!(args.contains(&format!(
-            "-Dlog4j.configurationFile={}",
-            dir.join("assets/log_configs/client.xml").display()
-        )));
+        let log_argument = args
+            .iter()
+            .find_map(|arg| arg.strip_prefix("-Dlog4j.configurationFile="))
+            .expect("Logging JVM argument is required");
+        // Windows accepts both separator styles; compare path components rather than raw strings.
+        assert_eq!(
+            std::path::Path::new(log_argument),
+            dir.join("assets").join("log_configs").join("client.xml")
+        );
         let index = args.iter().position(|a| a == "--gameDir").unwrap();
         assert_eq!(args[index + 1], dir.to_string_lossy());
         let index = args.iter().position(|a| a == "-cp").unwrap();

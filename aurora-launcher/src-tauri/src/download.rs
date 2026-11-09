@@ -20,7 +20,7 @@ impl Net {
     pub fn new(cancel: Arc<AtomicBool>) -> Result<Self> {
         Ok(Self {
             client: reqwest::Client::builder()
-                .user_agent("AuroraLauncher/0.1.2 (github.com/ipoteca22848/legit-soft)")
+                .user_agent("AuroraLauncher/0.1.3 (github.com/ipoteca22848/legit-soft)")
                 .connect_timeout(std::time::Duration::from_secs(20))
                 .timeout(std::time::Duration::from_secs(600))
                 .build()?,
